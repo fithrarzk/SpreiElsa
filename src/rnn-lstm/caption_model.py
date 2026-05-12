@@ -5,10 +5,13 @@ from .lstm   import LSTMCell, LSTMDecoder
 
 
 class CaptionModel:
-    def __init__(self, decoder_type: str = "lstm"):
+    def __init__(self, decoder_type: str = "lstm", injection_method: str = "pre"):
         if decoder_type.lower() not in ("rnn", "lstm"):
             raise ValueError("decoder_type must be 'rnn' or 'lstm'")
+        if injection_method not in ("pre", "init"):
+            raise ValueError("injection_method must be 'pre' or 'init'")
         self.decoder_type = decoder_type.lower()
+        self.injection_method = injection_method
 
         self.embedding:        EmbeddingLayer = EmbeddingLayer()
         self.image_projection: DenseLayer     = DenseLayer()        # CNN → embed_dim
@@ -110,17 +113,20 @@ class CaptionModel:
 
         if self.decoder_type == "rnn":
             h = [np.zeros(hidden_size, dtype=np.float32) for _ in range(self.n_layers)]
-
             x_img = self.image_projection.forward(image_feature.astype(np.float32))
-            _, h = self.decoder.step(x_img, h)
+
+            if self.injection_method == "pre":
+                _, h = self.decoder.step(x_img, h)
 
             generated = []
             token = start_idx
             for _ in range(max_len):
                 x = self.embedding.forward(token)
                 out, h = self.decoder.step(x, h)
+                if self.injection_method == "init":
+                    out = np.concatenate([out, x_img], axis=-1)
                 logits = self.output_layer.forward(out)
-                token  = int(np.argmax(logits))
+                token = int(np.argmax(logits))
                 if token == end_idx:
                     break
                 if token != pad_idx:
@@ -129,17 +135,20 @@ class CaptionModel:
         else:  # lstm
             h = [np.zeros(hidden_size, dtype=np.float32) for _ in range(self.n_layers)]
             c = [np.zeros(hidden_size, dtype=np.float32) for _ in range(self.n_layers)]
-
             x_img = self.image_projection.forward(image_feature.astype(np.float32))
-            _, h, c = self.decoder.step(x_img, h, c)
+
+            if self.injection_method == "pre":
+                _, h, c = self.decoder.step(x_img, h, c)
 
             generated = []
             token = start_idx
             for _ in range(max_len):
                 x = self.embedding.forward(token)
                 out, h, c = self.decoder.step(x, h, c)
+                if self.injection_method == "init":
+                    out = np.concatenate([out, x_img], axis=-1)
                 logits = self.output_layer.forward(out)
-                token  = int(np.argmax(logits))
+                token = int(np.argmax(logits))
                 if token == end_idx:
                     break
                 if token != pad_idx:
@@ -172,7 +181,8 @@ class CaptionModel:
         if self.decoder_type == "rnn":
             h0 = [np.zeros(hidden_size, dtype=np.float32) for _ in range(self.n_layers)]
             x_img = self.image_projection.forward(image_feature.astype(np.float32))
-            _, h0 = self.decoder.step(x_img, h0)
+            if self.injection_method == "pre":
+                _, h0 = self.decoder.step(x_img, h0)
             beams = [([start_idx], 0.0, h0)]
 
             for _ in range(max_len):
@@ -184,6 +194,8 @@ class CaptionModel:
                         continue
                     x = self.embedding.forward(last)
                     out, new_h = self.decoder.step(x, h_state)
+                    if self.injection_method == "init":
+                        out = np.concatenate([out, x_img], axis=-1)
                     probs = self.output_layer.forward(out)
                     top_idx = np.argsort(probs)[-beam_size:][::-1]
                     for idx in top_idx:
@@ -204,7 +216,8 @@ class CaptionModel:
             h0 = [np.zeros(hidden_size, dtype=np.float32) for _ in range(self.n_layers)]
             c0 = [np.zeros(hidden_size, dtype=np.float32) for _ in range(self.n_layers)]
             x_img = self.image_projection.forward(image_feature.astype(np.float32))
-            _, h0, c0 = self.decoder.step(x_img, h0, c0)
+            if self.injection_method == "pre":
+                _, h0, c0 = self.decoder.step(x_img, h0, c0)
             beams = [([start_idx], 0.0, h0, c0)]
 
             for _ in range(max_len):
@@ -216,6 +229,8 @@ class CaptionModel:
                         continue
                     x = self.embedding.forward(last)
                     out, new_h, new_c = self.decoder.step(x, h_state, c_state)
+                    if self.injection_method == "init":
+                        out = np.concatenate([out, x_img], axis=-1)
                     probs = self.output_layer.forward(out)
                     top_idx = np.argsort(probs)[-beam_size:][::-1]
                     for idx in top_idx:
@@ -245,21 +260,23 @@ class CaptionModel:
         assert self.decoder is not None
 
         x_img = self.image_projection.forward(image_feature.astype(np.float32))
-        x_img = x_img[np.newaxis]                                    # (1, embed_dim)
 
         cap_emb = self.embedding.forward(np.array(caption_tokens))   # (seq_len, embed_dim)
 
-        full_seq = np.concatenate([x_img, cap_emb], axis=0)          # (seq_len+1, embed_dim)
+        if self.injection_method == "pre":
+            full_seq = np.concatenate([x_img[np.newaxis], cap_emb], axis=0)
+        else:
+            full_seq = cap_emb
 
         if self.decoder_type == "rnn":
             outputs, _ = self.decoder.forward(full_seq)
         else:
             outputs, _, _ = self.decoder.forward(full_seq)
 
-        logits = np.stack(
-            [self.output_layer.forward(outputs[t]) for t in range(len(outputs))],
-            axis=0,
-        )   # (seq_len+1, vocab_size)
+        if self.injection_method == "init":
+            outputs = np.concatenate([outputs, np.repeat(x_img[np.newaxis], outputs.shape[0], axis=0)], axis=-1)
+
+        logits = np.stack([self.output_layer.forward(outputs[t]) for t in range(len(outputs))], axis=0)
 
         return logits
 
@@ -271,18 +288,24 @@ class CaptionModel:
         assert self.decoder is not None
 
         x_img = self.image_projection.forward(image_features.astype(np.float32))
-        x_img = x_img[:, np.newaxis, :]
-
         cap_emb = self.embedding.forward(np.array(caption_tokens))
-        full_seq = np.concatenate([x_img, cap_emb], axis=1)
+
+        if self.injection_method == "pre":
+            full_seq = np.concatenate([x_img[:, np.newaxis, :], cap_emb], axis=1)
+        else:
+            full_seq = cap_emb
 
         if self.decoder_type == "rnn":
             outputs, _ = self.decoder.forward(full_seq)
         else:
             outputs, _, _ = self.decoder.forward(full_seq)
 
-        logits_steps = [self.output_layer.forward(outputs[:, t, :]) for t in range(outputs.shape[1])]
-        logits = np.stack(logits_steps, axis=1)
+        if self.injection_method == "init":
+            outputs = np.concatenate([outputs, x_img[:, np.newaxis, :].repeat(outputs.shape[1], axis=1)], axis=-1)
+
+        flat = outputs.reshape((-1, outputs.shape[-1]))
+        logits_flat = self.output_layer.forward(flat)
+        logits = logits_flat.reshape((outputs.shape[0], outputs.shape[1], -1))
         return logits
 
     def generate_captions_batch(

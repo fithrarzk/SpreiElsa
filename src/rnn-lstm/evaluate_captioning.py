@@ -219,9 +219,6 @@ def main() -> None:
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
-    if args.injection != "pre" and args.mode in ("scratch", "both"):
-        raise ValueError("Scratch evaluation hanya mendukung injection_method='pre'.")
-
     if args.mode in ("keras", "both"):
         keras_model = tf.keras.models.load_model(args.model_path)
         result = evaluate(
@@ -246,7 +243,7 @@ def main() -> None:
 
     if args.mode in ("scratch", "both"):
         keras_model = tf.keras.models.load_model(args.model_path)
-        scratch_model = CaptionModel(decoder_type=args.decoder_type)
+        scratch_model = CaptionModel(decoder_type=args.decoder_type, injection_method=args.injection)
         scratch_model.load_from_keras(keras_model, word2idx, idx2word)
         result = evaluate(
             model=scratch_model,
