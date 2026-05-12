@@ -1,1 +1,17 @@
-src/dataset
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local lightweight image subset for CPU sanity checks.
+# Regenerate it from ../dataset with src/dataset/create_local_subset.py.
+/src/dataset/train/
+/src/dataset/val/
+/src/dataset/test/
+/src/dataset/Images
+/src/dataset/captions.txt
+# Local/Kaggle experiment artifacts.
+/outputs/
+*.keras
+*.weights.h5
+*.npy
+*.png
