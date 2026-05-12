@@ -1,7 +1,7 @@
 import numpy as np
-from .layers import EmbeddingLayer, DenseLayer
-from .rnn    import SimpleRNNCell, SimpleRNNDecoder
-from .lstm   import LSTMCell, LSTMDecoder
+from layers import EmbeddingLayer, DenseLayer
+from rnn    import SimpleRNNCell, SimpleRNNDecoder
+from lstm   import LSTMCell, LSTMDecoder
 
 
 class CaptionModel:
