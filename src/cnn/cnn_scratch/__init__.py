@@ -1,6 +1,6 @@
 """NumPy-only CNN forward propagation layers."""
 
-from .activations import get_activation, linear, relu, softmax
+from .activations import get_activation, get_activation_backward, linear, relu, softmax
 from .layers import (
     AveragePooling2D,
     Conv2D,
@@ -24,6 +24,7 @@ __all__ = [
     "MaxPooling2D",
     "SequentialScratchModel",
     "get_activation",
+    "get_activation_backward",
     "linear",
     "relu",
     "softmax",
