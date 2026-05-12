@@ -1,0 +1,30 @@
+"""Activation functions for scratch CNN forward propagation."""
+
+from __future__ import annotations
+
+import numpy as np
+
+
+def linear(x: np.ndarray) -> np.ndarray:
+    return x
+
+
+def relu(x: np.ndarray) -> np.ndarray:
+    return np.maximum(x, 0)
+
+
+def softmax(x: np.ndarray, axis: int = -1) -> np.ndarray:
+    shifted = x - np.max(x, axis=axis, keepdims=True)
+    exp = np.exp(shifted)
+    return exp / np.sum(exp, axis=axis, keepdims=True)
+
+
+def get_activation(name: str | None):
+    if name is None or name == "linear":
+        return linear
+    if name == "relu":
+        return relu
+    if name == "softmax":
+        return softmax
+    raise ValueError(f"Unsupported activation: {name}")
+
