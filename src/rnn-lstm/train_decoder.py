@@ -2,12 +2,10 @@
 
 from __future__ import annotations
 
-import argparse
 import json
 import os
 import sys
 from dataclasses import asdict, dataclass
-from itertools import product
 from pathlib import Path
 
 import numpy as np
@@ -132,83 +130,3 @@ def train_one(
     return experiment_dir
 
 
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--captions-file", type=Path, required=True)
-    parser.add_argument("--splits-json", type=Path, required=True)
-    parser.add_argument("--vocab-path", type=Path, required=True)
-    parser.add_argument("--features-path", type=Path, required=True)
-    parser.add_argument("--output-dir", type=Path, default=Path("outputs/rnn_lstm"))
-    parser.add_argument("--decoder-type", choices=["rnn", "lstm"], default="lstm")
-    parser.add_argument("--embed-dim", type=int, default=256)
-    parser.add_argument("--hidden-size", type=int, default=256)
-    parser.add_argument("--n-layers", type=int, default=1)
-    parser.add_argument("--max-seq-len", type=int, default=35)
-    parser.add_argument("--feature-dim", type=int, default=2048)
-    parser.add_argument("--learning-rate", type=float, default=1e-3)
-    parser.add_argument("--injection", choices=["pre", "init"], default="pre")
-    parser.add_argument("--epochs", type=int, default=10)
-    parser.add_argument("--batch-size", type=int, default=32)
-    parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--run-grid", action="store_true")
-    parser.add_argument("--layers-grid", nargs="+", type=int, default=[1, 2, 3])
-    parser.add_argument("--hidden-grid", nargs="+", type=int, default=[128, 512])
-    return parser.parse_args()
-
-
-def main() -> None:
-    args = parse_args()
-    from text_utils import load_flickr8k_captions
-
-    captions = load_flickr8k_captions(str(args.captions_file))
-    splits = _load_splits(args.splits_json)
-    word2idx, _ = load_vocab(args.vocab_path)
-    features = load_features(str(args.features_path))
-
-    output_root = args.output_dir / args.decoder_type
-    output_root.mkdir(parents=True, exist_ok=True)
-
-    if args.run_grid:
-        configs = [
-            DecoderExperimentConfig(
-                decoder_type=args.decoder_type,
-                n_layers=n_layers,
-                hidden_size=hidden_size,
-                embed_dim=args.embed_dim,
-                max_seq_len=args.max_seq_len,
-                feature_dim=args.feature_dim,
-                learning_rate=args.learning_rate,
-                injection_method=args.injection,
-            )
-            for n_layers, hidden_size in product(args.layers_grid, args.hidden_grid)
-        ]
-    else:
-        configs = [
-            DecoderExperimentConfig(
-                decoder_type=args.decoder_type,
-                n_layers=args.n_layers,
-                hidden_size=args.hidden_size,
-                embed_dim=args.embed_dim,
-                max_seq_len=args.max_seq_len,
-                feature_dim=args.feature_dim,
-                learning_rate=args.learning_rate,
-                injection_method=args.injection,
-            )
-        ]
-
-    for config in configs:
-        train_one(
-            config=config,
-            captions=captions,
-            splits=splits,
-            features=features,
-            word2idx=word2idx,
-            output_root=output_root,
-            batch_size=args.batch_size,
-            epochs=args.epochs,
-            seed=args.seed,
-        )
-
-
-if __name__ == "__main__":
-    main()

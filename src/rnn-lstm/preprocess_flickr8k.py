@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import argparse
 import json
 from pathlib import Path
 
@@ -83,29 +82,3 @@ def preprocess(
     return summary
 
 
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--captions-file", type=Path, required=True)
-    parser.add_argument("--train-split", type=Path, required=True)
-    parser.add_argument("--val-split", type=Path, required=True)
-    parser.add_argument("--test-split", type=Path, required=True)
-    parser.add_argument("--output-dir", type=Path, default=Path("outputs/rnn_lstm/preprocess"))
-    parser.add_argument("--min-freq", type=int, default=1)
-    return parser.parse_args()
-
-
-def main() -> None:
-    args = parse_args()
-    summary = preprocess(
-        captions_file=args.captions_file,
-        train_split=args.train_split,
-        val_split=args.val_split,
-        test_split=args.test_split,
-        output_dir=args.output_dir,
-        min_freq=args.min_freq,
-    )
-    print(json.dumps(summary, indent=2))
-
-
-if __name__ == "__main__":
-    main()

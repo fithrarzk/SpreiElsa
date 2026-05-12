@@ -6,7 +6,6 @@ intended for Kaggle GPU.
 
 from __future__ import annotations
 
-import argparse
 import json
 from pathlib import Path
 
@@ -78,26 +77,4 @@ def train_one(config, data_root: Path, output_dir: Path, epochs: int, batch_size
     return experiment_dir
 
 
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--data-root", type=Path, default=Path("src/dataset"))
-    parser.add_argument("--output-dir", type=Path, default=Path("outputs/cnn"))
-    parser.add_argument("--image-size", type=int, default=64)
-    parser.add_argument("--epochs", type=int, default=1)
-    parser.add_argument("--batch-size", type=int, default=16)
-    parser.add_argument("--experiment-id", default="d1_f16_k3_max")
-    parser.add_argument("--run-all", action="store_true")
-    parser.add_argument("--non-shared", action="store_true")
-    return parser.parse_args()
-
-
-def main() -> None:
-    args = parse_args()
-    configs = all_shared_experiments(args.image_size) if args.run_all else [get_experiment(args.experiment_id, args.image_size)]
-    for config in configs:
-        train_one(config, args.data_root, args.output_dir, args.epochs, args.batch_size, non_shared=args.non_shared)
-
-
-if __name__ == "__main__":
-    main()
 
