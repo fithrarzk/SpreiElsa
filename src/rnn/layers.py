@@ -25,6 +25,9 @@ class EmbeddingLayer:
     def load_weights(self, keras_layer):
         self.W = keras_layer.get_weights()[0].astype(np.float32)
 
+    def set_weights(self, W: np.ndarray):
+        self.W = np.array(W, dtype=np.float32)
+
     def forward(self, x):
         return self.W[x]
 
@@ -39,6 +42,10 @@ class DenseLayer:
         w = keras_layer.get_weights()
         self.W = w[0].astype(np.float32)
         self.b = w[1].astype(np.float32)
+
+    def set_weights(self, W: np.ndarray, b: np.ndarray):
+        self.W = np.array(W, dtype=np.float32)
+        self.b = np.array(b, dtype=np.float32)
 
     def forward(self, x):
         return self._act(x @ self.W + self.b)

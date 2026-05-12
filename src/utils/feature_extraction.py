@@ -1,6 +1,9 @@
 import os
+import sys
 import numpy as np
-from image_utils import load_image, load_batch  # dari Timur
+
+sys.path.insert(0, os.path.dirname(__file__))
+from image_utils import load_images
 
 
 def build_inception_encoder():
@@ -26,7 +29,7 @@ def extract_features(image_paths, encoder, preprocess_fn, target_size=(299, 299)
     n = len(image_paths)
     for start in range(0, n, batch_size):
         batch_paths = image_paths[start:start + batch_size]
-        batch = (load_batch(batch_paths, target_size) * 255.0).astype(np.float32)
+        batch = (load_images(batch_paths, image_size=target_size, normalize=True) * 255.0).astype(np.float32)
         batch_feats = encoder.predict(preprocess_fn(batch), verbose=0)
         for path, feat in zip(batch_paths, batch_feats):
             features[os.path.basename(path)] = feat.astype(np.float32)
@@ -35,11 +38,11 @@ def extract_features(image_paths, encoder, preprocess_fn, target_size=(299, 299)
     return features
 
 
-def save_features(features, path):
+def save_features(features: dict, path: str) -> None:
     np.save(path, features)
 
 
-def load_features(path):
+def load_features(path: str) -> dict:
     return np.load(path, allow_pickle=True).item()
 
 

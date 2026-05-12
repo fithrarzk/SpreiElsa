@@ -7,7 +7,8 @@ __pycache__/
 /src/dataset/train/
 /src/dataset/val/
 /src/dataset/test/
-
+/src/dataset/Images
+/src/dataset/captions.txt
 # Local/Kaggle experiment artifacts.
 /outputs/
 *.keras
