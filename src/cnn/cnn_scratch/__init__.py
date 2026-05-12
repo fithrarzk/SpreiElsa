@@ -11,6 +11,7 @@ from .layers import (
     LocallyConnected2D,
     MaxPooling2D,
 )
+from .losses import cross_entropy_from_probs, softmax_cross_entropy_loss
 from .model import SequentialScratchModel
 
 __all__ = [
@@ -26,6 +27,8 @@ __all__ = [
     "get_activation",
     "get_activation_backward",
     "linear",
+    "softmax_cross_entropy_loss",
+    "cross_entropy_from_probs",
     "relu",
     "softmax",
 ]

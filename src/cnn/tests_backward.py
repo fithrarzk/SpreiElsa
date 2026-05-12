@@ -5,6 +5,7 @@ from __future__ import annotations
 import numpy as np
 
 from src.cnn.cnn_scratch.layers import Conv2D, Dense
+from src.cnn.cnn_scratch.losses import softmax_cross_entropy_loss
 
 
 def _relative_error(a: np.ndarray, b: np.ndarray, eps: float = 1e-8) -> float:
@@ -81,6 +82,10 @@ def check_conv2d_backward() -> None:
 def main() -> None:
     check_dense_backward()
     check_conv2d_backward()
+    logits = np.array([[1.0, -1.0, 0.5]], dtype=np.float32)
+    labels = np.array([2], dtype=np.int64)
+    loss, grad = softmax_cross_entropy_loss(logits, labels)
+    print("Softmax CE loss:", loss, "grad shape:", grad.shape)
 
 
 if __name__ == "__main__":
