@@ -58,6 +58,56 @@ def _greedy_decode_keras(model, image_feature: np.ndarray, word2idx: dict, idx2w
     return decode_caption(tokens, idx2word)
 
 
+def _beam_search_keras(
+    model,
+    image_feature: np.ndarray,
+    word2idx: dict,
+    idx2word: dict,
+    max_len: int,
+    beam_size: int,
+    length_penalty: float,
+) -> str:
+    pad_idx = word2idx.get("<pad>", 0)
+    start_idx = word2idx.get("<start>", 1)
+    end_idx = word2idx.get("<end>", 2)
+
+    caption_len = int(model.inputs[1].shape[1])
+    output_len = int(model.outputs[0].shape[1])
+    steps = min(max_len, output_len)
+
+    def score_norm(score, length):
+        if length_penalty <= 0:
+            return score
+        return score / (length ** length_penalty)
+
+    beams = [([start_idx], 0.0)]
+    for step in range(steps):
+        candidates = []
+        for tokens, score in beams:
+            last = tokens[-1]
+            if last in (end_idx, pad_idx):
+                candidates.append((tokens, score))
+                continue
+            caption_input = np.full((1, caption_len), pad_idx, dtype=np.int32)
+            cap_len = min(len(tokens), caption_len)
+            caption_input[0, :cap_len] = tokens[:cap_len]
+            preds = model.predict([image_feature[np.newaxis], caption_input], verbose=0)
+            probs = preds[0, step]
+            top_idx = np.argsort(probs)[-beam_size:][::-1]
+            for idx in top_idx:
+                prob = float(probs[int(idx)])
+                new_score = score + float(np.log(max(prob, 1e-9)))
+                candidates.append((tokens + [int(idx)], new_score))
+
+        candidates.sort(key=lambda item: score_norm(item[1], len(item[0])), reverse=True)
+        beams = candidates[:beam_size]
+        if all(tokens[-1] in (end_idx, pad_idx) for tokens, _ in beams):
+            break
+
+    best_tokens = max(beams, key=lambda item: score_norm(item[1], len(item[0])))[0]
+    return decode_caption(best_tokens, idx2word)
+
+
 def _evaluate_single(
     image_name: str,
     candidate: str,
@@ -87,6 +137,9 @@ def evaluate(
     max_len: int,
     mode: str,
     seed: int,
+    decoding: str,
+    beam_size: int,
+    length_penalty: float,
 ) -> dict:
     rng = random.Random(seed)
     results = []
@@ -96,9 +149,23 @@ def evaluate(
             continue
         feature = np.asarray(features[image_name], dtype=np.float32)
         if mode == "keras":
-            candidate = _greedy_decode_keras(model, feature, word2idx, idx2word, max_len=max_len)
+            if decoding == "beam":
+                candidate = _beam_search_keras(
+                    model,
+                    feature,
+                    word2idx,
+                    idx2word,
+                    max_len=max_len,
+                    beam_size=beam_size,
+                    length_penalty=length_penalty,
+                )
+            else:
+                candidate = _greedy_decode_keras(model, feature, word2idx, idx2word, max_len=max_len)
         else:
-            candidate = model.generate_caption(feature, max_len=max_len)
+            if decoding == "beam":
+                candidate = model.generate_caption_beam(feature, max_len=max_len, beam_size=beam_size, length_penalty=length_penalty)
+            else:
+                candidate = model.generate_caption(feature, max_len=max_len)
         results.append(_evaluate_single(image_name, candidate, references))
 
     rng.shuffle(results)
@@ -131,6 +198,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-samples", type=int)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--mode", choices=["keras", "scratch", "both"], default="keras")
+    parser.add_argument("--injection", choices=["pre", "init"], default="pre")
+    parser.add_argument("--decoding", choices=["greedy", "beam"], default="greedy")
+    parser.add_argument("--beam-size", type=int, default=3)
+    parser.add_argument("--length-penalty", type=float, default=0.7)
     return parser.parse_args()
 
 
@@ -148,6 +219,9 @@ def main() -> None:
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
+    if args.injection != "pre" and args.mode in ("scratch", "both"):
+        raise ValueError("Scratch evaluation hanya mendukung injection_method='pre'.")
+
     if args.mode in ("keras", "both"):
         keras_model = tf.keras.models.load_model(args.model_path)
         result = evaluate(
@@ -161,6 +235,9 @@ def main() -> None:
             max_len=args.max_len,
             mode="keras",
             seed=args.seed,
+            decoding=args.decoding,
+            beam_size=args.beam_size,
+            length_penalty=args.length_penalty,
         )
         with (args.output_dir / "metrics_keras.json").open("w", encoding="utf-8") as handle:
             json.dump(result["metrics"], handle, indent=2)
@@ -182,6 +259,9 @@ def main() -> None:
             max_len=args.max_len,
             mode="scratch",
             seed=args.seed,
+            decoding=args.decoding,
+            beam_size=args.beam_size,
+            length_penalty=args.length_penalty,
         )
         with (args.output_dir / "metrics_scratch.json").open("w", encoding="utf-8") as handle:
             json.dump(result["metrics"], handle, indent=2)

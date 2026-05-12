@@ -40,10 +40,14 @@ class DecoderExperimentConfig:
     max_seq_len: int
     feature_dim: int
     learning_rate: float
+    injection_method: str
 
     @property
     def experiment_id(self) -> str:
-        return f"{self.decoder_type}_l{self.n_layers}_h{self.hidden_size}_e{self.embed_dim}_m{self.max_seq_len}"
+        return (
+            f"{self.decoder_type}_{self.injection_method}"
+            f"_l{self.n_layers}_h{self.hidden_size}_e{self.embed_dim}_m{self.max_seq_len}"
+        )
 
     def to_dict(self) -> dict:
         return asdict(self) | {"experiment_id": self.experiment_id}
@@ -64,6 +68,7 @@ def _build_model(config: DecoderExperimentConfig, vocab_size: int) -> tf.keras.M
         decoder_type=config.decoder_type,
         feature_dim=config.feature_dim,
         max_seq_len=config.max_seq_len,
+        injection_method=config.injection_method,
     )
     model.compile(
         optimizer=tf.keras.optimizers.Adam(learning_rate=config.learning_rate),
@@ -96,6 +101,7 @@ def train_one(
         batch_size=batch_size,
         shuffle=True,
         seed=seed,
+        injection_method=config.injection_method,
     )
     val_ds = build_dataset(
         image_names=splits["val"],
@@ -105,6 +111,7 @@ def train_one(
         max_seq_len=config.max_seq_len,
         batch_size=batch_size,
         shuffle=False,
+        injection_method=config.injection_method,
     )
 
     model = _build_model(config, vocab_size=len(word2idx))
@@ -139,6 +146,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-seq-len", type=int, default=35)
     parser.add_argument("--feature-dim", type=int, default=2048)
     parser.add_argument("--learning-rate", type=float, default=1e-3)
+    parser.add_argument("--injection", choices=["pre", "init"], default="pre")
     parser.add_argument("--epochs", type=int, default=10)
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--seed", type=int, default=42)
@@ -170,6 +178,7 @@ def main() -> None:
                 max_seq_len=args.max_seq_len,
                 feature_dim=args.feature_dim,
                 learning_rate=args.learning_rate,
+                injection_method=args.injection,
             )
             for n_layers, hidden_size in product(args.layers_grid, args.hidden_grid)
         ]
@@ -183,6 +192,7 @@ def main() -> None:
                 max_seq_len=args.max_seq_len,
                 feature_dim=args.feature_dim,
                 learning_rate=args.learning_rate,
+                injection_method=args.injection,
             )
         ]
 
