@@ -9,6 +9,7 @@ from .layers import (
     Flatten,
     GlobalAveragePooling2D,
     GlobalMaxPooling2D,
+    LocallyConnected2D,
     MaxPooling2D,
 )
 from .model import SequentialScratchModel
@@ -49,6 +50,19 @@ def keras_to_scratch_model(keras_model) -> SequentialScratchModel:
         elif class_name == "Dense":
             kernel, bias = layer.get_weights()
             scratch_layers.append(Dense(kernel=kernel, bias=bias, activation=layer.activation.__name__))
+        elif class_name in {"LocallyConnected2D", "SimpleLocallyConnected2D"}:
+            kernel, bias = layer.get_weights()
+            activation = layer.activation.__name__ if layer.activation is not None else None
+            scratch_layers.append(
+                LocallyConnected2D(
+                    kernel=kernel,
+                    bias=bias,
+                    kernel_size=tuple(layer.kernel_size),
+                    strides=tuple(layer.strides),
+                    padding=getattr(layer, "padding", "valid"),
+                    activation=activation,
+                )
+            )
         elif class_name == "Dropout":
             continue
         else:
