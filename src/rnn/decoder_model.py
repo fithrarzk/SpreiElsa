@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import Model, Input
-from tensorflow.keras.layers import Dense, Embedding, SimpleRNN, LSTM
+from tensorflow.keras.layers import Dense, Embedding, SimpleRNN, LSTM, Reshape, Concatenate
 
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'utils'))
@@ -24,11 +24,11 @@ def build_decoder_model(
     caption_input = Input(shape=(max_seq_len - 1,),   name="caption_tokens", dtype="int32")
 
     x_img = Dense(embed_dim, name="image_projection")(image_input)   # (batch, embed_dim)
-    x_img = tf.expand_dims(x_img, axis=1)                            # (batch, 1, embed_dim)
+    x_img = Reshape((1, embed_dim), name="image_projection_reshape")(x_img)
 
     x_cap = Embedding(vocab_size, embed_dim, name="embedding")(caption_input)
 
-    x = tf.concat([x_img, x_cap], axis=1)                           # (batch, max_seq_len, embed_dim)
+    x = Concatenate(axis=1, name="concat_image_caption")([x_img, x_cap])
 
     for i in range(n_layers):
         if decoder_type == "rnn":

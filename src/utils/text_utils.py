@@ -92,3 +92,22 @@ def caption_length_stats(captions_list, word2idx):
     return {"min": int(lengths.min()), "max": int(lengths.max()),
             "mean": float(lengths.mean()), "p95": int(np.percentile(lengths, 95)),
             "p99": int(np.percentile(lengths, 99))}
+
+def build_vocabulary(all_captions_dict, min_freq=1):
+    # Build vocabulary dari dictionary of captions
+    captions_list = []
+    for captions in all_captions_dict.values():
+        captions_list.extend(captions)
+    return build_vocab(captions_list, min_freq=min_freq)
+
+
+def word2idx_to_json(word2idx, path):
+    # save ke json
+    idx2word = {v: k for k, v in word2idx.items()}
+    save_vocab(word2idx, idx2word, path)
+
+
+def json_to_word2idx(path):
+    # laod dari json
+    word2idx, _ = load_vocab(path)
+    return word2idx
