@@ -1,6 +1,6 @@
 # SpreiElsa
 
-Implementasi IF3270 Tubes 2 untuk eksperimen neural network, dengan fokus saat ini pada CNN untuk Intel Image Classification.
+Implementasi IF3270 Tubes 2 untuk eksperimen neural network: CNN untuk Intel Image Classification serta RNN/LSTM untuk Flickr8k image captioning.
 
 ## Struktur
 
@@ -79,10 +79,10 @@ Implementasi CNN utama ada di `src/cnn/`.
 - `src/cnn/compare_shared_non_shared.py`: CSV/JSON ringkas untuk analisis shared vs non-shared.
 - `src/cnn/kaggle_run_cnn.py`: runner full untuk Kaggle GPU.
 
-Sanity check scratch:
+Sanity check scratch tersedia di notebook utama:
 
 ```powershell
-python -m src.cnn.tests_sanity
+jupyter notebook src/notebook/cnn.ipynb
 ```
 
 Mini training lokal satu eksperimen:

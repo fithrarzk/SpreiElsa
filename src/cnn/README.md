@@ -24,7 +24,7 @@ Prinsip development:
 Command penting:
 
 ```powershell
-python -m src.cnn.tests_sanity
+jupyter notebook src/notebook/cnn.ipynb
 python -m src.cnn.train_cnn --data-root src/dataset --output-dir outputs/cnn --experiment-id d1_f16_k3_max --epochs 1 --batch-size 16
 python -m src.cnn.plotting --output-root outputs/cnn --summary-path outputs/cnn/summary.csv
 python -m src.cnn.scratch_compare --model-path outputs/cnn/shared_d1_f16_k3_max/model.keras --split-root src/dataset/test --output-path outputs/cnn/shared_d1_f16_k3_max/scratch_compare.json
