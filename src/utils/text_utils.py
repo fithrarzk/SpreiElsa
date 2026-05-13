@@ -19,7 +19,11 @@ def load_flickr8k_captions(captions_file):
             line = line.strip()
             if not line or line.lower().startswith("image,caption"):
                 continue
-            parts = line.split(",", 1)
+
+            if "\t" in line:
+                parts = line.split("\t", 1)
+            else:
+                parts = line.split(",", 1)
             if len(parts) != 2:
                 continue
             img_name = parts[0].split("#")[0].strip()

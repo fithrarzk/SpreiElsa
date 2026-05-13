@@ -220,7 +220,7 @@ def main() -> None:
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     if args.mode in ("keras", "both"):
-        keras_model = tf.keras.models.load_model(args.model_path)
+        keras_model = tf.keras.models.load_model(args.model_path, compile=False)
         result = evaluate(
             model=keras_model,
             captions=captions,
@@ -242,7 +242,7 @@ def main() -> None:
             json.dump(result["details"], handle, indent=2)
 
     if args.mode in ("scratch", "both"):
-        keras_model = tf.keras.models.load_model(args.model_path)
+        keras_model = tf.keras.models.load_model(args.model_path, compile=False)
         scratch_model = CaptionModel(decoder_type=args.decoder_type, injection_method=args.injection)
         scratch_model.load_from_keras(keras_model, word2idx, idx2word)
         result = evaluate(
