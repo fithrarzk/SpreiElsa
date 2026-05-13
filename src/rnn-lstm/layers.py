@@ -30,7 +30,7 @@ class EmbeddingLayer:
         self.W = np.array(W, dtype=np.float32)
 
     def forward(self, x):
-        self._last_input = np.array(x, copy=False)
+        self._last_input = np.asarray(x)
         return self.W[x]
 
     def backward(self, upstream: np.ndarray) -> np.ndarray:
