@@ -1,0 +1,108 @@
+{
+  "best_experiment": {
+    "experiment": "shared_d2_f32_k3_max",
+    "conv_depth": 2,
+    "filters_base": 32,
+    "kernel_size": 3,
+    "pooling": "max",
+    "non_shared": false,
+    "macro_f1": 0.7891029230446035,
+    "test_accuracy": 0.7883333563804626,
+    "param_count": 822662
+  },
+  "conv_depth": [
+    {
+      "conv_depth": 1,
+      "mean_macro_f1": 0.7116439203104079,
+      "best_macro_f1": 0.726627171812579,
+      "mean_test_accuracy": 0.7113333269953728,
+      "mean_param_count": 1430950.0,
+      "n_experiments": 8
+    },
+    {
+      "conv_depth": 2,
+      "mean_macro_f1": 0.7603785033737384,
+      "best_macro_f1": 0.7891029230446035,
+      "mean_test_accuracy": 0.7594583332538605,
+      "mean_param_count": 584150.0,
+      "n_experiments": 8
+    }
+  ],
+  "filters_base": [
+    {
+      "filters_base": 16,
+      "mean_macro_f1": 0.7311597308984937,
+      "best_macro_f1": 0.7644319655569382,
+      "mean_test_accuracy": 0.7303333282470703,
+      "mean_param_count": 668950.0,
+      "n_experiments": 8
+    },
+    {
+      "filters_base": 32,
+      "mean_macro_f1": 0.7408626927856526,
+      "best_macro_f1": 0.7891029230446035,
+      "mean_test_accuracy": 0.7404583320021629,
+      "mean_param_count": 1346150.0,
+      "n_experiments": 8
+    }
+  ],
+  "kernel_size": [
+    {
+      "kernel_size": 3,
+      "mean_macro_f1": 0.7440055261151685,
+      "best_macro_f1": 0.7891029230446035,
+      "mean_test_accuracy": 0.7434583306312561,
+      "mean_param_count": 1046014.0,
+      "n_experiments": 8
+    },
+    {
+      "kernel_size": 5,
+      "mean_macro_f1": 0.7280168975689779,
+      "best_macro_f1": 0.7584100605590223,
+      "mean_test_accuracy": 0.7273333296179771,
+      "mean_param_count": 969086.0,
+      "n_experiments": 8
+    }
+  ],
+  "pooling": [
+    {
+      "pooling": "avg",
+      "mean_macro_f1": 0.7358775263639314,
+      "best_macro_f1": 0.7713824620523342,
+      "mean_test_accuracy": 0.7347916662693024,
+      "mean_param_count": 1007550.0,
+      "n_experiments": 8
+    },
+    {
+      "pooling": "max",
+      "mean_macro_f1": 0.7361448973202149,
+      "best_macro_f1": 0.7891029230446035,
+      "mean_test_accuracy": 0.7359999939799309,
+      "mean_param_count": 1007550.0,
+      "n_experiments": 8
+    }
+  ],
+  "shared_vs_non_shared": [
+    {
+      "model_type": "shared",
+      "experiment": "shared_d2_f32_k3_max",
+      "macro_f1": 0.7891029230446035,
+      "test_accuracy": 0.7883333563804626,
+      "param_count": 822662
+    },
+    {
+      "model_type": "non_shared",
+      "experiment": "non_shared_d2_f32_k3_max",
+      "macro_f1": 0.6443638286579291,
+      "test_accuracy": 0.656333327293396,
+      "param_count": 19802630
+    }
+  ],
+  "scratch_compare": {
+    "samples": 30,
+    "keras_macro_f1": 0.17358490566037738,
+    "scratch_macro_f1": 0.17358490566037738,
+    "max_abs_probability_diff": 5.364418029785156e-07,
+    "prediction_match_rate": 1.0
+  }
+}
