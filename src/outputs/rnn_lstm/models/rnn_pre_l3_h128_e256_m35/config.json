@@ -1,0 +1,11 @@
+{
+  "decoder_type": "rnn",
+  "n_layers": 3,
+  "hidden_size": 128,
+  "embed_dim": 256,
+  "max_seq_len": 35,
+  "feature_dim": 2048,
+  "learning_rate": 0.001,
+  "injection_method": "pre",
+  "experiment_id": "rnn_pre_l3_h128_e256_m35"
+}

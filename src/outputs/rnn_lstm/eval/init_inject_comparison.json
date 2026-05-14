@@ -1,0 +1,54 @@
+{
+  "rnn": {
+    "pre": {
+      "bleu4": 0.012555442348034605,
+      "meteor": 0.237045499662983,
+      "samples": 50,
+      "mode": "keras",
+      "decoder_type": "rnn",
+      "total_time_s": 43.67015869400029,
+      "avg_time_ms": 873.4031738800057,
+      "decoding": "greedy",
+      "beam_size": null,
+      "injection": "pre"
+    },
+    "init": {
+      "bleu4": 0.06203671195726747,
+      "meteor": 0.29959238268232197,
+      "samples": 50,
+      "mode": "keras",
+      "decoder_type": "rnn",
+      "total_time_s": 57.37717418600005,
+      "avg_time_ms": 1147.543483720001,
+      "decoding": "greedy",
+      "beam_size": null,
+      "injection": "init"
+    }
+  },
+  "lstm": {
+    "pre": {
+      "bleu4": 0.0100552444405999,
+      "meteor": 0.24434182622974268,
+      "samples": 50,
+      "mode": "keras",
+      "decoder_type": "lstm",
+      "total_time_s": 52.00571227699993,
+      "avg_time_ms": 1040.1142455399986,
+      "decoding": "greedy",
+      "beam_size": null,
+      "injection": "pre"
+    },
+    "init": {
+      "bleu4": 0.03212162268381309,
+      "meteor": 0.28149805604168887,
+      "samples": 50,
+      "mode": "keras",
+      "decoder_type": "lstm",
+      "total_time_s": 52.90376398499984,
+      "avg_time_ms": 1058.0752796999968,
+      "decoding": "greedy",
+      "beam_size": null,
+      "injection": "init"
+    }
+  }
+}

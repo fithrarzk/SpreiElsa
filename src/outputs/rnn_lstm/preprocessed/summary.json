@@ -1,0 +1,17 @@
+{
+  "total_images": 8091,
+  "train_images": 6000,
+  "val_images": 1000,
+  "test_images": 1091,
+  "train_images_with_captions": 6000,
+  "val_images_with_captions": 1000,
+  "test_images_with_captions": 1091,
+  "vocab_size": 7684,
+  "caption_length_stats": {
+    "min": 3,
+    "max": 37,
+    "mean": 12.768933333333333,
+    "p95": 20,
+    "p99": 24
+  }
+}

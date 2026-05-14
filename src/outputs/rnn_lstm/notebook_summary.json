@@ -1,0 +1,416 @@
+{
+  "best_rnn": {
+    "experiment": "rnn_pre_l1_h256_e256_m35",
+    "decoder_type": "rnn",
+    "injection": "pre",
+    "layers": 1,
+    "hidden": 256,
+    "loss": 3.6875460147857666,
+    "val_loss": 4.084106922149658,
+    "param_count": 4597764
+  },
+  "best_lstm": {
+    "experiment": "lstm_pre_l1_h256_e256_m35",
+    "decoder_type": "lstm",
+    "injection": "pre",
+    "layers": 1,
+    "hidden": 256,
+    "loss": 3.7700905799865723,
+    "val_loss": 4.068833827972412,
+    "param_count": 4991748
+  },
+  "rnn_variations": [
+    {
+      "experiment": "rnn_pre_l2_h128_e256_m35",
+      "layers": 2,
+      "hidden": 128,
+      "bleu4": 0.016726317130602977,
+      "meteor": 0.2316136998666195,
+      "avg_time_ms": 1045.0473124200016
+    },
+    {
+      "experiment": "rnn_pre_l1_h256_e256_m35",
+      "layers": 1,
+      "hidden": 256,
+      "bleu4": 0.012555442348034605,
+      "meteor": 0.237045499662983,
+      "avg_time_ms": 906.6210447000003
+    },
+    {
+      "experiment": "rnn_pre_l3_h256_e256_m35",
+      "layers": 3,
+      "hidden": 256,
+      "bleu4": 0.01111173752767306,
+      "meteor": 0.2381238568469577,
+      "avg_time_ms": 939.9848984800019
+    },
+    {
+      "experiment": "rnn_pre_l3_h128_e256_m35",
+      "layers": 3,
+      "hidden": 128,
+      "bleu4": 0.010645929214851801,
+      "meteor": 0.22736492921225196,
+      "avg_time_ms": 991.4138602999992
+    },
+    {
+      "experiment": "rnn_pre_l2_h256_e256_m35",
+      "layers": 2,
+      "hidden": 256,
+      "bleu4": 0.007374863228417917,
+      "meteor": 0.2308880314292907,
+      "avg_time_ms": 1056.0385119600005
+    },
+    {
+      "experiment": "rnn_pre_l1_h128_e256_m35",
+      "layers": 1,
+      "hidden": 128,
+      "bleu4": 0.004453867535176719,
+      "meteor": 0.20733714658382899,
+      "avg_time_ms": 1042.0322196999996
+    }
+  ],
+  "lstm_variations": [
+    {
+      "experiment": "lstm_pre_l2_h128_e256_m35",
+      "layers": 2,
+      "hidden": 128,
+      "bleu4": 0.01241225634349658,
+      "meteor": 0.22602384061959038,
+      "avg_time_ms": 1000.4956022399984
+    },
+    {
+      "experiment": "lstm_pre_l3_h256_e256_m35",
+      "layers": 3,
+      "hidden": 256,
+      "bleu4": 0.010627612262833758,
+      "meteor": 0.22426337057434043,
+      "avg_time_ms": 1011.1482180599979
+    },
+    {
+      "experiment": "lstm_pre_l1_h256_e256_m35",
+      "layers": 1,
+      "hidden": 256,
+      "bleu4": 0.0100552444405999,
+      "meteor": 0.24434182622974268,
+      "avg_time_ms": 1011.4942931000041
+    },
+    {
+      "experiment": "lstm_pre_l2_h256_e256_m35",
+      "layers": 2,
+      "hidden": 256,
+      "bleu4": 0.009746288706586127,
+      "meteor": 0.2316257548899778,
+      "avg_time_ms": 1205.7450216600046
+    },
+    {
+      "experiment": "lstm_pre_l1_h128_e256_m35",
+      "layers": 1,
+      "hidden": 128,
+      "bleu4": 0.007358984624270862,
+      "meteor": 0.22594118671238103,
+      "avg_time_ms": 1309.2206504999922
+    },
+    {
+      "experiment": "lstm_pre_l3_h128_e256_m35",
+      "layers": 3,
+      "hidden": 128,
+      "bleu4": 0.00014620818275954566,
+      "meteor": 0.18707154149301963,
+      "avg_time_ms": 613.3606021600008
+    }
+  ],
+  "keras_vs_scratch": [
+    {
+      "decoder": "RNN",
+      "keras_bleu4": 0.012555442348034605,
+      "scratch_bleu4": 1.179856992531393e-06,
+      "keras_meteor": 0.237045499662983,
+      "scratch_meteor": 0.17819847886579349,
+      "keras_avg_time_ms": 862.8139189800003,
+      "scratch_avg_time_ms": 3.3563433200015425
+    },
+    {
+      "decoder": "LSTM",
+      "keras_bleu4": 0.0100552444405999,
+      "scratch_bleu4": 1.4476689043554802e-06,
+      "keras_meteor": 0.24434182622974268,
+      "scratch_meteor": 0.16342923423379585,
+      "keras_avg_time_ms": 1010.5765353599963,
+      "scratch_avg_time_ms": 3.9873534400021526
+    }
+  ],
+  "rnn_vs_lstm": {
+    "n_common": 50,
+    "rnn_bleu4": 0.012555442348034606,
+    "lstm_bleu4": 0.010055244440599895,
+    "rnn_meteor": 0.237045499662983,
+    "lstm_meteor": 0.24434182622974274
+  },
+  "caption_length": {
+    "15": 0.012555442348034605,
+    "25": 0.012555442348034605,
+    "35": 0.012555442348034605
+  },
+  "beam": {
+    "rnn": {
+      "beam_1": {
+        "bleu4": 1.179856992531393e-06,
+        "meteor": 0.17819847886579349,
+        "samples": 50,
+        "mode": "scratch",
+        "decoder_type": "rnn",
+        "total_time_s": 0.17908528799989654,
+        "avg_time_ms": 3.5817057599979307,
+        "decoding": "greedy",
+        "beam_size": null,
+        "injection": "pre"
+      },
+      "beam_3": {
+        "bleu4": 1.068645713530419e-06,
+        "meteor": 0.1595899238871425,
+        "samples": 50,
+        "mode": "scratch",
+        "decoder_type": "rnn",
+        "total_time_s": 0.6373317170000519,
+        "avg_time_ms": 12.746634340001037,
+        "decoding": "beam",
+        "beam_size": 3,
+        "injection": "pre"
+      },
+      "beam_5": {
+        "bleu4": 5.7845629957553535e-05,
+        "meteor": 0.1404343576504485,
+        "samples": 50,
+        "mode": "scratch",
+        "decoder_type": "rnn",
+        "total_time_s": 1.0389984400003414,
+        "avg_time_ms": 20.779968800006827,
+        "decoding": "beam",
+        "beam_size": 5,
+        "injection": "pre"
+      }
+    },
+    "lstm": {
+      "beam_1": {
+        "bleu4": 1.4476689043554802e-06,
+        "meteor": 0.16342923423379585,
+        "samples": 50,
+        "mode": "scratch",
+        "decoder_type": "lstm",
+        "total_time_s": 0.20268886500025474,
+        "avg_time_ms": 4.053777300005095,
+        "decoding": "greedy",
+        "beam_size": null,
+        "injection": "pre"
+      },
+      "beam_3": {
+        "bleu4": 1.0757235762605026e-07,
+        "meteor": 0.138021904292433,
+        "samples": 50,
+        "mode": "scratch",
+        "decoder_type": "lstm",
+        "total_time_s": 0.6587697800000569,
+        "avg_time_ms": 13.175395600001139,
+        "decoding": "beam",
+        "beam_size": 3,
+        "injection": "pre"
+      },
+      "beam_5": {
+        "bleu4": 8.064162898867248e-07,
+        "meteor": 0.1458685376606018,
+        "samples": 50,
+        "mode": "scratch",
+        "decoder_type": "lstm",
+        "total_time_s": 1.1161122359999354,
+        "avg_time_ms": 22.322244719998707,
+        "decoding": "beam",
+        "beam_size": 5,
+        "injection": "pre"
+      }
+    }
+  },
+  "batch": {
+    "rnn": {
+      "n": 50,
+      "single_total_s": 0.14934181999979046,
+      "batch_total_s": 0.16561080900009983,
+      "single_avg_ms": 2.986836399995809,
+      "batch_avg_ms": 3.3122161800019967,
+      "match_rate": 1.0
+    },
+    "lstm": {
+      "n": 50,
+      "single_total_s": 0.16418906399985644,
+      "batch_total_s": 0.06811005800000203,
+      "single_avg_ms": 3.283781279997129,
+      "batch_avg_ms": 1.3622011600000405,
+      "match_rate": 1.0
+    }
+  },
+  "init_inject": {
+    "rnn": {
+      "pre": {
+        "bleu4": 0.012555442348034605,
+        "meteor": 0.237045499662983,
+        "samples": 50,
+        "mode": "keras",
+        "decoder_type": "rnn",
+        "total_time_s": 43.67015869400029,
+        "avg_time_ms": 873.4031738800057,
+        "decoding": "greedy",
+        "beam_size": null,
+        "injection": "pre"
+      },
+      "init": {
+        "bleu4": 0.06203671195726747,
+        "meteor": 0.29959238268232197,
+        "samples": 50,
+        "mode": "keras",
+        "decoder_type": "rnn",
+        "total_time_s": 57.37717418600005,
+        "avg_time_ms": 1147.543483720001,
+        "decoding": "greedy",
+        "beam_size": null,
+        "injection": "init"
+      }
+    },
+    "lstm": {
+      "pre": {
+        "bleu4": 0.0100552444405999,
+        "meteor": 0.24434182622974268,
+        "samples": 50,
+        "mode": "keras",
+        "decoder_type": "lstm",
+        "total_time_s": 52.00571227699993,
+        "avg_time_ms": 1040.1142455399986,
+        "decoding": "greedy",
+        "beam_size": null,
+        "injection": "pre"
+      },
+      "init": {
+        "bleu4": 0.03212162268381309,
+        "meteor": 0.28149805604168887,
+        "samples": 50,
+        "mode": "keras",
+        "decoder_type": "lstm",
+        "total_time_s": 52.90376398499984,
+        "avg_time_ms": 1058.0752796999968,
+        "decoding": "greedy",
+        "beam_size": null,
+        "injection": "init"
+      }
+    }
+  },
+  "qualitative_examples": [
+    {
+      "image": "3721799573_2f470950e0.jpg",
+      "rnn_bleu4": 1.0000000000000007e-09,
+      "lstm_bleu4": 1.0000000000000007e-09,
+      "rnn_caption": "a man in a black shirt is a a",
+      "lstm_caption": "a man in a red shirt is a a in in of of",
+      "ground_truth": [
+        "There are two ladies embracing and posing shown here .",
+        "Two girlfriends smiling ."
+      ]
+    },
+    {
+      "image": "3720366614_dfa8fe1088.jpg",
+      "rnn_bleu4": 1.3196406677113771e-07,
+      "lstm_bleu4": 1.3196406677113771e-07,
+      "rnn_caption": "a dog dog a a in in of",
+      "lstm_caption": "a dog dog a a in in water",
+      "ground_truth": [
+        "A small black dog is standing on two feet and wearing a pink tutu .",
+        "Small dog in costume stands on hind legs to reach dangling flowers ."
+      ]
+    },
+    {
+      "image": "3721812313_6000566803.jpg",
+      "rnn_bleu4": 1.5233113288035675e-07,
+      "lstm_bleu4": 1.4519590582309556e-07,
+      "rnn_caption": "a man of a and and woman woman a a in in of",
+      "lstm_caption": "a group of people are in in of of",
+      "ground_truth": [
+        "A closeup shot of three guys and a girl posing for the camera .",
+        "A woman and three men are posing for a photo"
+      ]
+    },
+    {
+      "image": "3726629271_7639634703.jpg",
+      "rnn_bleu4": 1.3196406677113771e-07,
+      "lstm_bleu4": 1.4609701823905344e-05,
+      "rnn_caption": "a dog dog a a in in of",
+      "lstm_caption": "two dogs dogs in in snow field",
+      "ground_truth": [
+        "Four dogs are playing and jumping in the air outside .",
+        "Four dogs jumping in the air in a field ."
+      ]
+    },
+    {
+      "image": "3726590391_bc6e729bb6.jpg",
+      "rnn_bleu4": 1.623339577375496e-05,
+      "lstm_bleu4": 1.5282332389018925e-07,
+      "rnn_caption": "a man in a black shirt is a a",
+      "lstm_caption": "a young in is is a a in in of of",
+      "ground_truth": [
+        "An elderly woman is crying while sitting in a window .",
+        "An elderly woman is sitting by a window reading ."
+      ]
+    },
+    {
+      "image": "3724581378_41049da264.jpg",
+      "rnn_bleu4": 1.4427171049309453e-05,
+      "lstm_bleu4": 1.3809146166549123e-05,
+      "rnn_caption": "a man is a a on in bike",
+      "lstm_caption": "a man is a a on in surfboard snow a a",
+      "ground_truth": [
+        "A man surfing .",
+        "A person surfs in the ocean ."
+      ]
+    },
+    {
+      "image": "3718964174_cb2dc1615e.jpg",
+      "rnn_bleu4": 1.545813127110937e-05,
+      "lstm_bleu4": 1.591178311098151e-05,
+      "rnn_caption": "a man in a black shirt is a a",
+      "lstm_caption": "a man in a red shirt is a a in in of of",
+      "ground_truth": [
+        "A woman in a blue sweater with a blue scarf around her head .",
+        "A woman in a head covering is looking away from the camera ."
+      ]
+    },
+    {
+      "image": "3725353555_75c346d7ec.jpg",
+      "rnn_bleu4": 1.7567205239427937e-05,
+      "lstm_bleu4": 1.7286039232097067e-05,
+      "rnn_caption": "a dog dog a a in in",
+      "lstm_caption": "a dog dog a a in in water",
+      "ground_truth": [
+        "A brown and black dog is jumping through a sprinkler .",
+        "A dog playing with a sprinkler"
+      ]
+    },
+    {
+      "image": "3720210639_18bb34e475.jpg",
+      "rnn_bleu4": 0.0019729406277958833,
+      "lstm_bleu4": 1.6421934873372767e-07,
+      "rnn_caption": "a man in a red jacket is a a on in bike",
+      "lstm_caption": "a man is a a on on bike bike a the",
+      "ground_truth": [
+        "A person in a red hat and shoes doing stunts on a red bike while a person in yellow watches .",
+        "A person is doing a trick in the air on a bike while his friend takes a picture ."
+      ]
+    },
+    {
+      "image": "3723690961_729dd5d617.jpg",
+      "rnn_bleu4": 0.34329452398451965,
+      "lstm_bleu4": 0.2224246939793677,
+      "rnn_caption": "a man in a black shirt is a a",
+      "lstm_caption": "a man in a red shirt is a a in in of of",
+      "ground_truth": [
+        "A man in a pink shirt and white vest plays a guitar .",
+        "A man in a pink shirt playing guitar ."
+      ]
+    }
+  ]
+}

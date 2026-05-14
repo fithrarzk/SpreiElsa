@@ -1,0 +1,4010 @@
+{
+  "rnn_pre_l1_h256_e256_m35": {
+    "summary": {
+      "bleu4": 0.012555442348034605,
+      "meteor": 0.237045499662983,
+      "samples": 50,
+      "mode": "keras",
+      "decoder_type": "rnn",
+      "total_time_s": 45.331052235000016,
+      "avg_time_ms": 906.6210447000003,
+      "decoding": "greedy",
+      "beam_size": null,
+      "injection": "pre"
+    },
+    "results": [
+      {
+        "image": "3725177385_62d5e13634.jpg",
+        "candidate": "a man is a a on on bike bike",
+        "references": [
+          "A bunch of vintage cars are parked in a lot .",
+          "An antique car that is yellow is shown lined up with other cars .",
+          "People admire classic cars .",
+          "Several old fashioned cars are parked together .",
+          "Some old people admiring classic cars park in front of them ."
+        ],
+        "bleu4": 1.2091070234069986e-07,
+        "meteor": 0.10101010101010101
+      },
+      {
+        "image": "3724738804_f00748a137.jpg",
+        "candidate": "a little girl in a pink shirt is a a",
+        "references": [
+          "A woman and three children are jumping into a swimming pool .",
+          "Children jumping in a pool surrounded by pool chairs and huts .",
+          "Children jump off the edge into a pool .",
+          "Three girls jump into a pool .",
+          "Three girls wearing goggles are jumping into a swimming pool together ."
+        ],
+        "bleu4": 1.2226164593253855e-05,
+        "meteor": 0.09174311926605504
+      },
+      {
+        "image": "3724487641_d2096f10e5.jpg",
+        "candidate": "a man in a red shirt is a a",
+        "references": [
+          "A bunch of little boys in bathing trunks running .",
+          "Two wet boys in swim trunks run .",
+          "two young boys competing in a race .",
+          "Two young boys in bathing suits walk",
+          "Young boys running along the pavement ."
+        ],
+        "bleu4": 1.2909944487358064e-05,
+        "meteor": 0.1111111111111111
+      },
+      {
+        "image": "3721812313_6000566803.jpg",
+        "candidate": "a man of a and and woman woman a a in in of",
+        "references": [
+          "A closeup shot of three guys and a girl posing for the camera .",
+          "A woman and three men are posing for a photo",
+          "A woman wearing glasses poses for the camera with three men .",
+          "A woman with her arms on the cheeks of two men on either side of her pose while another man peeks over her head .",
+          "Three men and a woman posing for picture"
+        ],
+        "bleu4": 1.5233113288035675e-07,
+        "meteor": 0.22058823529411767
+      },
+      {
+        "image": "3718892835_a3e74a3417.jpg",
+        "candidate": "a man in a red shirt is a a on",
+        "references": [
+          "A boy falls off of his scooter during an obstacle course .",
+          "A boy wearing a helmet flips up his scooter as he skates between orange cones .",
+          "A person wearing a helmet begins to fall from a silver scooter .",
+          "A woman is about to fall off a scooter .",
+          "\"This person is falling off a scooter , in a parking lot .\""
+        ],
+        "bleu4": 1.5352597838656372e-05,
+        "meteor": 0.23445463812436287
+      },
+      {
+        "image": "3728695560_00ec1ca492.jpg",
+        "candidate": "a man in a black shirt is a a",
+        "references": [
+          "A little girl looks at a birthday cake while a man holds a baby .",
+          "\"A man , baby , and child sit in front of a birthday cake .\"",
+          "A man holding a baby and an older child admire a birthday cake with candles .",
+          "A man holding a baby with a girl and a birthday cake .",
+          "Candles are lit on a cake while a man holds a baby ."
+        ],
+        "bleu4": 1.2174183994831628e-05,
+        "meteor": 0.31794871794871793
+      },
+      {
+        "image": "3725202807_12fbfdd207.jpg",
+        "candidate": "a man in a red jacket is a a",
+        "references": [
+          "A couple in a parking lot .",
+          "A couple walks past a car in a parking lot .",
+          "A man and a woman are walking past a car with a fancy symbol on the front .",
+          "A man and a woman walk past a red car with a silver hood ornament",
+          "A man and woman walking next to a red car with an unusual hood ornament ."
+        ],
+        "bleu4": 2.079537503833559e-05,
+        "meteor": 0.4056437389770723
+      },
+      {
+        "image": "3721082512_8277087f3f.jpg",
+        "candidate": "a man in a red jacket is a a on in bike",
+        "references": [
+          "a man riding a bike through the forest",
+          "A mountain biker rides through a shady trail .",
+          "A mountain biker travels along a dirt trail inside a heavily wooded area .",
+          "A person biking near trees .",
+          "Bicyclist in racing gear rides through forest area ."
+        ],
+        "bleu4": 1.3433931298343464e-05,
+        "meteor": 0.4464285714285714
+      },
+      {
+        "image": "3726019124_f302b3d48a.jpg",
+        "candidate": "a man is a a of of is is a a",
+        "references": [
+          "A bike in a field and two kites",
+          "A kid is riding a bike in an open field .",
+          "A landscape picture of a motorcyclist and a person flying kites .",
+          "Kites attached to wheeled devices in a field",
+          "two people fly kites in a field"
+        ],
+        "bleu4": 1.4601394329159486e-07,
+        "meteor": 0.14851485148514854
+      },
+      {
+        "image": "3723903586_e98d3d8ec7.jpg",
+        "candidate": "a dogs of a sled in a snow",
+        "references": [
+          "greyhounds racing on a track",
+          "A greyhound race with the lead dog wearing yellow and black stripes and the number 8",
+          "Dogs racing at a track .",
+          "\"Greyhound dogs race on the track , with # 8 leading the way .\"",
+          "Some greyhound dogs are racing on a dirt track ."
+        ],
+        "bleu4": 1.1096811069015168e-07,
+        "meteor": 0.09433962264150944
+      },
+      {
+        "image": "3726076549_0efb38854b.jpg",
+        "candidate": "a man is a a on in bike",
+        "references": [
+          "\"A boy in jeans , black t-shirt , and blue cap on a bike , leaps over steps .\"",
+          "An Asian man in a black shirt and jeans rides his black and red bicycle down a railing .",
+          "A teenager performs a railgrind on his bicycle .",
+          "Man sliding down stair handrails on a bike .",
+          "This man has balanced his bicycle on a handrail ."
+        ],
+        "bleu4": 1.6548754598234378e-07,
+        "meteor": 0.234375
+      },
+      {
+        "image": "3724623861_2bb6c23641.jpg",
+        "candidate": "a man in a black shirt is a a",
+        "references": [
+          "A girl in a colorful dress and sunglasses is playing a violin on the street .",
+          "a red haired woman playing the violin",
+          "A woman in a dress plays violin outside .",
+          "A woman plays a violin outdoors .",
+          "A woman wearing a plaid dress plays an instrument while standing near a tree ."
+        ],
+        "bleu4": 1.623339577375496e-05,
+        "meteor": 0.31550068587105623
+      },
+      {
+        "image": "3721881082_afe9fc734e.jpg",
+        "candidate": "a man in a red jacket is a a",
+        "references": [
+          "A woman and a girl sitting on a front lawn",
+          "\"A woman and girl wearing traditional clothes , sits on the front lawn , reading from a book .\"",
+          "A woman wearing colonial clothing is sitting on the grass reading to a young girl .",
+          "\"The girl and a lady are sitting on a blanket , reading a book .\"",
+          "Two women sitting on a blanket on the lawn while sharing a book ."
+        ],
+        "bleu4": 1.2992700517098238e-07,
+        "meteor": 0.15151515151515152
+      },
+      {
+        "image": "3718305988_fe2c91fd44.jpg",
+        "candidate": "a man is a a on in sled",
+        "references": [
+          "A jogger runs up brick stairs for streght training .",
+          "A man is skating down a set of stairs .",
+          "A skateboarder jumps on brick stairs .",
+          "A young man skateboards around the empty outdoor sports arena .",
+          "The man is skateboarding on a large brick staircase ."
+        ],
+        "bleu4": 0.0020612390921238427,
+        "meteor": 0.42134831460674155
+      },
+      {
+        "image": "3726730085_2468ee9220.jpg",
+        "candidate": "a boy boy a a and in shirt shirt a a",
+        "references": [
+          "A baby is lifted into the air by a man wearing no shirt .",
+          "A child being held over the head of an adult .",
+          "A man and a young child .",
+          "A man with no shirt holding a baby aloft .",
+          "Man raising young boy into the clear blue sky ."
+        ],
+        "bleu4": 1.4601394329159486e-07,
+        "meteor": 0.15384615384615385
+      },
+      {
+        "image": "3726700898_c50494b8bd.jpg",
+        "candidate": "a man in a red shirt is a a",
+        "references": [
+          "A man balances a knife on his arm as another man watches .",
+          "A man has a knife on his arm and another man is watching .",
+          "A man is tossing a knife in the air while another man stands nearby .",
+          "A young man shows off a knife trick to another .",
+          "The man in the bright colored shirt is balancing a knife on his arm ."
+        ],
+        "bleu4": 2.0009215413364038e-05,
+        "meteor": 0.2504960317460318
+      },
+      {
+        "image": "3721799573_2f470950e0.jpg",
+        "candidate": "a man in a black shirt is a a",
+        "references": [
+          "There are two ladies embracing and posing shown here .",
+          "Two girlfriends smiling .",
+          "Two women have their arms around each other and are smiling .",
+          "Two women smile for the camera .",
+          "Two women with their arms around each other smile ."
+        ],
+        "bleu4": 1.0000000000000007e-09,
+        "meteor": 0.0
+      },
+      {
+        "image": "3724759125_2dc0e1f4a3.jpg",
+        "candidate": "a man in a red shirt is a a",
+        "references": [
+          "A boy on a play horse at the park points to the slide .",
+          "a boy rides a toy horse .",
+          "A little boy is riding a mechanical horse at the playground .",
+          "A small boy rides a on a playground toy while pointing to a slide .",
+          "A young fair skinned boy rides a play horse at a playground ."
+        ],
+        "bleu4": 1.22933993213519e-07,
+        "meteor": 0.15873015873015872
+      },
+      {
+        "image": "3726170067_094cc1b7e5.jpg",
+        "candidate": "a man in a black shirt is a a",
+        "references": [
+          "A balding man with glasses stands in front of a colorful display .",
+          "A bald man wearing glasses .",
+          "A man in a brown coat in front of a sign with a tree .",
+          "A man wearing glasses and a blazer stands in front of a billboard sign .",
+          "An older man is standing outside in front of a truck ."
+        ],
+        "bleu4": 0.2748887655709261,
+        "meteor": 0.4166666666666666
+      },
+      {
+        "image": "3717845800_ab45e255b8.jpg",
+        "candidate": "a group player men playing a",
+        "references": [
+          "Four rugby players on the ground with two standing behind them .",
+          "Members of two soccer teams struggle on the field to get the ball .",
+          "Soccer players on the ground fighting for the ball .",
+          "The rugby players in red are wrestling the player in yellow to the ground .",
+          "Three members of the red team are in the grass with a member of the yellow team ."
+        ],
+        "bleu4": 8.19544321298924e-08,
+        "meteor": 0.03787878787878787
+      },
+      {
+        "image": "3728164558_52729baefa.jpg",
+        "candidate": "a man in a red jacket is a a",
+        "references": [
+          "two people leaning against a railing outside the enterance of a building",
+          "Two people standing on a porch .",
+          "Two woman stand near a door .",
+          "Two women standing outside community library",
+          "Two women stand outside a library ."
+        ],
+        "bleu4": 1.2209471671615692e-07,
+        "meteor": 0.08547008547008547
+      },
+      {
+        "image": "3724150944_fc62e8d5e0.jpg",
+        "candidate": "a little in in is uniform a the",
+        "references": [
+          "A group of young boys on opposing teams are playing soccer .",
+          "Children playing soccer near the goal net .",
+          "Four boys playing soccer .",
+          "Four children run along a grassy field playing soccer .",
+          "The young boy in the red shirt is kicking a soccer ball ."
+        ],
+        "bleu4": 1.4953487812212206e-07,
+        "meteor": 0.0704225352112676
+      },
+      {
+        "image": "3726130458_07df79e969.jpg",
+        "candidate": "a men player a a and and dog dog in a snow",
+        "references": [
+          "A baseball player dodges a ball with his bat high in the air .",
+          "A baseball player in a white uniform is walking to base while a crowd of people watch from the bleachers .",
+          "A baseball player near home plate .",
+          "A baseball player raises the bat above his head .",
+          "A baseball player runs to catch the ball ."
+        ],
+        "bleu4": 1.2835352829970901e-05,
+        "meteor": 0.15503875968992248
+      },
+      {
+        "image": "3730011219_588cdc7972.jpg",
+        "candidate": "a little boy in a pink shirt is a a",
+        "references": [
+          "A man and a young child walk along the beach shore .",
+          "A man and toddler are walking along the beach in front of the ocean .",
+          "\"A man at the beach holding a pail , standing next to a child .\"",
+          "A man with a bucket and a girl in a hat on the beach .",
+          "\"The man is wearing a black shirt , holding a pail , and walking with a child next to the water .\""
+        ],
+        "bleu4": 1.5110694817407625e-05,
+        "meteor": 0.18790849673202614
+      },
+      {
+        "image": "3727752439_907795603b.jpg",
+        "candidate": "a man in a black shirt is a a",
+        "references": [
+          "a large woman puts her sunglasses on .",
+          "A woman in a black dress holding sunglasses .",
+          "a woman wearing a black and white outfit while holding her sunglasses .",
+          "The lady is holding her glasses .",
+          "The woman with blond hair holds her sunglasses ."
+        ],
+        "bleu4": 0.002110534063187263,
+        "meteor": 0.46296296296296297
+      },
+      {
+        "image": "3726025663_e7d35d23f6.jpg",
+        "candidate": "a man of a motorcycle riding riding bike bike the the",
+        "references": [
+          "A group of people ride in a race",
+          "A large group of bicycles riding their bikes .",
+          "Bicycles in a race .",
+          "Bikers participate in a race .",
+          "There are many men racing on their bicycles ."
+        ],
+        "bleu4": 1.3809146166549141e-07,
+        "meteor": 0.1807228915662651
+      },
+      {
+        "image": "3725814794_30db172f67.jpg",
+        "candidate": "a man player a a and and dog dog in a snow",
+        "references": [
+          "A man performing martial arts kicks his opponent .",
+          "\"During a martial arts match , a man attempts to kick the other in the face .\"",
+          "Two men compete in a karate tournament .",
+          "Two people dressed in karate outfits are fighting .",
+          "Two people in white with black belts are having a karate match ."
+        ],
+        "bleu4": 1.5690219308813562e-05,
+        "meteor": 0.2232142857142857
+      },
+      {
+        "image": "3724581378_41049da264.jpg",
+        "candidate": "a man is a a on in bike",
+        "references": [
+          "A man surfing .",
+          "A person surfs in the ocean .",
+          "A surfer catching a large wave in the ocean .",
+          "Surfer riding a wave",
+          "Surfer wearing a wetsuit at the crest of a wave ."
+        ],
+        "bleu4": 1.4427171049309453e-05,
+        "meteor": 0.5357142857142857
+      },
+      {
+        "image": "3724718895_bd03f4a4dc.jpg",
+        "candidate": "a black dog white a black dog in a snow",
+        "references": [
+          "a dog drinks the sprinkler water .",
+          "A small brown and white dog is playing with the sprinkler in the grass .",
+          "A small terrier plays in a sprinkler .",
+          "The little black and white dog is running in the sprinkler .",
+          "The white dog is being squirted in the face with a jet of water ."
+        ],
+        "bleu4": 1.4539441923491842e-05,
+        "meteor": 0.29296875
+      },
+      {
+        "image": "3728015645_b43a60258b.jpg",
+        "candidate": "a boy in a wetsuit shirt a a and in in",
+        "references": [
+          "A man is posed standing on one hand on a skateboard ramp .",
+          "A man on inline skates in midair",
+          "a skateboarder wearing a white cap is doing a stunt in a city skate park .",
+          "A young man is skateboarding on a ramp and is standing on one arm .",
+          "Man standing on one arm with feet in the air on playground equipment with a body of water in the background ."
+        ],
+        "bleu4": 1.4502571730116988e-05,
+        "meteor": 0.1750380517503805
+      },
+      {
+        "image": "3729405438_6e79077ab2.jpg",
+        "candidate": "a man in a red jacket is a a on in bike",
+        "references": [
+          "A bicycler balances his bike on a rail .",
+          "A biker is riding down the stairs on his bike at night .",
+          "A boy rides his red bicycle down the handrail of a staircase in a city .",
+          "A guy grinding a rail in a park on his bike",
+          "A trick bicyclist grinds down a handrail ."
+        ],
+        "bleu4": 1.5690219308813562e-05,
+        "meteor": 0.33513513513513515
+      },
+      {
+        "image": "3726590391_bc6e729bb6.jpg",
+        "candidate": "a man in a black shirt is a a",
+        "references": [
+          "An elderly woman is crying while sitting in a window .",
+          "An elderly woman is sitting by a window reading .",
+          "A woman reads a book in front of a window .",
+          "A woman with her head down and her hand to her mouth sitting beside someone reading .",
+          "There is an old woman in front of a window ."
+        ],
+        "bleu4": 1.623339577375496e-05,
+        "meteor": 0.15151515151515152
+      },
+      {
+        "image": "3726120436_740bda8416.jpg",
+        "candidate": "a man in a red shirt is a a",
+        "references": [
+          "A man and woman sitting in chairs next to a turquoise truck .",
+          "An older couple chats near a bright colored car .",
+          "\"There is a man and a woman sitting on folding chairs , outside next to a truck .\"",
+          "Two old people sitting in chairs talking in front of a hill .",
+          "Woman and man sit next to their green truck ."
+        ],
+        "bleu4": 2.0205155046766242e-05,
+        "meteor": 0.26976495726495725
+      },
+      {
+        "image": "3728256505_7f8db8270d.jpg",
+        "candidate": "a man in a red shirt is a a on",
+        "references": [
+          "A man jumping onto a platform .",
+          "A man on the edge of a wall about to fall off .",
+          "A man on inline skates does a trick on a cracked concrete ramp .",
+          "A man with Rollerblades grinding a curb .",
+          "The man does a trick on his skateboard on a concrete ramp ."
+        ],
+        "bleu4": 1.256964399014653e-05,
+        "meteor": 0.3993055555555556
+      },
+      {
+        "image": "3722507770_0d6cb7420e.jpg",
+        "candidate": "a man in a red jacket is a a on in bike",
+        "references": [
+          "A boy and his bike leaps into the air .",
+          "A boy does tricks on a bicycle while in a park .",
+          "A boy doing a trick on a bike",
+          "A boy is doing tricks on his bike as he flies in the air .",
+          "This young biker has his arms out as he tries this trick ."
+        ],
+        "bleu4": 1.5175081325512532e-05,
+        "meteor": 0.3757440476190476
+      },
+      {
+        "image": "3730011701_5352e02286.jpg",
+        "candidate": "a little girl in a pink shirt is a a",
+        "references": [
+          "A little girl buried in the sand .",
+          "A little girls waist high in sand",
+          "A little girl with a hat sits between a woman 's feet in the sand in front of a pair of colorful tents .",
+          "The little girl in the yellow hat is buried up to her waist in the sand on the beach .",
+          "The small baby in a yellow has the lower half of her body buried in sand ."
+        ],
+        "bleu4": 0.0030705195677312707,
+        "meteor": 0.5136986301369862
+      },
+      {
+        "image": "3729525173_7f984ed776.jpg",
+        "candidate": "a man in a red shirt is a a",
+        "references": [
+          "A lady sitting on a front porch reading a book .",
+          "A person sits at a doorstep and reads a book .",
+          "A woman is reading literature and sitting on the front stoop of a building .",
+          "A woman sits and reads in the stoop of a wooden door .",
+          "A woman sits and reads on the front stoop of her building ."
+        ],
+        "bleu4": 1.3738108161269033e-07,
+        "meteor": 0.15151515151515152
+      },
+      {
+        "image": "3718076407_0b4588d7bc.jpg",
+        "candidate": "a dog dog a a in in of",
+        "references": [
+          "A brown and white dog is playing with a toy in a field of green grass and clover .",
+          "A brown and white dog retrieving a white plushie toy in a field of clover .",
+          "A distorted photo of a playing dog in a flower field",
+          "A dog in grass carrying a toy in its mouth .",
+          "The little brown dog is running through a clover field with a white object in its mouth ."
+        ],
+        "bleu4": 1.4643803168582162e-05,
+        "meteor": 0.32206632653061223
+      },
+      {
+        "image": "3725353555_75c346d7ec.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "A brown and black dog is jumping through a sprinkler .",
+          "A dog playing with a sprinkler",
+          "A German Shepherd runs through a sprinkler .",
+          "A tan and black dog jumps through a water sprinkler in the yard .",
+          "The German shepherd dog is jumping up as it is being squirted with a jet of water ."
+        ],
+        "bleu4": 1.7567205239427937e-05,
+        "meteor": 0.4189435336976321
+      },
+      {
+        "image": "3726629271_7639634703.jpg",
+        "candidate": "a dog dog a a in in of",
+        "references": [
+          "Four dogs are playing and jumping in the air outside .",
+          "Four dogs jumping in the air in a field .",
+          "\"Four dogs look at an object in the sky , one jumping to reach it .\"",
+          "\"Four dogs watch an unseen object , two of them leaping in the air .\"",
+          "Two dogs on hind legs and two seated dogs are looking at something in the air ."
+        ],
+        "bleu4": 1.3196406677113771e-07,
+        "meteor": 0.056179775280898875
+      },
+      {
+        "image": "3718964174_cb2dc1615e.jpg",
+        "candidate": "a man in a black shirt is a a",
+        "references": [
+          "A woman in a blue sweater with a blue scarf around her head .",
+          "A woman in a head covering is looking away from the camera .",
+          "A woman is wearing a blue headscarf and a blue sweater .",
+          "A woman wearing a teal cardigan with a teal scarf and sunglasses on her head .",
+          "There is a woman with a green scarf around her head ."
+        ],
+        "bleu4": 1.545813127110937e-05,
+        "meteor": 0.26976495726495725
+      },
+      {
+        "image": "3726168984_1fa2c8965b.jpg",
+        "candidate": "a dogs dog a a",
+        "references": [
+          "A black dog is colliding with a golden dog that has something in its mouth .",
+          "A black dog trying to mate with a brown dog",
+          "A brown dog and a yellow dog play fight over a plastic bottle .",
+          "A brown dog is climbing over a golden dog that is carrying bottle in its mouth .",
+          "Two dogs play with a bottle ."
+        ],
+        "bleu4": 1.4559320405642375e-07,
+        "meteor": 0.1639344262295082
+      },
+      {
+        "image": "3719461451_07de35af3a.jpg",
+        "candidate": "a dog is a through in water water",
+        "references": [
+          "A pelican flies over the water .",
+          "A very large bird flying over water .",
+          "A white Pelican is flying over the ocean .",
+          "The white pelican is flying over the ocean .",
+          "white gull flying over ocean"
+        ],
+        "bleu4": 1.3915788418568708e-07,
+        "meteor": 0.16129032258064513
+      },
+      {
+        "image": "3720366614_dfa8fe1088.jpg",
+        "candidate": "a dog dog a a in in of",
+        "references": [
+          "A small black dog is standing on two feet and wearing a pink tutu .",
+          "Small dog in costume stands on hind legs to reach dangling flowers .",
+          "The dog is jumping up beside a red wall .",
+          "The small brown and black down is wearing a pink tutu .",
+          "The small dog wearing a tutu stands on its hind legs ."
+        ],
+        "bleu4": 1.3196406677113771e-07,
+        "meteor": 0.16163793103448273
+      },
+      {
+        "image": "3722572342_6904d11d52.jpg",
+        "candidate": "a man is a a on in bike",
+        "references": [
+          "a red covered boat racing across the water",
+          "A red high speed racing boat skips across the water .",
+          "A red speed boat crosses the water .",
+          "A watercraft speeds through the water .",
+          "Red boat marked GRAHAM races across water ."
+        ],
+        "bleu4": 1.0573712634405632e-07,
+        "meteor": 0.08064516129032256
+      },
+      {
+        "image": "3723690961_729dd5d617.jpg",
+        "candidate": "a man in a black shirt is a a",
+        "references": [
+          "A man in a pink shirt and white vest plays a guitar .",
+          "A man in a pink shirt playing guitar .",
+          "A man in a white suit and a pink shirt plays guitar .",
+          "A man wearing pants plays a guitar while onstage .",
+          "The man in the white and pink outfit is holding a guitar ."
+        ],
+        "bleu4": 0.34329452398451965,
+        "meteor": 0.5975308641975308
+      },
+      {
+        "image": "3724113279_99b6e5bf41.jpg",
+        "candidate": "a man is a a on in bike",
+        "references": [
+          "\"a bmx rider , wall rides .\"",
+          "A man does a trick with his bicycle off the side of a wall .",
+          "A man jumps with his bike near a brick wall .",
+          "Man is performing a trick with a bicycle off a brick wall .",
+          "The man rides his bicycle up the brick wall ."
+        ],
+        "bleu4": 1.89872248984167e-05,
+        "meteor": 0.26077097505668934
+      },
+      {
+        "image": "3718007650_e5930b4509.jpg",
+        "candidate": "a group of people are in in of",
+        "references": [
+          "A girl with a black dress and big white bow stands with her back to the camera .",
+          "many people gather outside .",
+          "People stand outside watching something .",
+          "People with costumes are gathered in a wooded area looking the same direction .",
+          "The back of a woman in costume ; little girl looks at her"
+        ],
+        "bleu4": 1.5811388300841893e-07,
+        "meteor": 0.11363636363636363
+      },
+      {
+        "image": "3720210639_18bb34e475.jpg",
+        "candidate": "a man in a red jacket is a a on in bike",
+        "references": [
+          "A person in a red hat and shoes doing stunts on a red bike while a person in yellow watches .",
+          "A person is doing a trick in the air on a bike while his friend takes a picture .",
+          "A red bike jumps toward a person in yellow .",
+          "Boy in midair on bicycle",
+          "Person doing bicycle jump"
+        ],
+        "bleu4": 0.0019729406277958833,
+        "meteor": 0.2981505102040817
+      },
+      {
+        "image": "3727740053_3baa94ffcb.jpg",
+        "candidate": "a man in a red shirt is a a",
+        "references": [
+          "One man kicks another in the shoulder at a martial arts event .",
+          "Two martial artists compete in a match .",
+          "Two men are participating in a karate match .",
+          "Two men in an oriental fighting contest .",
+          "Two men in karate uniforms kicking each other ."
+        ],
+        "bleu4": 1.4287202148493991e-05,
+        "meteor": 0.06944444444444445
+      }
+    ],
+    "num_layers": 1,
+    "hidden_units": 256
+  },
+  "rnn_pre_l2_h256_e256_m35": {
+    "summary": {
+      "bleu4": 0.007374863228417917,
+      "meteor": 0.2308880314292907,
+      "samples": 50,
+      "mode": "keras",
+      "decoder_type": "rnn",
+      "total_time_s": 52.801925598000025,
+      "avg_time_ms": 1056.0385119600005,
+      "decoding": "greedy",
+      "beam_size": null,
+      "injection": "pre"
+    },
+    "results": [
+      {
+        "image": "3725177385_62d5e13634.jpg",
+        "candidate": "a man is a a on in park",
+        "references": [
+          "A bunch of vintage cars are parked in a lot .",
+          "An antique car that is yellow is shown lined up with other cars .",
+          "People admire classic cars .",
+          "Several old fashioned cars are parked together .",
+          "Some old people admiring classic cars park in front of them ."
+        ],
+        "bleu4": 1.5811388300841893e-07,
+        "meteor": 0.1020408163265306
+      },
+      {
+        "image": "3724738804_f00748a137.jpg",
+        "candidate": "a children boy in a shorts shirt a a on in water",
+        "references": [
+          "A woman and three children are jumping into a swimming pool .",
+          "Children jumping in a pool surrounded by pool chairs and huts .",
+          "Children jump off the edge into a pool .",
+          "Three girls jump into a pool .",
+          "Three girls wearing goggles are jumping into a swimming pool together ."
+        ],
+        "bleu4": 1.3193849171325932e-05,
+        "meteor": 0.13513513513513514
+      },
+      {
+        "image": "3724487641_d2096f10e5.jpg",
+        "candidate": "a children in in blue field is a through in",
+        "references": [
+          "A bunch of little boys in bathing trunks running .",
+          "Two wet boys in swim trunks run .",
+          "two young boys competing in a race .",
+          "Two young boys in bathing suits walk",
+          "Young boys running along the pavement ."
+        ],
+        "bleu4": 1.1892071150027209e-07,
+        "meteor": 0.10989010989010989
+      },
+      {
+        "image": "3721812313_6000566803.jpg",
+        "candidate": "a man of a man in a black jacket and a is and a woman in a black shirt",
+        "references": [
+          "A closeup shot of three guys and a girl posing for the camera .",
+          "A woman and three men are posing for a photo",
+          "A woman wearing glasses poses for the camera with three men .",
+          "A woman with her arms on the cheeks of two men on either side of her pose while another man peeks over her head .",
+          "Three men and a woman posing for picture"
+        ],
+        "bleu4": 0.0009212734024927713,
+        "meteor": 0.20604395604395606
+      },
+      {
+        "image": "3718892835_a3e74a3417.jpg",
+        "candidate": "a boy boy a a on shirt swing a a",
+        "references": [
+          "A boy falls off of his scooter during an obstacle course .",
+          "A boy wearing a helmet flips up his scooter as he skates between orange cones .",
+          "A person wearing a helmet begins to fall from a silver scooter .",
+          "A woman is about to fall off a scooter .",
+          "\"This person is falling off a scooter , in a parking lot .\""
+        ],
+        "bleu4": 1.4519590582309535e-05,
+        "meteor": 0.17624521072796936
+      },
+      {
+        "image": "3728695560_00ec1ca492.jpg",
+        "candidate": "a man in a red jacket is a a on in park",
+        "references": [
+          "A little girl looks at a birthday cake while a man holds a baby .",
+          "\"A man , baby , and child sit in front of a birthday cake .\"",
+          "A man holding a baby and an older child admire a birthday cake with candles .",
+          "A man holding a baby with a girl and a birthday cake .",
+          "Candles are lit on a cake while a man holds a baby ."
+        ],
+        "bleu4": 1.5175081325512532e-05,
+        "meteor": 0.31
+      },
+      {
+        "image": "3725202807_12fbfdd207.jpg",
+        "candidate": "a man in a red jacket is a a on with park",
+        "references": [
+          "A couple in a parking lot .",
+          "A couple walks past a car in a parking lot .",
+          "A man and a woman are walking past a car with a fancy symbol on the front .",
+          "A man and a woman walk past a red car with a silver hood ornament",
+          "A man and woman walking next to a red car with an unusual hood ornament ."
+        ],
+        "bleu4": 2.1266570406782686e-05,
+        "meteor": 0.3872053872053872
+      },
+      {
+        "image": "3721082512_8277087f3f.jpg",
+        "candidate": "a man in a blue helmet is a a on in dirt",
+        "references": [
+          "a man riding a bike through the forest",
+          "A mountain biker rides through a shady trail .",
+          "A mountain biker travels along a dirt trail inside a heavily wooded area .",
+          "A person biking near trees .",
+          "Bicyclist in racing gear rides through forest area ."
+        ],
+        "bleu4": 1.3433931298343464e-05,
+        "meteor": 0.30423280423280424
+      },
+      {
+        "image": "3726019124_f302b3d48a.jpg",
+        "candidate": "a man is a a on in snow",
+        "references": [
+          "A bike in a field and two kites",
+          "A kid is riding a bike in an open field .",
+          "A landscape picture of a motorcyclist and a person flying kites .",
+          "Kites attached to wheeled devices in a field",
+          "two people fly kites in a field"
+        ],
+        "bleu4": 1.5811388300841893e-07,
+        "meteor": 0.2040816326530612
+      },
+      {
+        "image": "3723903586_e98d3d8ec7.jpg",
+        "candidate": "a dogs of a snow in",
+        "references": [
+          "greyhounds racing on a track",
+          "A greyhound race with the lead dog wearing yellow and black stripes and the number 8",
+          "Dogs racing at a track .",
+          "\"Greyhound dogs race on the track , with # 8 leading the way .\"",
+          "Some greyhound dogs are racing on a dirt track ."
+        ],
+        "bleu4": 1.351200154807036e-07,
+        "meteor": 0.09803921568627451
+      },
+      {
+        "image": "3726076549_0efb38854b.jpg",
+        "candidate": "a man in a red jacket is a a on in dirt",
+        "references": [
+          "\"A boy in jeans , black t-shirt , and blue cap on a bike , leaps over steps .\"",
+          "An Asian man in a black shirt and jeans rides his black and red bicycle down a railing .",
+          "A teenager performs a railgrind on his bicycle .",
+          "Man sliding down stair handrails on a bike .",
+          "This man has balanced his bicycle on a handrail ."
+        ],
+        "bleu4": 0.0017364082025196836,
+        "meteor": 0.17857142857142858
+      },
+      {
+        "image": "3724623861_2bb6c23641.jpg",
+        "candidate": "a man in a black jacket is a a on with park",
+        "references": [
+          "A girl in a colorful dress and sunglasses is playing a violin on the street .",
+          "a red haired woman playing the violin",
+          "A woman in a dress plays violin outside .",
+          "A woman plays a violin outdoors .",
+          "A woman wearing a plaid dress plays an instrument while standing near a tree ."
+        ],
+        "bleu4": 1.2359813457554955e-05,
+        "meteor": 0.30423280423280424
+      },
+      {
+        "image": "3721881082_afe9fc734e.jpg",
+        "candidate": "a man of a man in a wheelchair jacket a a and",
+        "references": [
+          "A woman and a girl sitting on a front lawn",
+          "\"A woman and girl wearing traditional clothes , sits on the front lawn , reading from a book .\"",
+          "A woman wearing colonial clothing is sitting on the grass reading to a young girl .",
+          "\"The girl and a lady are sitting on a blanket , reading a book .\"",
+          "Two women sitting on a blanket on the lawn while sharing a book ."
+        ],
+        "bleu4": 1.2431641554764903e-07,
+        "meteor": 0.14705882352941177
+      },
+      {
+        "image": "3718305988_fe2c91fd44.jpg",
+        "candidate": "a man is a a on in park",
+        "references": [
+          "A jogger runs up brick stairs for streght training .",
+          "A man is skating down a set of stairs .",
+          "A skateboarder jumps on brick stairs .",
+          "A young man skateboards around the empty outdoor sports arena .",
+          "The man is skateboarding on a large brick staircase ."
+        ],
+        "bleu4": 0.0020612390921238427,
+        "meteor": 0.42134831460674155
+      },
+      {
+        "image": "3726730085_2468ee9220.jpg",
+        "candidate": "a boy boy a a on shirt swing a a",
+        "references": [
+          "A baby is lifted into the air by a man wearing no shirt .",
+          "A child being held over the head of an adult .",
+          "A man and a young child .",
+          "A man with no shirt holding a baby aloft .",
+          "Man raising young boy into the clear blue sky ."
+        ],
+        "bleu4": 1.4142135623730954e-07,
+        "meteor": 0.15625
+      },
+      {
+        "image": "3726700898_c50494b8bd.jpg",
+        "candidate": "a man in a black jacket is a a on with park",
+        "references": [
+          "A man balances a knife on his arm as another man watches .",
+          "A man has a knife on his arm and another man is watching .",
+          "A man is tossing a knife in the air while another man stands nearby .",
+          "A young man shows off a knife trick to another .",
+          "The man in the bright colored shirt is balancing a knife on his arm ."
+        ],
+        "bleu4": 1.7364082025196827e-05,
+        "meteor": 0.26302083333333326
+      },
+      {
+        "image": "3721799573_2f470950e0.jpg",
+        "candidate": "a man in a black shirt is a a and with woman hair a a and",
+        "references": [
+          "There are two ladies embracing and posing shown here .",
+          "Two girlfriends smiling .",
+          "Two women have their arms around each other and are smiling .",
+          "Two women smile for the camera .",
+          "Two women with their arms around each other smile ."
+        ],
+        "bleu4": 1.0573712634405632e-07,
+        "meteor": 0.05154639175257732
+      },
+      {
+        "image": "3724759125_2dc0e1f4a3.jpg",
+        "candidate": "a boy in a blue shirt is a a on with park",
+        "references": [
+          "A boy on a play horse at the park points to the slide .",
+          "a boy rides a toy horse .",
+          "A little boy is riding a mechanical horse at the playground .",
+          "A small boy rides a on a playground toy while pointing to a slide .",
+          "A young fair skinned boy rides a play horse at a playground ."
+        ],
+        "bleu4": 1.865892043799414e-05,
+        "meteor": 0.3872053872053872
+      },
+      {
+        "image": "3726170067_094cc1b7e5.jpg",
+        "candidate": "a man in a black jacket is a a and with woman hair a a and",
+        "references": [
+          "A balding man with glasses stands in front of a colorful display .",
+          "A bald man wearing glasses .",
+          "A man in a brown coat in front of a sign with a tree .",
+          "A man wearing glasses and a blazer stands in front of a billboard sign .",
+          "An older man is standing outside in front of a truck ."
+        ],
+        "bleu4": 0.1875114458383465,
+        "meteor": 0.39612676056338025
+      },
+      {
+        "image": "3717845800_ab45e255b8.jpg",
+        "candidate": "a men player a a and uniform uniform a the",
+        "references": [
+          "Four rugby players on the ground with two standing behind them .",
+          "Members of two soccer teams struggle on the field to get the ball .",
+          "Soccer players on the ground fighting for the ball .",
+          "The rugby players in red are wrestling the player in yellow to the ground .",
+          "Three members of the red team are in the grass with a member of the yellow team ."
+        ],
+        "bleu4": 1.3160740129524932e-07,
+        "meteor": 0.07352941176470588
+      },
+      {
+        "image": "3728164558_52729baefa.jpg",
+        "candidate": "a man in a black jacket is a a on with park",
+        "references": [
+          "two people leaning against a railing outside the enterance of a building",
+          "Two people standing on a porch .",
+          "Two woman stand near a door .",
+          "Two women standing outside community library",
+          "Two women stand outside a library ."
+        ],
+        "bleu4": 1.2574334296829372e-07,
+        "meteor": 0.08333333333333331
+      },
+      {
+        "image": "3724150944_fc62e8d5e0.jpg",
+        "candidate": "a little in in in uniform field a a",
+        "references": [
+          "A group of young boys on opposing teams are playing soccer .",
+          "Children playing soccer near the goal net .",
+          "Four boys playing soccer .",
+          "Four children run along a grassy field playing soccer .",
+          "The young boy in the red shirt is kicking a soccer ball ."
+        ],
+        "bleu4": 1.351200154807036e-07,
+        "meteor": 0.1111111111111111
+      },
+      {
+        "image": "3726130458_07df79e969.jpg",
+        "candidate": "a men player a a and uniform uniform a the",
+        "references": [
+          "A baseball player dodges a ball with his bat high in the air .",
+          "A baseball player in a white uniform is walking to base while a crowd of people watch from the bleachers .",
+          "A baseball player near home plate .",
+          "A baseball player raises the bat above his head .",
+          "A baseball player runs to catch the ball ."
+        ],
+        "bleu4": 1.5650845800732888e-07,
+        "meteor": 0.1829268292682927
+      },
+      {
+        "image": "3730011219_588cdc7972.jpg",
+        "candidate": "a boy boy a a on in swing",
+        "references": [
+          "A man and a young child walk along the beach shore .",
+          "A man and toddler are walking along the beach in front of the ocean .",
+          "\"A man at the beach holding a pail , standing next to a child .\"",
+          "A man with a bucket and a girl in a hat on the beach .",
+          "\"The man is wearing a black shirt , holding a pail , and walking with a child next to the water .\""
+        ],
+        "bleu4": 1.0866997661969641e-07,
+        "meteor": 0.14925373134328357
+      },
+      {
+        "image": "3727752439_907795603b.jpg",
+        "candidate": "a man in a red shirt is a a on in park",
+        "references": [
+          "a large woman puts her sunglasses on .",
+          "A woman in a black dress holding sunglasses .",
+          "a woman wearing a black and white outfit while holding her sunglasses .",
+          "The lady is holding her glasses .",
+          "The woman with blond hair holds her sunglasses ."
+        ],
+        "bleu4": 1.3950796967929138e-05,
+        "meteor": 0.30423280423280424
+      },
+      {
+        "image": "3726025663_e7d35d23f6.jpg",
+        "candidate": "a man in a red helmet is a a on in dirt",
+        "references": [
+          "A group of people ride in a race",
+          "A large group of bicycles riding their bikes .",
+          "Bicycles in a race .",
+          "Bikers participate in a race .",
+          "There are many men racing on their bicycles ."
+        ],
+        "bleu4": 1.3193849171325932e-05,
+        "meteor": 0.30423280423280424
+      },
+      {
+        "image": "3725814794_30db172f67.jpg",
+        "candidate": "a man player a a and and uniform dog playing a a",
+        "references": [
+          "A man performing martial arts kicks his opponent .",
+          "\"During a martial arts match , a man attempts to kick the other in the face .\"",
+          "Two men compete in a karate tournament .",
+          "Two people dressed in karate outfits are fighting .",
+          "Two people in white with black belts are having a karate match ."
+        ],
+        "bleu4": 1.2278260149096126e-05,
+        "meteor": 0.2232142857142857
+      },
+      {
+        "image": "3724581378_41049da264.jpg",
+        "candidate": "a man in a wetsuit wetsuit a a wave in a woods",
+        "references": [
+          "A man surfing .",
+          "A person surfs in the ocean .",
+          "A surfer catching a large wave in the ocean .",
+          "Surfer riding a wave",
+          "Surfer wearing a wetsuit at the crest of a wave ."
+        ],
+        "bleu4": 2.0649489889854934e-05,
+        "meteor": 0.4807692307692307
+      },
+      {
+        "image": "3724718895_bd03f4a4dc.jpg",
+        "candidate": "a dog dog a a in",
+        "references": [
+          "a dog drinks the sprinkler water .",
+          "A small brown and white dog is playing with the sprinkler in the grass .",
+          "A small terrier plays in a sprinkler .",
+          "The little black and white dog is running in the sprinkler .",
+          "The white dog is being squirted in the face with a jet of water ."
+        ],
+        "bleu4": 1.910885584408735e-05,
+        "meteor": 0.31249999999999994
+      },
+      {
+        "image": "3728015645_b43a60258b.jpg",
+        "candidate": "a boy in a blue shirt is a a on in snow",
+        "references": [
+          "A man is posed standing on one hand on a skateboard ramp .",
+          "A man on inline skates in midair",
+          "a skateboarder wearing a white cap is doing a stunt in a city skate park .",
+          "A young man is skateboarding on a ramp and is standing on one arm .",
+          "Man standing on one arm with feet in the air on playground equipment with a body of water in the background ."
+        ],
+        "bleu4": 1.5690219308813562e-05,
+        "meteor": 0.17384731670445955
+      },
+      {
+        "image": "3729405438_6e79077ab2.jpg",
+        "candidate": "a man in a blue helmet is a a on in dirt",
+        "references": [
+          "A bicycler balances his bike on a rail .",
+          "A biker is riding down the stairs on his bike at night .",
+          "A boy rides his red bicycle down the handrail of a staircase in a city .",
+          "A guy grinding a rail in a park on his bike",
+          "A trick bicyclist grinds down a handrail ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.28434684684684686
+      },
+      {
+        "image": "3726590391_bc6e729bb6.jpg",
+        "candidate": "a man in a red shirt is a a on with park",
+        "references": [
+          "An elderly woman is crying while sitting in a window .",
+          "An elderly woman is sitting by a window reading .",
+          "A woman reads a book in front of a window .",
+          "A woman with her head down and her hand to her mouth sitting beside someone reading .",
+          "There is an old woman in front of a window ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.14705882352941177
+      },
+      {
+        "image": "3726120436_740bda8416.jpg",
+        "candidate": "a man in a red jacket is a a on in",
+        "references": [
+          "A man and woman sitting in chairs next to a turquoise truck .",
+          "An older couple chats near a bright colored car .",
+          "\"There is a man and a woman sitting on folding chairs , outside next to a truck .\"",
+          "Two old people sitting in chairs talking in front of a hill .",
+          "Woman and man sit next to their green truck ."
+        ],
+        "bleu4": 1.7832018574003685e-05,
+        "meteor": 0.2652310924369748
+      },
+      {
+        "image": "3728256505_7f8db8270d.jpg",
+        "candidate": "a man is a a on in bicycle",
+        "references": [
+          "A man jumping onto a platform .",
+          "A man on the edge of a wall about to fall off .",
+          "A man on inline skates does a trick on a cracked concrete ramp .",
+          "A man with Rollerblades grinding a curb .",
+          "The man does a trick on his skateboard on a concrete ramp ."
+        ],
+        "bleu4": 1.7286039232097067e-05,
+        "meteor": 0.4121863799283154
+      },
+      {
+        "image": "3722507770_0d6cb7420e.jpg",
+        "candidate": "a man in a helmet helmet a bike bike a a",
+        "references": [
+          "A boy and his bike leaps into the air .",
+          "A boy does tricks on a bicycle while in a park .",
+          "A boy doing a trick on a bike",
+          "A boy is doing tricks on his bike as he flies in the air .",
+          "This young biker has his arms out as he tries this trick ."
+        ],
+        "bleu4": 1.7364082025196827e-05,
+        "meteor": 0.3802710843373494
+      },
+      {
+        "image": "3730011701_5352e02286.jpg",
+        "candidate": "a boy boy a a on shirt swing a a",
+        "references": [
+          "A little girl buried in the sand .",
+          "A little girls waist high in sand",
+          "A little girl with a hat sits between a woman 's feet in the sand in front of a pair of colorful tents .",
+          "The little girl in the yellow hat is buried up to her waist in the sand on the beach .",
+          "The small baby in a yellow has the lower half of her body buried in sand ."
+        ],
+        "bleu4": 1.4953487812212206e-07,
+        "meteor": 0.09216589861751152
+      },
+      {
+        "image": "3729525173_7f984ed776.jpg",
+        "candidate": "a man in a red jacket is a a on with park",
+        "references": [
+          "A lady sitting on a front porch reading a book .",
+          "A person sits at a doorstep and reads a book .",
+          "A woman is reading literature and sitting on the front stoop of a building .",
+          "A woman sits and reads in the stoop of a wooden door .",
+          "A woman sits and reads on the front stoop of her building ."
+        ],
+        "bleu4": 1.4953487812212206e-07,
+        "meteor": 0.14705882352941177
+      },
+      {
+        "image": "3718076407_0b4588d7bc.jpg",
+        "candidate": "a dog dog a a in",
+        "references": [
+          "A brown and white dog is playing with a toy in a field of green grass and clover .",
+          "A brown and white dog retrieving a white plushie toy in a field of clover .",
+          "A distorted photo of a playing dog in a flower field",
+          "A dog in grass carrying a toy in its mouth .",
+          "The little brown dog is running through a clover field with a white object in its mouth ."
+        ],
+        "bleu4": 1.0373672493717562e-05,
+        "meteor": 0.32877604166666663
+      },
+      {
+        "image": "3725353555_75c346d7ec.jpg",
+        "candidate": "a dog dog a a",
+        "references": [
+          "A brown and black dog is jumping through a sprinkler .",
+          "A dog playing with a sprinkler",
+          "A German Shepherd runs through a sprinkler .",
+          "A tan and black dog jumps through a water sprinkler in the yard .",
+          "The German shepherd dog is jumping up as it is being squirted with a jet of water ."
+        ],
+        "bleu4": 1.6112536656048357e-05,
+        "meteor": 0.43314500941619594
+      },
+      {
+        "image": "3726629271_7639634703.jpg",
+        "candidate": "two dogs dogs in a snow",
+        "references": [
+          "Four dogs are playing and jumping in the air outside .",
+          "Four dogs jumping in the air in a field .",
+          "\"Four dogs look at an object in the sky , one jumping to reach it .\"",
+          "\"Four dogs watch an unseen object , two of them leaping in the air .\"",
+          "Two dogs on hind legs and two seated dogs are looking at something in the air ."
+        ],
+        "bleu4": 1.4573787921801996e-05,
+        "meteor": 0.21041666666666667
+      },
+      {
+        "image": "3718964174_cb2dc1615e.jpg",
+        "candidate": "a man in a black shirt is a a and with woman hair a a and and",
+        "references": [
+          "A woman in a blue sweater with a blue scarf around her head .",
+          "A woman in a head covering is looking away from the camera .",
+          "A woman is wearing a blue headscarf and a blue sweater .",
+          "A woman wearing a teal cardigan with a teal scarf and sunglasses on her head .",
+          "There is a woman with a green scarf around her head ."
+        ],
+        "bleu4": 1.557355531137103e-05,
+        "meteor": 0.25249999999999995
+      },
+      {
+        "image": "3726168984_1fa2c8965b.jpg",
+        "candidate": "two dogs dogs in a snow",
+        "references": [
+          "A black dog is colliding with a golden dog that has something in its mouth .",
+          "A black dog trying to mate with a brown dog",
+          "A brown dog and a yellow dog play fight over a plastic bottle .",
+          "A brown dog is climbing over a golden dog that is carrying bottle in its mouth .",
+          "Two dogs play with a bottle ."
+        ],
+        "bleu4": 1.910885584408735e-05,
+        "meteor": 0.42592592592592593
+      },
+      {
+        "image": "3719461451_07de35af3a.jpg",
+        "candidate": "a dog dog a a",
+        "references": [
+          "A pelican flies over the water .",
+          "A very large bird flying over water .",
+          "A white Pelican is flying over the ocean .",
+          "The white pelican is flying over the ocean .",
+          "white gull flying over ocean"
+        ],
+        "bleu4": 1.1892071150027209e-07,
+        "meteor": 0.0847457627118644
+      },
+      {
+        "image": "3720366614_dfa8fe1088.jpg",
+        "candidate": "a dog dog a a in",
+        "references": [
+          "A small black dog is standing on two feet and wearing a pink tutu .",
+          "Small dog in costume stands on hind legs to reach dangling flowers .",
+          "The dog is jumping up beside a red wall .",
+          "The small brown and black down is wearing a pink tutu .",
+          "The small dog wearing a tutu stands on its hind legs ."
+        ],
+        "bleu4": 9.746079379487552e-08,
+        "meteor": 0.1644736842105263
+      },
+      {
+        "image": "3722572342_6904d11d52.jpg",
+        "candidate": "a man is a a on in snow",
+        "references": [
+          "a red covered boat racing across the water",
+          "A red high speed racing boat skips across the water .",
+          "A red speed boat crosses the water .",
+          "A watercraft speeds through the water .",
+          "Red boat marked GRAHAM races across water ."
+        ],
+        "bleu4": 1.0573712634405632e-07,
+        "meteor": 0.08064516129032256
+      },
+      {
+        "image": "3723690961_729dd5d617.jpg",
+        "candidate": "a man in a black jacket is a a and with woman hair a a and",
+        "references": [
+          "A man in a pink shirt and white vest plays a guitar .",
+          "A man in a pink shirt playing guitar .",
+          "A man in a white suit and a pink shirt plays guitar .",
+          "A man wearing pants plays a guitar while onstage .",
+          "The man in the white and pink outfit is holding a guitar ."
+        ],
+        "bleu4": 0.1760928267911618,
+        "meteor": 0.4509943181818182
+      },
+      {
+        "image": "3724113279_99b6e5bf41.jpg",
+        "candidate": "a man in a red jacket is a a on in snow",
+        "references": [
+          "\"a bmx rider , wall rides .\"",
+          "A man does a trick with his bicycle off the side of a wall .",
+          "A man jumps with his bike near a brick wall .",
+          "Man is performing a trick with a bicycle off a brick wall .",
+          "The man rides his bicycle up the brick wall ."
+        ],
+        "bleu4": 1.3950796967929138e-05,
+        "meteor": 0.2505446623093682
+      },
+      {
+        "image": "3718007650_e5930b4509.jpg",
+        "candidate": "a group of people are in in of",
+        "references": [
+          "A girl with a black dress and big white bow stands with her back to the camera .",
+          "many people gather outside .",
+          "People stand outside watching something .",
+          "People with costumes are gathered in a wooded area looking the same direction .",
+          "The back of a woman in costume ; little girl looks at her"
+        ],
+        "bleu4": 1.5811388300841893e-07,
+        "meteor": 0.11363636363636363
+      },
+      {
+        "image": "3720210639_18bb34e475.jpg",
+        "candidate": "a man in a blue helmet is a a on in dirt",
+        "references": [
+          "A person in a red hat and shoes doing stunts on a red bike while a person in yellow watches .",
+          "A person is doing a trick in the air on a bike while his friend takes a picture .",
+          "A red bike jumps toward a person in yellow .",
+          "Boy in midair on bicycle",
+          "Person doing bicycle jump"
+        ],
+        "bleu4": 1.5690219308813562e-05,
+        "meteor": 0.22207754629629628
+      },
+      {
+        "image": "3727740053_3baa94ffcb.jpg",
+        "candidate": "a man of a man in a red jacket and a is and a woman in a black shirt",
+        "references": [
+          "One man kicks another in the shoulder at a martial arts event .",
+          "Two martial artists compete in a match .",
+          "Two men are participating in a karate match .",
+          "Two men in an oriental fighting contest .",
+          "Two men in karate uniforms kicking each other ."
+        ],
+        "bleu4": 9.677736365399164e-06,
+        "meteor": 0.06097560975609756
+      }
+    ],
+    "num_layers": 2,
+    "hidden_units": 256
+  },
+  "rnn_pre_l3_h256_e256_m35": {
+    "summary": {
+      "bleu4": 0.01111173752767306,
+      "meteor": 0.2381238568469577,
+      "samples": 50,
+      "mode": "keras",
+      "decoder_type": "rnn",
+      "total_time_s": 46.999244924000095,
+      "avg_time_ms": 939.9848984800019,
+      "decoding": "greedy",
+      "beam_size": null,
+      "injection": "pre"
+    },
+    "results": [
+      {
+        "image": "3725177385_62d5e13634.jpg",
+        "candidate": "a man in a blue shirt is a a of",
+        "references": [
+          "A bunch of vintage cars are parked in a lot .",
+          "An antique car that is yellow is shown lined up with other cars .",
+          "People admire classic cars .",
+          "Several old fashioned cars are parked together .",
+          "Some old people admiring classic cars park in front of them ."
+        ],
+        "bleu4": 1.5352597838656372e-05,
+        "meteor": 0.25555555555555554
+      },
+      {
+        "image": "3724738804_f00748a137.jpg",
+        "candidate": "a man in a red shirt is a a on",
+        "references": [
+          "A woman and three children are jumping into a swimming pool .",
+          "Children jumping in a pool surrounded by pool chairs and huts .",
+          "Children jump off the edge into a pool .",
+          "Three girls jump into a pool .",
+          "Three girls wearing goggles are jumping into a swimming pool together ."
+        ],
+        "bleu4": 1.2226164593253855e-05,
+        "meteor": 0.09174311926605504
+      },
+      {
+        "image": "3724487641_d2096f10e5.jpg",
+        "candidate": "a man in a blue shirt is a a of",
+        "references": [
+          "A bunch of little boys in bathing trunks running .",
+          "Two wet boys in swim trunks run .",
+          "two young boys competing in a race .",
+          "Two young boys in bathing suits walk",
+          "Young boys running along the pavement ."
+        ],
+        "bleu4": 1.351200154807034e-05,
+        "meteor": 0.10989010989010989
+      },
+      {
+        "image": "3721812313_6000566803.jpg",
+        "candidate": "a man of a man in a wheelchair shirt a a",
+        "references": [
+          "A closeup shot of three guys and a girl posing for the camera .",
+          "A woman and three men are posing for a photo",
+          "A woman wearing glasses poses for the camera with three men .",
+          "A woman with her arms on the cheeks of two men on either side of her pose while another man peeks over her head .",
+          "Three men and a woman posing for picture"
+        ],
+        "bleu4": 1.3809146166549141e-07,
+        "meteor": 0.11718750000000001
+      },
+      {
+        "image": "3718892835_a3e74a3417.jpg",
+        "candidate": "a boy boy a a on and swing rides",
+        "references": [
+          "A boy falls off of his scooter during an obstacle course .",
+          "A boy wearing a helmet flips up his scooter as he skates between orange cones .",
+          "A person wearing a helmet begins to fall from a silver scooter .",
+          "A woman is about to fall off a scooter .",
+          "\"This person is falling off a scooter , in a parking lot .\""
+        ],
+        "bleu4": 1.5352597838656372e-05,
+        "meteor": 0.17746913580246912
+      },
+      {
+        "image": "3728695560_00ec1ca492.jpg",
+        "candidate": "a man of a man in a of jacket",
+        "references": [
+          "A little girl looks at a birthday cake while a man holds a baby .",
+          "\"A man , baby , and child sit in front of a birthday cake .\"",
+          "A man holding a baby and an older child admire a birthday cake with candles .",
+          "A man holding a baby with a girl and a birthday cake .",
+          "Candles are lit on a cake while a man holds a baby ."
+        ],
+        "bleu4": 1.4477626226006028e-05,
+        "meteor": 0.32051282051282054
+      },
+      {
+        "image": "3725202807_12fbfdd207.jpg",
+        "candidate": "a man in a red jacket and a shirt shirt a a",
+        "references": [
+          "A couple in a parking lot .",
+          "A couple walks past a car in a parking lot .",
+          "A man and a woman are walking past a car with a fancy symbol on the front .",
+          "A man and a woman walk past a red car with a silver hood ornament",
+          "A man and woman walking next to a red car with an unusual hood ornament ."
+        ],
+        "bleu4": 2.218932094313233e-05,
+        "meteor": 0.3872053872053872
+      },
+      {
+        "image": "3721082512_8277087f3f.jpg",
+        "candidate": "a man in a wetsuit jacket a a",
+        "references": [
+          "a man riding a bike through the forest",
+          "A mountain biker rides through a shady trail .",
+          "A mountain biker travels along a dirt trail inside a heavily wooded area .",
+          "A person biking near trees .",
+          "Bicyclist in racing gear rides through forest area ."
+        ],
+        "bleu4": 1.7286039232097067e-05,
+        "meteor": 0.3194444444444444
+      },
+      {
+        "image": "3726019124_f302b3d48a.jpg",
+        "candidate": "a dog dog a a",
+        "references": [
+          "A bike in a field and two kites",
+          "A kid is riding a bike in an open field .",
+          "A landscape picture of a motorcyclist and a person flying kites .",
+          "Kites attached to wheeled devices in a field",
+          "two people fly kites in a field"
+        ],
+        "bleu4": 1.0491075677643961e-07,
+        "meteor": 0.14423076923076925
+      },
+      {
+        "image": "3723903586_e98d3d8ec7.jpg",
+        "candidate": "a dog dog a a",
+        "references": [
+          "greyhounds racing on a track",
+          "A greyhound race with the lead dog wearing yellow and black stripes and the number 8",
+          "Dogs racing at a track .",
+          "\"Greyhound dogs race on the track , with # 8 leading the way .\"",
+          "Some greyhound dogs are racing on a dirt track ."
+        ],
+        "bleu4": 1.4142135623730954e-07,
+        "meteor": 0.1
+      },
+      {
+        "image": "3726076549_0efb38854b.jpg",
+        "candidate": "a man in a red jacket is a a on",
+        "references": [
+          "\"A boy in jeans , black t-shirt , and blue cap on a bike , leaps over steps .\"",
+          "An Asian man in a black shirt and jeans rides his black and red bicycle down a railing .",
+          "A teenager performs a railgrind on his bicycle .",
+          "Man sliding down stair handrails on a bike .",
+          "This man has balanced his bicycle on a handrail ."
+        ],
+        "bleu4": 0.0020205155046766235,
+        "meteor": 0.1829268292682927
+      },
+      {
+        "image": "3724623861_2bb6c23641.jpg",
+        "candidate": "a man in a red shirt and a is shirt a a girl",
+        "references": [
+          "A girl in a colorful dress and sunglasses is playing a violin on the street .",
+          "a red haired woman playing the violin",
+          "A woman in a dress plays violin outside .",
+          "A woman plays a violin outdoors .",
+          "A woman wearing a plaid dress plays an instrument while standing near a tree ."
+        ],
+        "bleu4": 1.8338524634118093e-05,
+        "meteor": 0.3006535947712418
+      },
+      {
+        "image": "3721881082_afe9fc734e.jpg",
+        "candidate": "a man of a man in a of",
+        "references": [
+          "A woman and a girl sitting on a front lawn",
+          "\"A woman and girl wearing traditional clothes , sits on the front lawn , reading from a book .\"",
+          "A woman wearing colonial clothing is sitting on the grass reading to a young girl .",
+          "\"The girl and a lady are sitting on a blanket , reading a book .\"",
+          "Two women sitting on a blanket on the lawn while sharing a book ."
+        ],
+        "bleu4": 1.0837626917437297e-07,
+        "meteor": 0.15306122448979592
+      },
+      {
+        "image": "3718305988_fe2c91fd44.jpg",
+        "candidate": "a man is a a on on water swing",
+        "references": [
+          "A jogger runs up brick stairs for streght training .",
+          "A man is skating down a set of stairs .",
+          "A skateboarder jumps on brick stairs .",
+          "A young man skateboards around the empty outdoor sports arena .",
+          "The man is skateboarding on a large brick staircase ."
+        ],
+        "bleu4": 0.002110534063187263,
+        "meteor": 0.41666666666666663
+      },
+      {
+        "image": "3726730085_2468ee9220.jpg",
+        "candidate": "a boy boy a a on and swing and",
+        "references": [
+          "A baby is lifted into the air by a man wearing no shirt .",
+          "A child being held over the head of an adult .",
+          "A man and a young child .",
+          "A man with no shirt holding a baby aloft .",
+          "Man raising young boy into the clear blue sky ."
+        ],
+        "bleu4": 1.4519590582309556e-07,
+        "meteor": 0.15873015873015872
+      },
+      {
+        "image": "3726700898_c50494b8bd.jpg",
+        "candidate": "a man in a red shirt and a is shirt a a girl",
+        "references": [
+          "A man balances a knife on his arm as another man watches .",
+          "A man has a knife on his arm and another man is watching .",
+          "A man is tossing a knife in the air while another man stands nearby .",
+          "A young man shows off a knife trick to another .",
+          "The man in the bright colored shirt is balancing a knife on his arm ."
+        ],
+        "bleu4": 1.730815832945954e-05,
+        "meteor": 0.28615384615384615
+      },
+      {
+        "image": "3721799573_2f470950e0.jpg",
+        "candidate": "a man in a black shirt is a a of",
+        "references": [
+          "There are two ladies embracing and posing shown here .",
+          "Two girlfriends smiling .",
+          "Two women have their arms around each other and are smiling .",
+          "Two women smile for the camera .",
+          "Two women with their arms around each other smile ."
+        ],
+        "bleu4": 1.0000000000000007e-09,
+        "meteor": 0.0
+      },
+      {
+        "image": "3724759125_2dc0e1f4a3.jpg",
+        "candidate": "a boy boy a a on and swing and",
+        "references": [
+          "A boy on a play horse at the park points to the slide .",
+          "a boy rides a toy horse .",
+          "A little boy is riding a mechanical horse at the playground .",
+          "A small boy rides a on a playground toy while pointing to a slide .",
+          "A young fair skinned boy rides a play horse at a playground ."
+        ],
+        "bleu4": 1.545813127110937e-05,
+        "meteor": 0.4056437389770723
+      },
+      {
+        "image": "3726170067_094cc1b7e5.jpg",
+        "candidate": "a man in a red shirt is a a of",
+        "references": [
+          "A balding man with glasses stands in front of a colorful display .",
+          "A bald man wearing glasses .",
+          "A man in a brown coat in front of a sign with a tree .",
+          "A man wearing glasses and a blazer stands in front of a billboard sign .",
+          "An older man is standing outside in front of a truck ."
+        ],
+        "bleu4": 0.2826657746622342,
+        "meteor": 0.41360294117647056
+      },
+      {
+        "image": "3717845800_ab45e255b8.jpg",
+        "candidate": "a men player a a are game in a of game",
+        "references": [
+          "Four rugby players on the ground with two standing behind them .",
+          "Members of two soccer teams struggle on the field to get the ball .",
+          "Soccer players on the ground fighting for the ball .",
+          "The rugby players in red are wrestling the player in yellow to the ground .",
+          "Three members of the red team are in the grass with a member of the yellow team ."
+        ],
+        "bleu4": 1.4601394329159486e-07,
+        "meteor": 0.13686131386861317
+      },
+      {
+        "image": "3728164558_52729baefa.jpg",
+        "candidate": "a man in a red jacket and a shirt shirt a a",
+        "references": [
+          "two people leaning against a railing outside the enterance of a building",
+          "Two people standing on a porch .",
+          "Two woman stand near a door .",
+          "Two women standing outside community library",
+          "Two women stand outside a library ."
+        ],
+        "bleu4": 1.1362193664675001e-07,
+        "meteor": 0.08333333333333331
+      },
+      {
+        "image": "3724150944_fc62e8d5e0.jpg",
+        "candidate": "a man player a a is and a dog dog a the",
+        "references": [
+          "A group of young boys on opposing teams are playing soccer .",
+          "Children playing soccer near the goal net .",
+          "Four boys playing soccer .",
+          "Four children run along a grassy field playing soccer .",
+          "The young boy in the red shirt is kicking a soccer ball ."
+        ],
+        "bleu4": 1.2574334296829372e-07,
+        "meteor": 0.06666666666666667
+      },
+      {
+        "image": "3726130458_07df79e969.jpg",
+        "candidate": "a basketball player in a is uniform a a is",
+        "references": [
+          "A baseball player dodges a ball with his bat high in the air .",
+          "A baseball player in a white uniform is walking to base while a crowd of people watch from the bleachers .",
+          "A baseball player near home plate .",
+          "A baseball player raises the bat above his head .",
+          "A baseball player runs to catch the ball ."
+        ],
+        "bleu4": 0.0020999013115956147,
+        "meteor": 0.26900584795321636
+      },
+      {
+        "image": "3730011219_588cdc7972.jpg",
+        "candidate": "a little girl in a blue shirt is a a of",
+        "references": [
+          "A man and a young child walk along the beach shore .",
+          "A man and toddler are walking along the beach in front of the ocean .",
+          "\"A man at the beach holding a pail , standing next to a child .\"",
+          "A man with a bucket and a girl in a hat on the beach .",
+          "\"The man is wearing a black shirt , holding a pail , and walking with a child next to the water .\""
+        ],
+        "bleu4": 0.0020649489889854925,
+        "meteor": 0.27372262773722633
+      },
+      {
+        "image": "3727752439_907795603b.jpg",
+        "candidate": "a man in a red shirt and a is shirt a a girl",
+        "references": [
+          "a large woman puts her sunglasses on .",
+          "A woman in a black dress holding sunglasses .",
+          "a woman wearing a black and white outfit while holding her sunglasses .",
+          "The lady is holding her glasses .",
+          "The woman with blond hair holds her sunglasses ."
+        ],
+        "bleu4": 1.3380161378318966e-05,
+        "meteor": 0.3006535947712418
+      },
+      {
+        "image": "3726025663_e7d35d23f6.jpg",
+        "candidate": "a man in a red jacket is a a on",
+        "references": [
+          "A group of people ride in a race",
+          "A large group of bicycles riding their bikes .",
+          "Bicycles in a race .",
+          "Bikers participate in a race .",
+          "There are many men racing on their bicycles ."
+        ],
+        "bleu4": 1.4519590582309535e-05,
+        "meteor": 0.31165311653116534
+      },
+      {
+        "image": "3725814794_30db172f67.jpg",
+        "candidate": "a man player a a is and a dog dog a the",
+        "references": [
+          "A man performing martial arts kicks his opponent .",
+          "\"During a martial arts match , a man attempts to kick the other in the face .\"",
+          "Two men compete in a karate tournament .",
+          "Two people dressed in karate outfits are fighting .",
+          "Two people in white with black belts are having a karate match ."
+        ],
+        "bleu4": 1.3193849171325932e-05,
+        "meteor": 0.2232142857142857
+      },
+      {
+        "image": "3724581378_41049da264.jpg",
+        "candidate": "a man in a wetsuit jacket a a",
+        "references": [
+          "A man surfing .",
+          "A person surfs in the ocean .",
+          "A surfer catching a large wave in the ocean .",
+          "Surfer riding a wave",
+          "Surfer wearing a wetsuit at the crest of a wave ."
+        ],
+        "bleu4": 1.814120717315551e-05,
+        "meteor": 0.5357142857142857
+      },
+      {
+        "image": "3724718895_bd03f4a4dc.jpg",
+        "candidate": "a dog dog a a in",
+        "references": [
+          "a dog drinks the sprinkler water .",
+          "A small brown and white dog is playing with the sprinkler in the grass .",
+          "A small terrier plays in a sprinkler .",
+          "The little black and white dog is running in the sprinkler .",
+          "The white dog is being squirted in the face with a jet of water ."
+        ],
+        "bleu4": 1.910885584408735e-05,
+        "meteor": 0.31249999999999994
+      },
+      {
+        "image": "3728015645_b43a60258b.jpg",
+        "candidate": "a boy boy a a on on swing swing",
+        "references": [
+          "A man is posed standing on one hand on a skateboard ramp .",
+          "A man on inline skates in midair",
+          "a skateboarder wearing a white cap is doing a stunt in a city skate park .",
+          "A young man is skateboarding on a ramp and is standing on one arm .",
+          "Man standing on one arm with feet in the air on playground equipment with a body of water in the background ."
+        ],
+        "bleu4": 1.5352597838656368e-07,
+        "meteor": 0.1388888888888889
+      },
+      {
+        "image": "3729405438_6e79077ab2.jpg",
+        "candidate": "a man in a red jacket is a a on",
+        "references": [
+          "A bicycler balances his bike on a rail .",
+          "A biker is riding down the stairs on his bike at night .",
+          "A boy rides his red bicycle down the handrail of a staircase in a city .",
+          "A guy grinding a rail in a park on his bike",
+          "A trick bicyclist grinds down a handrail ."
+        ],
+        "bleu4": 1.5110694817407625e-05,
+        "meteor": 0.2895642201834862
+      },
+      {
+        "image": "3726590391_bc6e729bb6.jpg",
+        "candidate": "a man in a red shirt and a is shirt a a girl",
+        "references": [
+          "An elderly woman is crying while sitting in a window .",
+          "An elderly woman is sitting by a window reading .",
+          "A woman reads a book in front of a window .",
+          "A woman with her head down and her hand to her mouth sitting beside someone reading .",
+          "There is an old woman in front of a window ."
+        ],
+        "bleu4": 1.4004147069285727e-05,
+        "meteor": 0.14563106796116507
+      },
+      {
+        "image": "3726120436_740bda8416.jpg",
+        "candidate": "a man in a red shirt and a shirt shirt a a",
+        "references": [
+          "A man and woman sitting in chairs next to a turquoise truck .",
+          "An older couple chats near a bright colored car .",
+          "\"There is a man and a woman sitting on folding chairs , outside next to a truck .\"",
+          "Two old people sitting in chairs talking in front of a hill .",
+          "Woman and man sit next to their green truck ."
+        ],
+        "bleu4": 1.7364082025196827e-05,
+        "meteor": 0.26302083333333326
+      },
+      {
+        "image": "3728256505_7f8db8270d.jpg",
+        "candidate": "a man in a blue jacket is a a on",
+        "references": [
+          "A man jumping onto a platform .",
+          "A man on the edge of a wall about to fall off .",
+          "A man on inline skates does a trick on a cracked concrete ramp .",
+          "A man with Rollerblades grinding a curb .",
+          "The man does a trick on his skateboard on a concrete ramp ."
+        ],
+        "bleu4": 1.256964399014653e-05,
+        "meteor": 0.3993055555555556
+      },
+      {
+        "image": "3722507770_0d6cb7420e.jpg",
+        "candidate": "a man in a wetsuit jacket a a",
+        "references": [
+          "A boy and his bike leaps into the air .",
+          "A boy does tricks on a bicycle while in a park .",
+          "A boy doing a trick on a bike",
+          "A boy is doing tricks on his bike as he flies in the air .",
+          "This young biker has his arms out as he tries this trick ."
+        ],
+        "bleu4": 1.6348126556655506e-05,
+        "meteor": 0.23883696780893046
+      },
+      {
+        "image": "3730011701_5352e02286.jpg",
+        "candidate": "a little girl in a blue shirt is a a of",
+        "references": [
+          "A little girl buried in the sand .",
+          "A little girls waist high in sand",
+          "A little girl with a hat sits between a woman 's feet in the sand in front of a pair of colorful tents .",
+          "The little girl in the yellow hat is buried up to her waist in the sand on the beach .",
+          "The small baby in a yellow has the lower half of her body buried in sand ."
+        ],
+        "bleu4": 0.0029202788658318946,
+        "meteor": 0.5067567567567568
+      },
+      {
+        "image": "3729525173_7f984ed776.jpg",
+        "candidate": "a man in a red jacket and a shirt shirt a a",
+        "references": [
+          "A lady sitting on a front porch reading a book .",
+          "A person sits at a doorstep and reads a book .",
+          "A woman is reading literature and sitting on the front stoop of a building .",
+          "A woman sits and reads in the stoop of a wooden door .",
+          "A woman sits and reads on the front stoop of her building ."
+        ],
+        "bleu4": 1.428720214849401e-07,
+        "meteor": 0.19607843137254902
+      },
+      {
+        "image": "3718076407_0b4588d7bc.jpg",
+        "candidate": "a dog dog a a",
+        "references": [
+          "A brown and white dog is playing with a toy in a field of green grass and clover .",
+          "A brown and white dog retrieving a white plushie toy in a field of clover .",
+          "A distorted photo of a playing dog in a flower field",
+          "A dog in grass carrying a toy in its mouth .",
+          "The little brown dog is running through a clover field with a white object in its mouth ."
+        ],
+        "bleu4": 7.77970299010513e-06,
+        "meteor": 0.26900584795321636
+      },
+      {
+        "image": "3725353555_75c346d7ec.jpg",
+        "candidate": "a dog dog a a in",
+        "references": [
+          "A brown and black dog is jumping through a sprinkler .",
+          "A dog playing with a sprinkler",
+          "A German Shepherd runs through a sprinkler .",
+          "A tan and black dog jumps through a water sprinkler in the yard .",
+          "The German shepherd dog is jumping up as it is being squirted with a jet of water ."
+        ],
+        "bleu4": 1.910885584408735e-05,
+        "meteor": 0.42592592592592593
+      },
+      {
+        "image": "3726629271_7639634703.jpg",
+        "candidate": "two dogs dogs in in snow",
+        "references": [
+          "Four dogs are playing and jumping in the air outside .",
+          "Four dogs jumping in the air in a field .",
+          "\"Four dogs look at an object in the sky , one jumping to reach it .\"",
+          "\"Four dogs watch an unseen object , two of them leaping in the air .\"",
+          "Two dogs on hind legs and two seated dogs are looking at something in the air ."
+        ],
+        "bleu4": 1.2255046020111174e-05,
+        "meteor": 0.21041666666666667
+      },
+      {
+        "image": "3718964174_cb2dc1615e.jpg",
+        "candidate": "a man in a black shirt is a a of",
+        "references": [
+          "A woman in a blue sweater with a blue scarf around her head .",
+          "A woman in a head covering is looking away from the camera .",
+          "A woman is wearing a blue headscarf and a blue sweater .",
+          "A woman wearing a teal cardigan with a teal scarf and sunglasses on her head .",
+          "There is a woman with a green scarf around her head ."
+        ],
+        "bleu4": 1.651999549110089e-05,
+        "meteor": 0.267478813559322
+      },
+      {
+        "image": "3726168984_1fa2c8965b.jpg",
+        "candidate": "a dogs dog a a",
+        "references": [
+          "A black dog is colliding with a golden dog that has something in its mouth .",
+          "A black dog trying to mate with a brown dog",
+          "A brown dog and a yellow dog play fight over a plastic bottle .",
+          "A brown dog is climbing over a golden dog that is carrying bottle in its mouth .",
+          "Two dogs play with a bottle ."
+        ],
+        "bleu4": 1.4559320405642375e-07,
+        "meteor": 0.1639344262295082
+      },
+      {
+        "image": "3719461451_07de35af3a.jpg",
+        "candidate": "a dog dog a a",
+        "references": [
+          "A pelican flies over the water .",
+          "A very large bird flying over water .",
+          "A white Pelican is flying over the ocean .",
+          "The white pelican is flying over the ocean .",
+          "white gull flying over ocean"
+        ],
+        "bleu4": 1.1892071150027209e-07,
+        "meteor": 0.0847457627118644
+      },
+      {
+        "image": "3720366614_dfa8fe1088.jpg",
+        "candidate": "a dog dog a a in",
+        "references": [
+          "A small black dog is standing on two feet and wearing a pink tutu .",
+          "Small dog in costume stands on hind legs to reach dangling flowers .",
+          "The dog is jumping up beside a red wall .",
+          "The small brown and black down is wearing a pink tutu .",
+          "The small dog wearing a tutu stands on its hind legs ."
+        ],
+        "bleu4": 9.746079379487552e-08,
+        "meteor": 0.1644736842105263
+      },
+      {
+        "image": "3722572342_6904d11d52.jpg",
+        "candidate": "a man in a wetsuit jacket a a",
+        "references": [
+          "a red covered boat racing across the water",
+          "A red high speed racing boat skips across the water .",
+          "A red speed boat crosses the water .",
+          "A watercraft speeds through the water .",
+          "Red boat marked GRAHAM races across water ."
+        ],
+        "bleu4": 1.0573712634405632e-07,
+        "meteor": 0.08064516129032256
+      },
+      {
+        "image": "3723690961_729dd5d617.jpg",
+        "candidate": "a man in a red shirt and a is shirt a a girl",
+        "references": [
+          "A man in a pink shirt and white vest plays a guitar .",
+          "A man in a pink shirt playing guitar .",
+          "A man in a white suit and a pink shirt plays guitar .",
+          "A man wearing pants plays a guitar while onstage .",
+          "The man in the white and pink outfit is holding a guitar ."
+        ],
+        "bleu4": 0.2613022659677713,
+        "meteor": 0.5694117647058823
+      },
+      {
+        "image": "3724113279_99b6e5bf41.jpg",
+        "candidate": "a man in a wetsuit jacket a a",
+        "references": [
+          "\"a bmx rider , wall rides .\"",
+          "A man does a trick with his bicycle off the side of a wall .",
+          "A man jumps with his bike near a brick wall .",
+          "Man is performing a trick with a bicycle off a brick wall .",
+          "The man rides his bicycle up the brick wall ."
+        ],
+        "bleu4": 1.4427171049309453e-05,
+        "meteor": 0.26077097505668934
+      },
+      {
+        "image": "3718007650_e5930b4509.jpg",
+        "candidate": "a group of people are in in of",
+        "references": [
+          "A girl with a black dress and big white bow stands with her back to the camera .",
+          "many people gather outside .",
+          "People stand outside watching something .",
+          "People with costumes are gathered in a wooded area looking the same direction .",
+          "The back of a woman in costume ; little girl looks at her"
+        ],
+        "bleu4": 1.5811388300841893e-07,
+        "meteor": 0.11363636363636363
+      },
+      {
+        "image": "3720210639_18bb34e475.jpg",
+        "candidate": "a man in a wetsuit jacket a a",
+        "references": [
+          "A person in a red hat and shoes doing stunts on a red bike while a person in yellow watches .",
+          "A person is doing a trick in the air on a bike while his friend takes a picture .",
+          "A red bike jumps toward a person in yellow .",
+          "Boy in midair on bicycle",
+          "Person doing bicycle jump"
+        ],
+        "bleu4": 1.525487608028146e-05,
+        "meteor": 0.19787234042553192
+      },
+      {
+        "image": "3727740053_3baa94ffcb.jpg",
+        "candidate": "a man player a a is and a a dog dog a the",
+        "references": [
+          "One man kicks another in the shoulder at a martial arts event .",
+          "Two martial artists compete in a match .",
+          "Two men are participating in a karate match .",
+          "Two men in an oriental fighting contest .",
+          "Two men in karate uniforms kicking each other ."
+        ],
+        "bleu4": 1.2325214199459173e-07,
+        "meteor": 0.06578947368421054
+      }
+    ],
+    "num_layers": 3,
+    "hidden_units": 256
+  },
+  "rnn_pre_l1_h128_e256_m35": {
+    "summary": {
+      "bleu4": 0.004453867535176719,
+      "meteor": 0.20733714658382899,
+      "samples": 50,
+      "mode": "keras",
+      "decoder_type": "rnn",
+      "total_time_s": 52.10161098499998,
+      "avg_time_ms": 1042.0322196999996,
+      "decoding": "greedy",
+      "beam_size": null,
+      "injection": "pre"
+    },
+    "results": [
+      {
+        "image": "3725177385_62d5e13634.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "A bunch of vintage cars are parked in a lot .",
+          "An antique car that is yellow is shown lined up with other cars .",
+          "People admire classic cars .",
+          "Several old fashioned cars are parked together .",
+          "Some old people admiring classic cars park in front of them ."
+        ],
+        "bleu4": 1.2850858522641766e-07,
+        "meteor": 0.09900990099009903
+      },
+      {
+        "image": "3724738804_f00748a137.jpg",
+        "candidate": "a man in a red shirt is a a on in of",
+        "references": [
+          "A woman and three children are jumping into a swimming pool .",
+          "Children jumping in a pool surrounded by pool chairs and huts .",
+          "Children jump off the edge into a pool .",
+          "Three girls jump into a pool .",
+          "Three girls wearing goggles are jumping into a swimming pool together ."
+        ],
+        "bleu4": 1.2278260149096126e-05,
+        "meteor": 0.09009009009009009
+      },
+      {
+        "image": "3724487641_d2096f10e5.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A bunch of little boys in bathing trunks running .",
+          "Two wet boys in swim trunks run .",
+          "two young boys competing in a race .",
+          "Two young boys in bathing suits walk",
+          "Young boys running along the pavement ."
+        ],
+        "bleu4": 1.1612061509165747e-05,
+        "meteor": 0.10869565217391304
+      },
+      {
+        "image": "3721812313_6000566803.jpg",
+        "candidate": "a man of a white and is woman a a in in",
+        "references": [
+          "A closeup shot of three guys and a girl posing for the camera .",
+          "A woman and three men are posing for a photo",
+          "A woman wearing glasses poses for the camera with three men .",
+          "A woman with her arms on the cheeks of two men on either side of her pose while another man peeks over her head .",
+          "Three men and a woman posing for picture"
+        ],
+        "bleu4": 1.4953487812212206e-07,
+        "meteor": 0.2232142857142857
+      },
+      {
+        "image": "3718892835_a3e74a3417.jpg",
+        "candidate": "a man in a blue shirt is a a on in skateboard",
+        "references": [
+          "A boy falls off of his scooter during an obstacle course .",
+          "A boy wearing a helmet flips up his scooter as he skates between orange cones .",
+          "A person wearing a helmet begins to fall from a silver scooter .",
+          "A woman is about to fall off a scooter .",
+          "\"This person is falling off a scooter , in a parking lot .\""
+        ],
+        "bleu4": 1.3950796967929138e-05,
+        "meteor": 0.23023023023023023
+      },
+      {
+        "image": "3728695560_00ec1ca492.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "A little girl looks at a birthday cake while a man holds a baby .",
+          "\"A man , baby , and child sit in front of a birthday cake .\"",
+          "A man holding a baby and an older child admire a birthday cake with candles .",
+          "A man holding a baby with a girl and a birthday cake .",
+          "Candles are lit on a cake while a man holds a baby ."
+        ],
+        "bleu4": 1.3954308650876805e-05,
+        "meteor": 0.31260504201680667
+      },
+      {
+        "image": "3725202807_12fbfdd207.jpg",
+        "candidate": "a man in a red shirt is a a on in of",
+        "references": [
+          "A couple in a parking lot .",
+          "A couple walks past a car in a parking lot .",
+          "A man and a woman are walking past a car with a fancy symbol on the front .",
+          "A man and a woman walk past a red car with a silver hood ornament",
+          "A man and woman walking next to a red car with an unusual hood ornament ."
+        ],
+        "bleu4": 2.0649489889854934e-05,
+        "meteor": 0.3872053872053872
+      },
+      {
+        "image": "3721082512_8277087f3f.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "a man riding a bike through the forest",
+          "A mountain biker rides through a shady trail .",
+          "A mountain biker travels along a dirt trail inside a heavily wooded area .",
+          "A person biking near trees .",
+          "Bicyclist in racing gear rides through forest area ."
+        ],
+        "bleu4": 1.1513415912487023e-05,
+        "meteor": 0.3078982597054887
+      },
+      {
+        "image": "3726019124_f302b3d48a.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "A bike in a field and two kites",
+          "A kid is riding a bike in an open field .",
+          "A landscape picture of a motorcyclist and a person flying kites .",
+          "Kites attached to wheeled devices in a field",
+          "two people fly kites in a field"
+        ],
+        "bleu4": 1.3809146166549141e-07,
+        "meteor": 0.14851485148514854
+      },
+      {
+        "image": "3723903586_e98d3d8ec7.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "greyhounds racing on a track",
+          "A greyhound race with the lead dog wearing yellow and black stripes and the number 8",
+          "Dogs racing at a track .",
+          "\"Greyhound dogs race on the track , with # 8 leading the way .\"",
+          "Some greyhound dogs are racing on a dirt track ."
+        ],
+        "bleu4": 1.300118652068739e-07,
+        "meteor": 0.09615384615384616
+      },
+      {
+        "image": "3726076549_0efb38854b.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "\"A boy in jeans , black t-shirt , and blue cap on a bike , leaps over steps .\"",
+          "An Asian man in a black shirt and jeans rides his black and red bicycle down a railing .",
+          "A teenager performs a railgrind on his bicycle .",
+          "Man sliding down stair handrails on a bike .",
+          "This man has balanced his bicycle on a handrail ."
+        ],
+        "bleu4": 1.3809146166549141e-07,
+        "meteor": 0.1807228915662651
+      },
+      {
+        "image": "3724623861_2bb6c23641.jpg",
+        "candidate": "a man in a red shirt is a a on in of",
+        "references": [
+          "A girl in a colorful dress and sunglasses is playing a violin on the street .",
+          "a red haired woman playing the violin",
+          "A woman in a dress plays violin outside .",
+          "A woman plays a violin outdoors .",
+          "A woman wearing a plaid dress plays an instrument while standing near a tree ."
+        ],
+        "bleu4": 1.5275875580822265e-05,
+        "meteor": 0.30423280423280424
+      },
+      {
+        "image": "3721881082_afe9fc734e.jpg",
+        "candidate": "a man of a white and is woman in a and shirt shirt a a and in woman clothes a a",
+        "references": [
+          "A woman and a girl sitting on a front lawn",
+          "\"A woman and girl wearing traditional clothes , sits on the front lawn , reading from a book .\"",
+          "A woman wearing colonial clothing is sitting on the grass reading to a young girl .",
+          "\"The girl and a lady are sitting on a blanket , reading a book .\"",
+          "Two women sitting on a blanket on the lawn while sharing a book ."
+        ],
+        "bleu4": 1.351200154807036e-07,
+        "meteor": 0.13513513513513511
+      },
+      {
+        "image": "3718305988_fe2c91fd44.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "A jogger runs up brick stairs for streght training .",
+          "A man is skating down a set of stairs .",
+          "A skateboarder jumps on brick stairs .",
+          "A young man skateboards around the empty outdoor sports arena .",
+          "The man is skateboarding on a large brick staircase ."
+        ],
+        "bleu4": 1.300118652068739e-07,
+        "meteor": 0.11363636363636362
+      },
+      {
+        "image": "3726730085_2468ee9220.jpg",
+        "candidate": "a man in a blue shirt is a a on in skateboard",
+        "references": [
+          "A baby is lifted into the air by a man wearing no shirt .",
+          "A child being held over the head of an adult .",
+          "A man and a young child .",
+          "A man with no shirt holding a baby aloft .",
+          "Man raising young boy into the clear blue sky ."
+        ],
+        "bleu4": 1.3433931298343464e-05,
+        "meteor": 0.3872053872053872
+      },
+      {
+        "image": "3726700898_c50494b8bd.jpg",
+        "candidate": "a man in a red shirt is a a on in skateboard",
+        "references": [
+          "A man balances a knife on his arm as another man watches .",
+          "A man has a knife on his arm and another man is watching .",
+          "A man is tossing a knife in the air while another man stands nearby .",
+          "A young man shows off a knife trick to another .",
+          "The man in the bright colored shirt is balancing a knife on his arm ."
+        ],
+        "bleu4": 1.997153017694773e-05,
+        "meteor": 0.26302083333333326
+      },
+      {
+        "image": "3721799573_2f470950e0.jpg",
+        "candidate": "a man in a red shirt is a a on in of",
+        "references": [
+          "There are two ladies embracing and posing shown here .",
+          "Two girlfriends smiling .",
+          "Two women have their arms around each other and are smiling .",
+          "Two women smile for the camera .",
+          "Two women with their arms around each other smile ."
+        ],
+        "bleu4": 1.0000000000000007e-09,
+        "meteor": 0.0
+      },
+      {
+        "image": "3724759125_2dc0e1f4a3.jpg",
+        "candidate": "a man in a blue shirt is a a on in skateboard",
+        "references": [
+          "A boy on a play horse at the park points to the slide .",
+          "a boy rides a toy horse .",
+          "A little boy is riding a mechanical horse at the playground .",
+          "A small boy rides a on a playground toy while pointing to a slide .",
+          "A young fair skinned boy rides a play horse at a playground ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.1515151515151515
+      },
+      {
+        "image": "3726170067_094cc1b7e5.jpg",
+        "candidate": "a man of a white and is woman a a in in",
+        "references": [
+          "A balding man with glasses stands in front of a colorful display .",
+          "A bald man wearing glasses .",
+          "A man in a brown coat in front of a sign with a tree .",
+          "A man wearing glasses and a blazer stands in front of a billboard sign .",
+          "An older man is standing outside in front of a truck ."
+        ],
+        "bleu4": 1.9729406277958857e-05,
+        "meteor": 0.3231884057971015
+      },
+      {
+        "image": "3717845800_ab45e255b8.jpg",
+        "candidate": "a man player a a and in dog is a in in",
+        "references": [
+          "Four rugby players on the ground with two standing behind them .",
+          "Members of two soccer teams struggle on the field to get the ball .",
+          "Soccer players on the ground fighting for the ball .",
+          "The rugby players in red are wrestling the player in yellow to the ground .",
+          "Three members of the red team are in the grass with a member of the yellow team ."
+        ],
+        "bleu4": 1.351200154807036e-07,
+        "meteor": 0.1358695652173913
+      },
+      {
+        "image": "3728164558_52729baefa.jpg",
+        "candidate": "a man in a red shirt is a a on in of",
+        "references": [
+          "two people leaning against a railing outside the enterance of a building",
+          "Two people standing on a porch .",
+          "Two woman stand near a door .",
+          "Two women standing outside community library",
+          "Two women stand outside a library ."
+        ],
+        "bleu4": 1.351200154807036e-07,
+        "meteor": 0.08333333333333331
+      },
+      {
+        "image": "3724150944_fc62e8d5e0.jpg",
+        "candidate": "a man in a blue shirt is a a in in snow",
+        "references": [
+          "A group of young boys on opposing teams are playing soccer .",
+          "Children playing soccer near the goal net .",
+          "Four boys playing soccer .",
+          "Four children run along a grassy field playing soccer .",
+          "The young boy in the red shirt is kicking a soccer ball ."
+        ],
+        "bleu4": 1.3193849171325932e-05,
+        "meteor": 0.05376344086021504
+      },
+      {
+        "image": "3726130458_07df79e969.jpg",
+        "candidate": "a man player a a in in",
+        "references": [
+          "A baseball player dodges a ball with his bat high in the air .",
+          "A baseball player in a white uniform is walking to base while a crowd of people watch from the bleachers .",
+          "A baseball player near home plate .",
+          "A baseball player raises the bat above his head .",
+          "A baseball player runs to catch the ball ."
+        ],
+        "bleu4": 1.63481265566555e-07,
+        "meteor": 0.16393442622950818
+      },
+      {
+        "image": "3730011219_588cdc7972.jpg",
+        "candidate": "a man in a blue shirt is a a on in skateboard",
+        "references": [
+          "A man and a young child walk along the beach shore .",
+          "A man and toddler are walking along the beach in front of the ocean .",
+          "\"A man at the beach holding a pail , standing next to a child .\"",
+          "A man with a bucket and a girl in a hat on the beach .",
+          "\"The man is wearing a black shirt , holding a pail , and walking with a child next to the water .\""
+        ],
+        "bleu4": 1.9216515629478687e-05,
+        "meteor": 0.3231884057971015
+      },
+      {
+        "image": "3727752439_907795603b.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "a large woman puts her sunglasses on .",
+          "A woman in a black dress holding sunglasses .",
+          "a woman wearing a black and white outfit while holding her sunglasses .",
+          "The lady is holding her glasses .",
+          "The woman with blond hair holds her sunglasses ."
+        ],
+        "bleu4": 1.2609141255922478e-07,
+        "meteor": 0.13513513513513514
+      },
+      {
+        "image": "3726025663_e7d35d23f6.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "A group of people ride in a race",
+          "A large group of bicycles riding their bikes .",
+          "Bicycles in a race .",
+          "Bikers participate in a race .",
+          "There are many men racing on their bicycles ."
+        ],
+        "bleu4": 1.2850858522641766e-07,
+        "meteor": 0.12048192771084337
+      },
+      {
+        "image": "3725814794_30db172f67.jpg",
+        "candidate": "a man player a a and in dog is a in in",
+        "references": [
+          "A man performing martial arts kicks his opponent .",
+          "\"During a martial arts match , a man attempts to kick the other in the face .\"",
+          "Two men compete in a karate tournament .",
+          "Two people dressed in karate outfits are fighting .",
+          "Two people in white with black belts are having a karate match ."
+        ],
+        "bleu4": 1.3193849171325932e-05,
+        "meteor": 0.2232142857142857
+      },
+      {
+        "image": "3724581378_41049da264.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "A man surfing .",
+          "A person surfs in the ocean .",
+          "A surfer catching a large wave in the ocean .",
+          "Surfer riding a wave",
+          "Surfer wearing a wetsuit at the crest of a wave ."
+        ],
+        "bleu4": 1.2850858522641749e-05,
+        "meteor": 0.4934210526315789
+      },
+      {
+        "image": "3724718895_bd03f4a4dc.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "a dog drinks the sprinkler water .",
+          "A small brown and white dog is playing with the sprinkler in the grass .",
+          "A small terrier plays in a sprinkler .",
+          "The little black and white dog is running in the sprinkler .",
+          "The white dog is being squirted in the face with a jet of water ."
+        ],
+        "bleu4": 1.7567205239427937e-05,
+        "meteor": 0.3073770491803278
+      },
+      {
+        "image": "3728015645_b43a60258b.jpg",
+        "candidate": "a man in a blue shirt is a a on in skateboard",
+        "references": [
+          "A man is posed standing on one hand on a skateboard ramp .",
+          "A man on inline skates in midair",
+          "a skateboarder wearing a white cap is doing a stunt in a city skate park .",
+          "A young man is skateboarding on a ramp and is standing on one arm .",
+          "Man standing on one arm with feet in the air on playground equipment with a body of water in the background ."
+        ],
+        "bleu4": 1.9729406277958857e-05,
+        "meteor": 0.3407407407407408
+      },
+      {
+        "image": "3729405438_6e79077ab2.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "A bicycler balances his bike on a rail .",
+          "A biker is riding down the stairs on his bike at night .",
+          "A boy rides his red bicycle down the handrail of a staircase in a city .",
+          "A guy grinding a rail in a park on his bike",
+          "A trick bicyclist grinds down a handrail ."
+        ],
+        "bleu4": 1.4601394329159486e-07,
+        "meteor": 0.18181818181818185
+      },
+      {
+        "image": "3726590391_bc6e729bb6.jpg",
+        "candidate": "a man in a red shirt is a a on in of",
+        "references": [
+          "An elderly woman is crying while sitting in a window .",
+          "An elderly woman is sitting by a window reading .",
+          "A woman reads a book in front of a window .",
+          "A woman with her head down and her hand to her mouth sitting beside someone reading .",
+          "There is an old woman in front of a window ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.14705882352941177
+      },
+      {
+        "image": "3726120436_740bda8416.jpg",
+        "candidate": "a man in a red shirt is a a on in skateboard",
+        "references": [
+          "A man and woman sitting in chairs next to a turquoise truck .",
+          "An older couple chats near a bright colored car .",
+          "\"There is a man and a woman sitting on folding chairs , outside next to a truck .\"",
+          "Two old people sitting in chairs talking in front of a hill .",
+          "Woman and man sit next to their green truck ."
+        ],
+        "bleu4": 1.865892043799414e-05,
+        "meteor": 0.26302083333333326
+      },
+      {
+        "image": "3728256505_7f8db8270d.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "A man jumping onto a platform .",
+          "A man on the edge of a wall about to fall off .",
+          "A man on inline skates does a trick on a cracked concrete ramp .",
+          "A man with Rollerblades grinding a curb .",
+          "The man does a trick on his skateboard on a concrete ramp ."
+        ],
+        "bleu4": 1.4502571730116988e-05,
+        "meteor": 0.3931623931623932
+      },
+      {
+        "image": "3722507770_0d6cb7420e.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "A boy and his bike leaps into the air .",
+          "A boy does tricks on a bicycle while in a park .",
+          "A boy doing a trick on a bike",
+          "A boy is doing tricks on his bike as he flies in the air .",
+          "This young biker has his arms out as he tries this trick ."
+        ],
+        "bleu4": 1.4601394329159486e-07,
+        "meteor": 0.1807228915662651
+      },
+      {
+        "image": "3730011701_5352e02286.jpg",
+        "candidate": "a man in a blue shirt is a a on in skateboard",
+        "references": [
+          "A little girl buried in the sand .",
+          "A little girls waist high in sand",
+          "A little girl with a hat sits between a woman 's feet in the sand in front of a pair of colorful tents .",
+          "The little girl in the yellow hat is buried up to her waist in the sand on the beach .",
+          "The small baby in a yellow has the lower half of her body buried in sand ."
+        ],
+        "bleu4": 1.1242533404534355e-05,
+        "meteor": 0.13333333333333333
+      },
+      {
+        "image": "3729525173_7f984ed776.jpg",
+        "candidate": "a man in a red shirt is a a on in of",
+        "references": [
+          "A lady sitting on a front porch reading a book .",
+          "A person sits at a doorstep and reads a book .",
+          "A woman is reading literature and sitting on the front stoop of a building .",
+          "A woman sits and reads in the stoop of a wooden door .",
+          "A woman sits and reads on the front stoop of her building ."
+        ],
+        "bleu4": 1.554100851842712e-07,
+        "meteor": 0.14705882352941177
+      },
+      {
+        "image": "3718076407_0b4588d7bc.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "A brown and white dog is playing with a toy in a field of green grass and clover .",
+          "A brown and white dog retrieving a white plushie toy in a field of clover .",
+          "A distorted photo of a playing dog in a flower field",
+          "A dog in grass carrying a toy in its mouth .",
+          "The little brown dog is running through a clover field with a white object in its mouth ."
+        ],
+        "bleu4": 1.2664827633083463e-05,
+        "meteor": 0.32538659793814434
+      },
+      {
+        "image": "3725353555_75c346d7ec.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "A brown and black dog is jumping through a sprinkler .",
+          "A dog playing with a sprinkler",
+          "A German Shepherd runs through a sprinkler .",
+          "A tan and black dog jumps through a water sprinkler in the yard .",
+          "The German shepherd dog is jumping up as it is being squirted with a jet of water ."
+        ],
+        "bleu4": 1.7567205239427937e-05,
+        "meteor": 0.4189435336976321
+      },
+      {
+        "image": "3726629271_7639634703.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "Four dogs are playing and jumping in the air outside .",
+          "Four dogs jumping in the air in a field .",
+          "\"Four dogs look at an object in the sky , one jumping to reach it .\"",
+          "\"Four dogs watch an unseen object , two of them leaping in the air .\"",
+          "Two dogs on hind legs and two seated dogs are looking at something in the air ."
+        ],
+        "bleu4": 1.0812389098631936e-07,
+        "meteor": 0.05681818181818181
+      },
+      {
+        "image": "3718964174_cb2dc1615e.jpg",
+        "candidate": "a man of a white and is woman a a in in",
+        "references": [
+          "A woman in a blue sweater with a blue scarf around her head .",
+          "A woman in a head covering is looking away from the camera .",
+          "A woman is wearing a blue headscarf and a blue sweater .",
+          "A woman wearing a teal cardigan with a teal scarf and sunglasses on her head .",
+          "There is a woman with a green scarf around her head ."
+        ],
+        "bleu4": 1.554100851842712e-07,
+        "meteor": 0.28434684684684686
+      },
+      {
+        "image": "3726168984_1fa2c8965b.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "A black dog is colliding with a golden dog that has something in its mouth .",
+          "A black dog trying to mate with a brown dog",
+          "A brown dog and a yellow dog play fight over a plastic bottle .",
+          "A brown dog is climbing over a golden dog that is carrying bottle in its mouth .",
+          "Two dogs play with a bottle ."
+        ],
+        "bleu4": 1.7110523717424898e-07,
+        "meteor": 0.16129032258064518
+      },
+      {
+        "image": "3719461451_07de35af3a.jpg",
+        "candidate": "a man dog a a in in snow",
+        "references": [
+          "A pelican flies over the water .",
+          "A very large bird flying over water .",
+          "A white Pelican is flying over the ocean .",
+          "The white pelican is flying over the ocean .",
+          "white gull flying over ocean"
+        ],
+        "bleu4": 1.0573712634405632e-07,
+        "meteor": 0.08064516129032256
+      },
+      {
+        "image": "3720366614_dfa8fe1088.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "A small black dog is standing on two feet and wearing a pink tutu .",
+          "Small dog in costume stands on hind legs to reach dangling flowers .",
+          "The dog is jumping up beside a red wall .",
+          "The small brown and black down is wearing a pink tutu .",
+          "The small dog wearing a tutu stands on its hind legs ."
+        ],
+        "bleu4": 1.1618668216566524e-07,
+        "meteor": 0.16304347826086957
+      },
+      {
+        "image": "3722572342_6904d11d52.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "a red covered boat racing across the water",
+          "A red high speed racing boat skips across the water .",
+          "A red speed boat crosses the water .",
+          "A watercraft speeds through the water .",
+          "Red boat marked GRAHAM races across water ."
+        ],
+        "bleu4": 9.764540896763123e-08,
+        "meteor": 0.07692307692307693
+      },
+      {
+        "image": "3723690961_729dd5d617.jpg",
+        "candidate": "a man in a red shirt and a is and a woman in a of",
+        "references": [
+          "A man in a pink shirt and white vest plays a guitar .",
+          "A man in a pink shirt playing guitar .",
+          "A man in a white suit and a pink shirt plays guitar .",
+          "A man wearing pants plays a guitar while onstage .",
+          "The man in the white and pink outfit is holding a guitar ."
+        ],
+        "bleu4": 0.22229849552064015,
+        "meteor": 0.5563218390804597
+      },
+      {
+        "image": "3724113279_99b6e5bf41.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "\"a bmx rider , wall rides .\"",
+          "A man does a trick with his bicycle off the side of a wall .",
+          "A man jumps with his bike near a brick wall .",
+          "Man is performing a trick with a bicycle off a brick wall .",
+          "The man rides his bicycle up the brick wall ."
+        ],
+        "bleu4": 1.7364082025196827e-05,
+        "meteor": 0.25302530253025307
+      },
+      {
+        "image": "3718007650_e5930b4509.jpg",
+        "candidate": "a man of a white in is of a",
+        "references": [
+          "A girl with a black dress and big white bow stands with her back to the camera .",
+          "many people gather outside .",
+          "People stand outside watching something .",
+          "People with costumes are gathered in a wooded area looking the same direction .",
+          "The back of a woman in costume ; little girl looks at her"
+        ],
+        "bleu4": 1.1631736348831653e-05,
+        "meteor": 0.0925925925925926
+      },
+      {
+        "image": "3720210639_18bb34e475.jpg",
+        "candidate": "a man is a a on on skateboard swing a a",
+        "references": [
+          "A person in a red hat and shoes doing stunts on a red bike while a person in yellow watches .",
+          "A person is doing a trick in the air on a bike while his friend takes a picture .",
+          "A red bike jumps toward a person in yellow .",
+          "Boy in midair on bicycle",
+          "Person doing bicycle jump"
+        ],
+        "bleu4": 1.5282332389018925e-07,
+        "meteor": 0.1445086705202312
+      },
+      {
+        "image": "3727740053_3baa94ffcb.jpg",
+        "candidate": "a man in a red shirt and a is is a a in of of",
+        "references": [
+          "One man kicks another in the shoulder at a martial arts event .",
+          "Two martial artists compete in a match .",
+          "Two men are participating in a karate match .",
+          "Two men in an oriental fighting contest .",
+          "Two men in karate uniforms kicking each other ."
+        ],
+        "bleu4": 1.093265113929094e-05,
+        "meteor": 0.0641025641025641
+      }
+    ],
+    "num_layers": 1,
+    "hidden_units": 128
+  },
+  "rnn_pre_l2_h128_e256_m35": {
+    "summary": {
+      "bleu4": 0.016726317130602977,
+      "meteor": 0.2316136998666195,
+      "samples": 50,
+      "mode": "keras",
+      "decoder_type": "rnn",
+      "total_time_s": 52.25236562100008,
+      "avg_time_ms": 1045.0473124200016,
+      "decoding": "greedy",
+      "beam_size": null,
+      "injection": "pre"
+    },
+    "results": [
+      {
+        "image": "3725177385_62d5e13634.jpg",
+        "candidate": "a man in a red shirt is a a in of",
+        "references": [
+          "A bunch of vintage cars are parked in a lot .",
+          "An antique car that is yellow is shown lined up with other cars .",
+          "People admire classic cars .",
+          "Several old fashioned cars are parked together .",
+          "Some old people admiring classic cars park in front of them ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.25302530253025307
+      },
+      {
+        "image": "3724738804_f00748a137.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A woman and three children are jumping into a swimming pool .",
+          "Children jumping in a pool surrounded by pool chairs and huts .",
+          "Children jump off the edge into a pool .",
+          "Three girls jump into a pool .",
+          "Three girls wearing goggles are jumping into a swimming pool together ."
+        ],
+        "bleu4": 1.2850858522641749e-05,
+        "meteor": 0.09090909090909093
+      },
+      {
+        "image": "3724487641_d2096f10e5.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A bunch of little boys in bathing trunks running .",
+          "Two wet boys in swim trunks run .",
+          "two young boys competing in a race .",
+          "Two young boys in bathing suits walk",
+          "Young boys running along the pavement ."
+        ],
+        "bleu4": 1.2850858522641749e-05,
+        "meteor": 0.10869565217391304
+      },
+      {
+        "image": "3721812313_6000566803.jpg",
+        "candidate": "a man of a woman and a woman and a woman and a are and in are",
+        "references": [
+          "A closeup shot of three guys and a girl posing for the camera .",
+          "A woman and three men are posing for a photo",
+          "A woman wearing glasses poses for the camera with three men .",
+          "A woman with her arms on the cheeks of two men on either side of her pose while another man peeks over her head .",
+          "Three men and a woman posing for picture"
+        ],
+        "bleu4": 0.0017912132032783655,
+        "meteor": 0.21067415730337077
+      },
+      {
+        "image": "3718892835_a3e74a3417.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A boy falls off of his scooter during an obstacle course .",
+          "A boy wearing a helmet flips up his scooter as he skates between orange cones .",
+          "A person wearing a helmet begins to fall from a silver scooter .",
+          "A woman is about to fall off a scooter .",
+          "\"This person is falling off a scooter , in a parking lot .\""
+        ],
+        "bleu4": 1.528233238901893e-05,
+        "meteor": 0.23232323232323235
+      },
+      {
+        "image": "3728695560_00ec1ca492.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A little girl looks at a birthday cake while a man holds a baby .",
+          "\"A man , baby , and child sit in front of a birthday cake .\"",
+          "A man holding a baby and an older child admire a birthday cake with candles .",
+          "A man holding a baby with a girl and a birthday cake .",
+          "Candles are lit on a cake while a man holds a baby ."
+        ],
+        "bleu4": 1.4502571730116988e-05,
+        "meteor": 0.31260504201680667
+      },
+      {
+        "image": "3725202807_12fbfdd207.jpg",
+        "candidate": "a man in a red shirt is a a of of",
+        "references": [
+          "A couple in a parking lot .",
+          "A couple walks past a car in a parking lot .",
+          "A man and a woman are walking past a car with a fancy symbol on the front .",
+          "A man and a woman walk past a red car with a silver hood ornament",
+          "A man and woman walking next to a red car with an unusual hood ornament ."
+        ],
+        "bleu4": 2.0902905270623313e-05,
+        "meteor": 0.3931623931623932
+      },
+      {
+        "image": "3721082512_8277087f3f.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "a man riding a bike through the forest",
+          "A mountain biker rides through a shady trail .",
+          "A mountain biker travels along a dirt trail inside a heavily wooded area .",
+          "A person biking near trees .",
+          "Bicyclist in racing gear rides through forest area ."
+        ],
+        "bleu4": 1.2173955129903118e-05,
+        "meteor": 0.3078982597054887
+      },
+      {
+        "image": "3726019124_f302b3d48a.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A bike in a field and two kites",
+          "A kid is riding a bike in an open field .",
+          "A landscape picture of a motorcyclist and a person flying kites .",
+          "Kites attached to wheeled devices in a field",
+          "two people fly kites in a field"
+        ],
+        "bleu4": 1.528233238901893e-05,
+        "meteor": 0.3078982597054887
+      },
+      {
+        "image": "3723903586_e98d3d8ec7.jpg",
+        "candidate": "a people is in in snow field",
+        "references": [
+          "greyhounds racing on a track",
+          "A greyhound race with the lead dog wearing yellow and black stripes and the number 8",
+          "Dogs racing at a track .",
+          "\"Greyhound dogs race on the track , with # 8 leading the way .\"",
+          "Some greyhound dogs are racing on a dirt track ."
+        ],
+        "bleu4": 1.0932651139290954e-07,
+        "meteor": 0.09615384615384616
+      },
+      {
+        "image": "3726076549_0efb38854b.jpg",
+        "candidate": "a man in a blue shirt is a a of of",
+        "references": [
+          "\"A boy in jeans , black t-shirt , and blue cap on a bike , leaps over steps .\"",
+          "An Asian man in a black shirt and jeans rides his black and red bicycle down a railing .",
+          "A teenager performs a railgrind on his bicycle .",
+          "Man sliding down stair handrails on a bike .",
+          "This man has balanced his bicycle on a handrail ."
+        ],
+        "bleu4": 0.0018658920437994147,
+        "meteor": 0.12048192771084337
+      },
+      {
+        "image": "3724623861_2bb6c23641.jpg",
+        "candidate": "a man in a red shirt is a a of of",
+        "references": [
+          "A girl in a colorful dress and sunglasses is playing a violin on the street .",
+          "a red haired woman playing the violin",
+          "A woman in a dress plays violin outside .",
+          "A woman plays a violin outdoors .",
+          "A woman wearing a plaid dress plays an instrument while standing near a tree ."
+        ],
+        "bleu4": 1.817385841085785e-05,
+        "meteor": 0.3078982597054887
+      },
+      {
+        "image": "3721881082_afe9fc734e.jpg",
+        "candidate": "a man of a woman and a woman and a woman are a",
+        "references": [
+          "A woman and a girl sitting on a front lawn",
+          "\"A woman and girl wearing traditional clothes , sits on the front lawn , reading from a book .\"",
+          "A woman wearing colonial clothing is sitting on the grass reading to a young girl .",
+          "\"The girl and a lady are sitting on a blanket , reading a book .\"",
+          "Two women sitting on a blanket on the lawn while sharing a book ."
+        ],
+        "bleu4": 0.21401603033752975,
+        "meteor": 0.14563106796116507
+      },
+      {
+        "image": "3718305988_fe2c91fd44.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A jogger runs up brick stairs for streght training .",
+          "A man is skating down a set of stairs .",
+          "A skateboarder jumps on brick stairs .",
+          "A young man skateboards around the empty outdoor sports arena .",
+          "The man is skateboarding on a large brick staircase ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.343070652173913
+      },
+      {
+        "image": "3726730085_2468ee9220.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A baby is lifted into the air by a man wearing no shirt .",
+          "A child being held over the head of an adult .",
+          "A man and a young child .",
+          "A man with no shirt holding a baby aloft .",
+          "Man raising young boy into the clear blue sky ."
+        ],
+        "bleu4": 1.588277335841436e-05,
+        "meteor": 0.3931623931623932
+      },
+      {
+        "image": "3726700898_c50494b8bd.jpg",
+        "candidate": "a man in a red shirt is a a in of",
+        "references": [
+          "A man balances a knife on his arm as another man watches .",
+          "A man has a knife on his arm and another man is watching .",
+          "A man is tossing a knife in the air while another man stands nearby .",
+          "A young man shows off a knife trick to another .",
+          "The man in the bright colored shirt is balancing a knife on his arm ."
+        ],
+        "bleu4": 2.0112680514489984e-05,
+        "meteor": 0.24658203125
+      },
+      {
+        "image": "3721799573_2f470950e0.jpg",
+        "candidate": "a man of a woman and a woman and a woman and a are and in are",
+        "references": [
+          "There are two ladies embracing and posing shown here .",
+          "Two girlfriends smiling .",
+          "Two women have their arms around each other and are smiling .",
+          "Two women smile for the camera .",
+          "Two women with their arms around each other smile ."
+        ],
+        "bleu4": 1.0414664128493447e-07,
+        "meteor": 0.16163793103448276
+      },
+      {
+        "image": "3724759125_2dc0e1f4a3.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A boy on a play horse at the park points to the slide .",
+          "a boy rides a toy horse .",
+          "A little boy is riding a mechanical horse at the playground .",
+          "A small boy rides a on a playground toy while pointing to a slide .",
+          "A young fair skinned boy rides a play horse at a playground ."
+        ],
+        "bleu4": 1.4601394329159486e-07,
+        "meteor": 0.15384615384615385
+      },
+      {
+        "image": "3726170067_094cc1b7e5.jpg",
+        "candidate": "a man in a red shirt is a a",
+        "references": [
+          "A balding man with glasses stands in front of a colorful display .",
+          "A bald man wearing glasses .",
+          "A man in a brown coat in front of a sign with a tree .",
+          "A man wearing glasses and a blazer stands in front of a billboard sign .",
+          "An older man is standing outside in front of a truck ."
+        ],
+        "bleu4": 0.2748887655709261,
+        "meteor": 0.4166666666666666
+      },
+      {
+        "image": "3717845800_ab45e255b8.jpg",
+        "candidate": "a group player people a in",
+        "references": [
+          "Four rugby players on the ground with two standing behind them .",
+          "Members of two soccer teams struggle on the field to get the ball .",
+          "Soccer players on the ground fighting for the ball .",
+          "The rugby players in red are wrestling the player in yellow to the ground .",
+          "Three members of the red team are in the grass with a member of the yellow team ."
+        ],
+        "bleu4": 9.069748827745893e-08,
+        "meteor": 0.14204545454545453
+      },
+      {
+        "image": "3728164558_52729baefa.jpg",
+        "candidate": "a man in a red shirt is a a",
+        "references": [
+          "two people leaning against a railing outside the enterance of a building",
+          "Two people standing on a porch .",
+          "Two woman stand near a door .",
+          "Two women standing outside community library",
+          "Two women stand outside a library ."
+        ],
+        "bleu4": 1.2209471671615692e-07,
+        "meteor": 0.08547008547008547
+      },
+      {
+        "image": "3724150944_fc62e8d5e0.jpg",
+        "candidate": "a man player a a in is",
+        "references": [
+          "A group of young boys on opposing teams are playing soccer .",
+          "Children playing soccer near the goal net .",
+          "Four boys playing soccer .",
+          "Four children run along a grassy field playing soccer .",
+          "The young boy in the red shirt is kicking a soccer ball ."
+        ],
+        "bleu4": 1.4388178057096277e-07,
+        "meteor": 0.05681818181818181
+      },
+      {
+        "image": "3726130458_07df79e969.jpg",
+        "candidate": "a men player a a in in",
+        "references": [
+          "A baseball player dodges a ball with his bat high in the air .",
+          "A baseball player in a white uniform is walking to base while a crowd of people watch from the bleachers .",
+          "A baseball player near home plate .",
+          "A baseball player raises the bat above his head .",
+          "A baseball player runs to catch the ball ."
+        ],
+        "bleu4": 1.63481265566555e-07,
+        "meteor": 0.16393442622950818
+      },
+      {
+        "image": "3730011219_588cdc7972.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A man and a young child walk along the beach shore .",
+          "A man and toddler are walking along the beach in front of the ocean .",
+          "\"A man at the beach holding a pail , standing next to a child .\"",
+          "A man with a bucket and a girl in a hat on the beach .",
+          "\"The man is wearing a black shirt , holding a pail , and walking with a child next to the water .\""
+        ],
+        "bleu4": 2.0112680514489984e-05,
+        "meteor": 0.27372262773722633
+      },
+      {
+        "image": "3727752439_907795603b.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "a large woman puts her sunglasses on .",
+          "A woman in a black dress holding sunglasses .",
+          "a woman wearing a black and white outfit while holding her sunglasses .",
+          "The lady is holding her glasses .",
+          "The woman with blond hair holds her sunglasses ."
+        ],
+        "bleu4": 1.2609141255922462e-05,
+        "meteor": 0.3078982597054887
+      },
+      {
+        "image": "3726025663_e7d35d23f6.jpg",
+        "candidate": "a man is a a in of with is and a woman and a woman and a are and in are",
+        "references": [
+          "A group of people ride in a race",
+          "A large group of bicycles riding their bikes .",
+          "Bicycles in a race .",
+          "Bikers participate in a race .",
+          "There are many men racing on their bicycles ."
+        ],
+        "bleu4": 1.2421889951295348e-07,
+        "meteor": 0.1075268817204301
+      },
+      {
+        "image": "3725814794_30db172f67.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A man performing martial arts kicks his opponent .",
+          "\"During a martial arts match , a man attempts to kick the other in the face .\"",
+          "Two men compete in a karate tournament .",
+          "Two people dressed in karate outfits are fighting .",
+          "Two people in white with black belts are having a karate match ."
+        ],
+        "bleu4": 1.4994880495617344e-05,
+        "meteor": 0.22590361445783133
+      },
+      {
+        "image": "3724581378_41049da264.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A man surfing .",
+          "A person surfs in the ocean .",
+          "A surfer catching a large wave in the ocean .",
+          "Surfer riding a wave",
+          "Surfer wearing a wetsuit at the crest of a wave ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.4934210526315789
+      },
+      {
+        "image": "3724718895_bd03f4a4dc.jpg",
+        "candidate": "a dog dog a the in",
+        "references": [
+          "a dog drinks the sprinkler water .",
+          "A small brown and white dog is playing with the sprinkler in the grass .",
+          "A small terrier plays in a sprinkler .",
+          "The little black and white dog is running in the sprinkler .",
+          "The white dog is being squirted in the face with a jet of water ."
+        ],
+        "bleu4": 2.0205155046766242e-05,
+        "meteor": 0.42592592592592593
+      },
+      {
+        "image": "3728015645_b43a60258b.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A man is posed standing on one hand on a skateboard ramp .",
+          "A man on inline skates in midair",
+          "a skateboarder wearing a white cap is doing a stunt in a city skate park .",
+          "A young man is skateboarding on a ramp and is standing on one arm .",
+          "Man standing on one arm with feet in the air on playground equipment with a body of water in the background ."
+        ],
+        "bleu4": 1.8364902984137105e-05,
+        "meteor": 0.3453453453453454
+      },
+      {
+        "image": "3729405438_6e79077ab2.jpg",
+        "candidate": "a man in a blue shirt is a a of of",
+        "references": [
+          "A bicycler balances his bike on a rail .",
+          "A biker is riding down the stairs on his bike at night .",
+          "A boy rides his red bicycle down the handrail of a staircase in a city .",
+          "A guy grinding a rail in a park on his bike",
+          "A trick bicyclist grinds down a handrail ."
+        ],
+        "bleu4": 1.528233238901893e-05,
+        "meteor": 0.23232323232323235
+      },
+      {
+        "image": "3726590391_bc6e729bb6.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "An elderly woman is crying while sitting in a window .",
+          "An elderly woman is sitting by a window reading .",
+          "A woman reads a book in front of a window .",
+          "A woman with her head down and her hand to her mouth sitting beside someone reading .",
+          "There is an old woman in front of a window ."
+        ],
+        "bleu4": 1.528233238901893e-05,
+        "meteor": 0.14851485148514854
+      },
+      {
+        "image": "3726120436_740bda8416.jpg",
+        "candidate": "a man in a red shirt is a a in of",
+        "references": [
+          "A man and woman sitting in chairs next to a turquoise truck .",
+          "An older couple chats near a bright colored car .",
+          "\"There is a man and a woman sitting on folding chairs , outside next to a truck .\"",
+          "Two old people sitting in chairs talking in front of a hill .",
+          "Woman and man sit next to their green truck ."
+        ],
+        "bleu4": 1.7832018574003685e-05,
+        "meteor": 0.2652310924369748
+      },
+      {
+        "image": "3728256505_7f8db8270d.jpg",
+        "candidate": "a man in a blue shirt is a a of of",
+        "references": [
+          "A man jumping onto a platform .",
+          "A man on the edge of a wall about to fall off .",
+          "A man on inline skates does a trick on a cracked concrete ramp .",
+          "A man with Rollerblades grinding a curb .",
+          "The man does a trick on his skateboard on a concrete ramp ."
+        ],
+        "bleu4": 1.3332543620675295e-05,
+        "meteor": 0.3931623931623932
+      },
+      {
+        "image": "3722507770_0d6cb7420e.jpg",
+        "candidate": "a man in a blue shirt is a a of of",
+        "references": [
+          "A boy and his bike leaps into the air .",
+          "A boy does tricks on a bicycle while in a park .",
+          "A boy doing a trick on a bike",
+          "A boy is doing tricks on his bike as he flies in the air .",
+          "This young biker has his arms out as he tries this trick ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.23232323232323235
+      },
+      {
+        "image": "3730011701_5352e02286.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "A little girl buried in the sand .",
+          "A little girls waist high in sand",
+          "A little girl with a hat sits between a woman 's feet in the sand in front of a pair of colorful tents .",
+          "The little girl in the yellow hat is buried up to her waist in the sand on the beach .",
+          "The small baby in a yellow has the lower half of her body buried in sand ."
+        ],
+        "bleu4": 1.6421934873372774e-05,
+        "meteor": 0.13513513513513514
+      },
+      {
+        "image": "3729525173_7f984ed776.jpg",
+        "candidate": "a man in a red shirt is a a of of",
+        "references": [
+          "A lady sitting on a front porch reading a book .",
+          "A person sits at a doorstep and reads a book .",
+          "A woman is reading literature and sitting on the front stoop of a building .",
+          "A woman sits and reads in the stoop of a wooden door .",
+          "A woman sits and reads on the front stoop of her building ."
+        ],
+        "bleu4": 1.5282332389018925e-07,
+        "meteor": 0.14851485148514854
+      },
+      {
+        "image": "3718076407_0b4588d7bc.jpg",
+        "candidate": "a dog dog a the in",
+        "references": [
+          "A brown and white dog is playing with a toy in a field of green grass and clover .",
+          "A brown and white dog retrieving a white plushie toy in a field of clover .",
+          "A distorted photo of a playing dog in a flower field",
+          "A dog in grass carrying a toy in its mouth .",
+          "The little brown dog is running through a clover field with a white object in its mouth ."
+        ],
+        "bleu4": 1.0373672493717562e-05,
+        "meteor": 0.32877604166666663
+      },
+      {
+        "image": "3725353555_75c346d7ec.jpg",
+        "candidate": "a dog dog a the in",
+        "references": [
+          "A brown and black dog is jumping through a sprinkler .",
+          "A dog playing with a sprinkler",
+          "A German Shepherd runs through a sprinkler .",
+          "A tan and black dog jumps through a water sprinkler in the yard .",
+          "The German shepherd dog is jumping up as it is being squirted with a jet of water ."
+        ],
+        "bleu4": 2.0205155046766242e-05,
+        "meteor": 0.42592592592592593
+      },
+      {
+        "image": "3726629271_7639634703.jpg",
+        "candidate": "a dog dog a the in",
+        "references": [
+          "Four dogs are playing and jumping in the air outside .",
+          "Four dogs jumping in the air in a field .",
+          "\"Four dogs look at an object in the sky , one jumping to reach it .\"",
+          "\"Four dogs watch an unseen object , two of them leaping in the air .\"",
+          "Two dogs on hind legs and two seated dogs are looking at something in the air ."
+        ],
+        "bleu4": 9.069748827745893e-08,
+        "meteor": 0.05747126436781608
+      },
+      {
+        "image": "3718964174_cb2dc1615e.jpg",
+        "candidate": "a man in a red shirt is a a",
+        "references": [
+          "A woman in a blue sweater with a blue scarf around her head .",
+          "A woman in a head covering is looking away from the camera .",
+          "A woman is wearing a blue headscarf and a blue sweater .",
+          "A woman wearing a teal cardigan with a teal scarf and sunglasses on her head .",
+          "There is a woman with a green scarf around her head ."
+        ],
+        "bleu4": 1.545813127110937e-05,
+        "meteor": 0.26976495726495725
+      },
+      {
+        "image": "3726168984_1fa2c8965b.jpg",
+        "candidate": "a dog dog a the in",
+        "references": [
+          "A black dog is colliding with a golden dog that has something in its mouth .",
+          "A black dog trying to mate with a brown dog",
+          "A brown dog and a yellow dog play fight over a plastic bottle .",
+          "A brown dog is climbing over a golden dog that is carrying bottle in its mouth .",
+          "Two dogs play with a bottle ."
+        ],
+        "bleu4": 1.6990442448471247e-07,
+        "meteor": 0.16260162601626016
+      },
+      {
+        "image": "3719461451_07de35af3a.jpg",
+        "candidate": "a dogs dog in a snow",
+        "references": [
+          "A pelican flies over the water .",
+          "A very large bird flying over water .",
+          "A white Pelican is flying over the ocean .",
+          "The white pelican is flying over the ocean .",
+          "white gull flying over ocean"
+        ],
+        "bleu4": 1.1362193664675001e-07,
+        "meteor": 0.08333333333333331
+      },
+      {
+        "image": "3720366614_dfa8fe1088.jpg",
+        "candidate": "a dog dog a a in",
+        "references": [
+          "A small black dog is standing on two feet and wearing a pink tutu .",
+          "Small dog in costume stands on hind legs to reach dangling flowers .",
+          "The dog is jumping up beside a red wall .",
+          "The small brown and black down is wearing a pink tutu .",
+          "The small dog wearing a tutu stands on its hind legs ."
+        ],
+        "bleu4": 9.746079379487552e-08,
+        "meteor": 0.1644736842105263
+      },
+      {
+        "image": "3722572342_6904d11d52.jpg",
+        "candidate": "a man in a blue shirt is a a in of",
+        "references": [
+          "a red covered boat racing across the water",
+          "A red high speed racing boat skips across the water .",
+          "A red speed boat crosses the water .",
+          "A watercraft speeds through the water .",
+          "Red boat marked GRAHAM races across water ."
+        ],
+        "bleu4": 9.764540896763123e-08,
+        "meteor": 0.07692307692307693
+      },
+      {
+        "image": "3723690961_729dd5d617.jpg",
+        "candidate": "a man in a red shirt is a a",
+        "references": [
+          "A man in a pink shirt and white vest plays a guitar .",
+          "A man in a pink shirt playing guitar .",
+          "A man in a white suit and a pink shirt plays guitar .",
+          "A man wearing pants plays a guitar while onstage .",
+          "The man in the white and pink outfit is holding a guitar ."
+        ],
+        "bleu4": 0.34329452398451965,
+        "meteor": 0.5975308641975308
+      },
+      {
+        "image": "3724113279_99b6e5bf41.jpg",
+        "candidate": "a man in a blue shirt is a a of of",
+        "references": [
+          "\"a bmx rider , wall rides .\"",
+          "A man does a trick with his bicycle off the side of a wall .",
+          "A man jumps with his bike near a brick wall .",
+          "Man is performing a trick with a bicycle off a brick wall .",
+          "The man rides his bicycle up the brick wall ."
+        ],
+        "bleu4": 1.528233238901893e-05,
+        "meteor": 0.25302530253025307
+      },
+      {
+        "image": "3718007650_e5930b4509.jpg",
+        "candidate": "a group of people are in in of of",
+        "references": [
+          "A girl with a black dress and big white bow stands with her back to the camera .",
+          "many people gather outside .",
+          "People stand outside watching something .",
+          "People with costumes are gathered in a wooded area looking the same direction .",
+          "The back of a woman in costume ; little girl looks at her"
+        ],
+        "bleu4": 1.1000617050044772e-07,
+        "meteor": 0.11111111111111112
+      },
+      {
+        "image": "3720210639_18bb34e475.jpg",
+        "candidate": "a man in a blue shirt is a a of of",
+        "references": [
+          "A person in a red hat and shoes doing stunts on a red bike while a person in yellow watches .",
+          "A person is doing a trick in the air on a bike while his friend takes a picture .",
+          "A red bike jumps toward a person in yellow .",
+          "Boy in midair on bicycle",
+          "Person doing bicycle jump"
+        ],
+        "bleu4": 1.528233238901893e-05,
+        "meteor": 0.19476439790575917
+      },
+      {
+        "image": "3727740053_3baa94ffcb.jpg",
+        "candidate": "a group of people are in in of of",
+        "references": [
+          "One man kicks another in the shoulder at a martial arts event .",
+          "Two martial artists compete in a match .",
+          "Two men are participating in a karate match .",
+          "Two men in an oriental fighting contest .",
+          "Two men in karate uniforms kicking each other ."
+        ],
+        "bleu4": 1.351200154807036e-07,
+        "meteor": 0.06944444444444445
+      }
+    ],
+    "num_layers": 2,
+    "hidden_units": 128
+  },
+  "rnn_pre_l3_h128_e256_m35": {
+    "summary": {
+      "bleu4": 0.010645929214851801,
+      "meteor": 0.22736492921225196,
+      "samples": 50,
+      "mode": "keras",
+      "decoder_type": "rnn",
+      "total_time_s": 49.57069301499996,
+      "avg_time_ms": 991.4138602999992,
+      "decoding": "greedy",
+      "beam_size": null,
+      "injection": "pre"
+    },
+    "results": [
+      {
+        "image": "3725177385_62d5e13634.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A bunch of vintage cars are parked in a lot .",
+          "An antique car that is yellow is shown lined up with other cars .",
+          "People admire classic cars .",
+          "Several old fashioned cars are parked together .",
+          "Some old people admiring classic cars park in front of them ."
+        ],
+        "bleu4": 1.3809146166549123e-05,
+        "meteor": 0.25302530253025307
+      },
+      {
+        "image": "3724738804_f00748a137.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A woman and three children are jumping into a swimming pool .",
+          "Children jumping in a pool surrounded by pool chairs and huts .",
+          "Children jump off the edge into a pool .",
+          "Three girls jump into a pool .",
+          "Three girls wearing goggles are jumping into a swimming pool together ."
+        ],
+        "bleu4": 1.2850858522641749e-05,
+        "meteor": 0.09090909090909093
+      },
+      {
+        "image": "3724487641_d2096f10e5.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A bunch of little boys in bathing trunks running .",
+          "Two wet boys in swim trunks run .",
+          "two young boys competing in a race .",
+          "Two young boys in bathing suits walk",
+          "Young boys running along the pavement ."
+        ],
+        "bleu4": 1.1612061509165747e-05,
+        "meteor": 0.10869565217391304
+      },
+      {
+        "image": "3721812313_6000566803.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A closeup shot of three guys and a girl posing for the camera .",
+          "A woman and three men are posing for a photo",
+          "A woman wearing glasses poses for the camera with three men .",
+          "A woman with her arms on the cheeks of two men on either side of her pose while another man peeks over her head .",
+          "Three men and a woman posing for picture"
+        ],
+        "bleu4": 1.2850858522641766e-07,
+        "meteor": 0.09900990099009903
+      },
+      {
+        "image": "3718892835_a3e74a3417.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A boy falls off of his scooter during an obstacle course .",
+          "A boy wearing a helmet flips up his scooter as he skates between orange cones .",
+          "A person wearing a helmet begins to fall from a silver scooter .",
+          "A woman is about to fall off a scooter .",
+          "\"This person is falling off a scooter , in a parking lot .\""
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.23232323232323235
+      },
+      {
+        "image": "3728695560_00ec1ca492.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A little girl looks at a birthday cake while a man holds a baby .",
+          "\"A man , baby , and child sit in front of a birthday cake .\"",
+          "A man holding a baby and an older child admire a birthday cake with candles .",
+          "A man holding a baby with a girl and a birthday cake .",
+          "Candles are lit on a cake while a man holds a baby ."
+        ],
+        "bleu4": 1.3954308650876805e-05,
+        "meteor": 0.31260504201680667
+      },
+      {
+        "image": "3725202807_12fbfdd207.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A couple in a parking lot .",
+          "A couple walks past a car in a parking lot .",
+          "A man and a woman are walking past a car with a fancy symbol on the front .",
+          "A man and a woman walk past a red car with a silver hood ornament",
+          "A man and woman walking next to a red car with an unusual hood ornament ."
+        ],
+        "bleu4": 1.817385841085785e-05,
+        "meteor": 0.3931623931623932
+      },
+      {
+        "image": "3721082512_8277087f3f.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "a man riding a bike through the forest",
+          "A mountain biker rides through a shady trail .",
+          "A mountain biker travels along a dirt trail inside a heavily wooded area .",
+          "A person biking near trees .",
+          "Bicyclist in racing gear rides through forest area ."
+        ],
+        "bleu4": 1.2173955129903118e-05,
+        "meteor": 0.3078982597054887
+      },
+      {
+        "image": "3726019124_f302b3d48a.jpg",
+        "candidate": "a man is a a in in",
+        "references": [
+          "A bike in a field and two kites",
+          "A kid is riding a bike in an open field .",
+          "A landscape picture of a motorcyclist and a person flying kites .",
+          "Kites attached to wheeled devices in a field",
+          "two people fly kites in a field"
+        ],
+        "bleu4": 1.63481265566555e-07,
+        "meteor": 0.20618556701030927
+      },
+      {
+        "image": "3723903586_e98d3d8ec7.jpg",
+        "candidate": "a man is a a in in",
+        "references": [
+          "greyhounds racing on a track",
+          "A greyhound race with the lead dog wearing yellow and black stripes and the number 8",
+          "Dogs racing at a track .",
+          "\"Greyhound dogs race on the track , with # 8 leading the way .\"",
+          "Some greyhound dogs are racing on a dirt track ."
+        ],
+        "bleu4": 1.0932651139290954e-07,
+        "meteor": 0.09615384615384616
+      },
+      {
+        "image": "3726076549_0efb38854b.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "\"A boy in jeans , black t-shirt , and blue cap on a bike , leaps over steps .\"",
+          "An Asian man in a black shirt and jeans rides his black and red bicycle down a railing .",
+          "A teenager performs a railgrind on his bicycle .",
+          "Man sliding down stair handrails on a bike .",
+          "This man has balanced his bicycle on a handrail ."
+        ],
+        "bleu4": 0.0018658920437994147,
+        "meteor": 0.12048192771084337
+      },
+      {
+        "image": "3724623861_2bb6c23641.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A girl in a colorful dress and sunglasses is playing a violin on the street .",
+          "a red haired woman playing the violin",
+          "A woman in a dress plays violin outside .",
+          "A woman plays a violin outdoors .",
+          "A woman wearing a plaid dress plays an instrument while standing near a tree ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.3078982597054887
+      },
+      {
+        "image": "3721881082_afe9fc734e.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A woman and a girl sitting on a front lawn",
+          "\"A woman and girl wearing traditional clothes , sits on the front lawn , reading from a book .\"",
+          "A woman wearing colonial clothing is sitting on the grass reading to a young girl .",
+          "\"The girl and a lady are sitting on a blanket , reading a book .\"",
+          "Two women sitting on a blanket on the lawn while sharing a book ."
+        ],
+        "bleu4": 1.3809146166549141e-07,
+        "meteor": 0.14851485148514854
+      },
+      {
+        "image": "3718305988_fe2c91fd44.jpg",
+        "candidate": "a man is a a in in",
+        "references": [
+          "A jogger runs up brick stairs for streght training .",
+          "A man is skating down a set of stairs .",
+          "A skateboarder jumps on brick stairs .",
+          "A young man skateboards around the empty outdoor sports arena .",
+          "The man is skateboarding on a large brick staircase ."
+        ],
+        "bleu4": 0.0024843779902590673,
+        "meteor": 0.4261363636363636
+      },
+      {
+        "image": "3726730085_2468ee9220.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A baby is lifted into the air by a man wearing no shirt .",
+          "A child being held over the head of an adult .",
+          "A man and a young child .",
+          "A man with no shirt holding a baby aloft .",
+          "Man raising young boy into the clear blue sky ."
+        ],
+        "bleu4": 1.528233238901893e-05,
+        "meteor": 0.3931623931623932
+      },
+      {
+        "image": "3726700898_c50494b8bd.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A man balances a knife on his arm as another man watches .",
+          "A man has a knife on his arm and another man is watching .",
+          "A man is tossing a knife in the air while another man stands nearby .",
+          "A young man shows off a knife trick to another .",
+          "The man in the bright colored shirt is balancing a knife on his arm ."
+        ],
+        "bleu4": 2.0112680514489984e-05,
+        "meteor": 0.24658203125
+      },
+      {
+        "image": "3721799573_2f470950e0.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "There are two ladies embracing and posing shown here .",
+          "Two girlfriends smiling .",
+          "Two women have their arms around each other and are smiling .",
+          "Two women smile for the camera .",
+          "Two women with their arms around each other smile ."
+        ],
+        "bleu4": 1.0000000000000007e-09,
+        "meteor": 0.0
+      },
+      {
+        "image": "3724759125_2dc0e1f4a3.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A boy on a play horse at the park points to the slide .",
+          "a boy rides a toy horse .",
+          "A little boy is riding a mechanical horse at the playground .",
+          "A small boy rides a on a playground toy while pointing to a slide .",
+          "A young fair skinned boy rides a play horse at a playground ."
+        ],
+        "bleu4": 1.4601394329159486e-07,
+        "meteor": 0.15384615384615385
+      },
+      {
+        "image": "3726170067_094cc1b7e5.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A balding man with glasses stands in front of a colorful display .",
+          "A bald man wearing glasses .",
+          "A man in a brown coat in front of a sign with a tree .",
+          "A man wearing glasses and a blazer stands in front of a billboard sign .",
+          "An older man is standing outside in front of a truck ."
+        ],
+        "bleu4": 0.2790159393585827,
+        "meteor": 0.41058394160583944
+      },
+      {
+        "image": "3717845800_ab45e255b8.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "Four rugby players on the ground with two standing behind them .",
+          "Members of two soccer teams struggle on the field to get the ball .",
+          "Soccer players on the ground fighting for the ball .",
+          "The rugby players in red are wrestling the player in yellow to the ground .",
+          "Three members of the red team are in the grass with a member of the yellow team ."
+        ],
+        "bleu4": 1.2850858522641766e-07,
+        "meteor": 0.07299270072992702
+      },
+      {
+        "image": "3728164558_52729baefa.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "two people leaning against a railing outside the enterance of a building",
+          "Two people standing on a porch .",
+          "Two woman stand near a door .",
+          "Two women standing outside community library",
+          "Two women stand outside a library ."
+        ],
+        "bleu4": 1.0602981681532927e-07,
+        "meteor": 0.08403361344537814
+      },
+      {
+        "image": "3724150944_fc62e8d5e0.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A group of young boys on opposing teams are playing soccer .",
+          "Children playing soccer near the goal net .",
+          "Four boys playing soccer .",
+          "Four children run along a grassy field playing soccer .",
+          "The young boy in the red shirt is kicking a soccer ball ."
+        ],
+        "bleu4": 1.3809146166549123e-05,
+        "meteor": 0.05434782608695652
+      },
+      {
+        "image": "3726130458_07df79e969.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A baseball player dodges a ball with his bat high in the air .",
+          "A baseball player in a white uniform is walking to base while a crowd of people watch from the bleachers .",
+          "A baseball player near home plate .",
+          "A baseball player raises the bat above his head .",
+          "A baseball player runs to catch the ball ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.19476439790575917
+      },
+      {
+        "image": "3730011219_588cdc7972.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A man and a young child walk along the beach shore .",
+          "A man and toddler are walking along the beach in front of the ocean .",
+          "\"A man at the beach holding a pail , standing next to a child .\"",
+          "A man with a bucket and a girl in a hat on the beach .",
+          "\"The man is wearing a black shirt , holding a pail , and walking with a child next to the water .\""
+        ],
+        "bleu4": 1.9529081793526222e-05,
+        "meteor": 0.27372262773722633
+      },
+      {
+        "image": "3727752439_907795603b.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "a large woman puts her sunglasses on .",
+          "A woman in a black dress holding sunglasses .",
+          "a woman wearing a black and white outfit while holding her sunglasses .",
+          "The lady is holding her glasses .",
+          "The woman with blond hair holds her sunglasses ."
+        ],
+        "bleu4": 1.2609141255922462e-05,
+        "meteor": 0.3078982597054887
+      },
+      {
+        "image": "3726025663_e7d35d23f6.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A group of people ride in a race",
+          "A large group of bicycles riding their bikes .",
+          "Bicycles in a race .",
+          "Bikers participate in a race .",
+          "There are many men racing on their bicycles ."
+        ],
+        "bleu4": 1.2850858522641749e-05,
+        "meteor": 0.3078982597054887
+      },
+      {
+        "image": "3725814794_30db172f67.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A man performing martial arts kicks his opponent .",
+          "\"During a martial arts match , a man attempts to kick the other in the face .\"",
+          "Two men compete in a karate tournament .",
+          "Two people dressed in karate outfits are fighting .",
+          "Two people in white with black belts are having a karate match ."
+        ],
+        "bleu4": 1.4994880495617344e-05,
+        "meteor": 0.22590361445783133
+      },
+      {
+        "image": "3724581378_41049da264.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A man surfing .",
+          "A person surfs in the ocean .",
+          "A surfer catching a large wave in the ocean .",
+          "Surfer riding a wave",
+          "Surfer wearing a wetsuit at the crest of a wave ."
+        ],
+        "bleu4": 1.3809146166549123e-05,
+        "meteor": 0.4934210526315789
+      },
+      {
+        "image": "3724718895_bd03f4a4dc.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "a dog drinks the sprinkler water .",
+          "A small brown and white dog is playing with the sprinkler in the grass .",
+          "A small terrier plays in a sprinkler .",
+          "The little black and white dog is running in the sprinkler .",
+          "The white dog is being squirted in the face with a jet of water ."
+        ],
+        "bleu4": 1.7567205239427937e-05,
+        "meteor": 0.3073770491803278
+      },
+      {
+        "image": "3728015645_b43a60258b.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A man is posed standing on one hand on a skateboard ramp .",
+          "A man on inline skates in midair",
+          "a skateboarder wearing a white cap is doing a stunt in a city skate park .",
+          "A young man is skateboarding on a ramp and is standing on one arm .",
+          "Man standing on one arm with feet in the air on playground equipment with a body of water in the background ."
+        ],
+        "bleu4": 1.7832018574003685e-05,
+        "meteor": 0.3453453453453454
+      },
+      {
+        "image": "3729405438_6e79077ab2.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A bicycler balances his bike on a rail .",
+          "A biker is riding down the stairs on his bike at night .",
+          "A boy rides his red bicycle down the handrail of a staircase in a city .",
+          "A guy grinding a rail in a park on his bike",
+          "A trick bicyclist grinds down a handrail ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.23232323232323235
+      },
+      {
+        "image": "3726590391_bc6e729bb6.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "An elderly woman is crying while sitting in a window .",
+          "An elderly woman is sitting by a window reading .",
+          "A woman reads a book in front of a window .",
+          "A woman with her head down and her hand to her mouth sitting beside someone reading .",
+          "There is an old woman in front of a window ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.14851485148514854
+      },
+      {
+        "image": "3726120436_740bda8416.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A man and woman sitting in chairs next to a turquoise truck .",
+          "An older couple chats near a bright colored car .",
+          "\"There is a man and a woman sitting on folding chairs , outside next to a truck .\"",
+          "Two old people sitting in chairs talking in front of a hill .",
+          "Woman and man sit next to their green truck ."
+        ],
+        "bleu4": 1.7246561487292422e-05,
+        "meteor": 0.2652310924369748
+      },
+      {
+        "image": "3728256505_7f8db8270d.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A man jumping onto a platform .",
+          "A man on the edge of a wall about to fall off .",
+          "A man on inline skates does a trick on a cracked concrete ramp .",
+          "A man with Rollerblades grinding a curb .",
+          "The man does a trick on his skateboard on a concrete ramp ."
+        ],
+        "bleu4": 1.2609141255922462e-05,
+        "meteor": 0.3931623931623932
+      },
+      {
+        "image": "3722507770_0d6cb7420e.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A boy and his bike leaps into the air .",
+          "A boy does tricks on a bicycle while in a park .",
+          "A boy doing a trick on a bike",
+          "A boy is doing tricks on his bike as he flies in the air .",
+          "This young biker has his arms out as he tries this trick ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.23232323232323235
+      },
+      {
+        "image": "3730011701_5352e02286.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A little girl buried in the sand .",
+          "A little girls waist high in sand",
+          "A little girl with a hat sits between a woman 's feet in the sand in front of a pair of colorful tents .",
+          "The little girl in the yellow hat is buried up to her waist in the sand on the beach .",
+          "The small baby in a yellow has the lower half of her body buried in sand ."
+        ],
+        "bleu4": 1.588277335841436e-05,
+        "meteor": 0.13513513513513514
+      },
+      {
+        "image": "3729525173_7f984ed776.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A lady sitting on a front porch reading a book .",
+          "A person sits at a doorstep and reads a book .",
+          "A woman is reading literature and sitting on the front stoop of a building .",
+          "A woman sits and reads in the stoop of a wooden door .",
+          "A woman sits and reads on the front stoop of her building ."
+        ],
+        "bleu4": 1.4601394329159486e-07,
+        "meteor": 0.14851485148514854
+      },
+      {
+        "image": "3718076407_0b4588d7bc.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "A brown and white dog is playing with a toy in a field of green grass and clover .",
+          "A brown and white dog retrieving a white plushie toy in a field of clover .",
+          "A distorted photo of a playing dog in a flower field",
+          "A dog in grass carrying a toy in its mouth .",
+          "The little brown dog is running through a clover field with a white object in its mouth ."
+        ],
+        "bleu4": 1.2664827633083463e-05,
+        "meteor": 0.32538659793814434
+      },
+      {
+        "image": "3725353555_75c346d7ec.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "A brown and black dog is jumping through a sprinkler .",
+          "A dog playing with a sprinkler",
+          "A German Shepherd runs through a sprinkler .",
+          "A tan and black dog jumps through a water sprinkler in the yard .",
+          "The German shepherd dog is jumping up as it is being squirted with a jet of water ."
+        ],
+        "bleu4": 1.7567205239427937e-05,
+        "meteor": 0.4189435336976321
+      },
+      {
+        "image": "3726629271_7639634703.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "Four dogs are playing and jumping in the air outside .",
+          "Four dogs jumping in the air in a field .",
+          "\"Four dogs look at an object in the sky , one jumping to reach it .\"",
+          "\"Four dogs watch an unseen object , two of them leaping in the air .\"",
+          "Two dogs on hind legs and two seated dogs are looking at something in the air ."
+        ],
+        "bleu4": 1.0812389098631936e-07,
+        "meteor": 0.05681818181818181
+      },
+      {
+        "image": "3718964174_cb2dc1615e.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A woman in a blue sweater with a blue scarf around her head .",
+          "A woman in a head covering is looking away from the camera .",
+          "A woman is wearing a blue headscarf and a blue sweater .",
+          "A woman wearing a teal cardigan with a teal scarf and sunglasses on her head .",
+          "There is a woman with a green scarf around her head ."
+        ],
+        "bleu4": 0.0020649489889854925,
+        "meteor": 0.34843749999999996
+      },
+      {
+        "image": "3726168984_1fa2c8965b.jpg",
+        "candidate": "a dog dog a a in in",
+        "references": [
+          "A black dog is colliding with a golden dog that has something in its mouth .",
+          "A black dog trying to mate with a brown dog",
+          "A brown dog and a yellow dog play fight over a plastic bottle .",
+          "A brown dog is climbing over a golden dog that is carrying bottle in its mouth .",
+          "Two dogs play with a bottle ."
+        ],
+        "bleu4": 1.7110523717424898e-07,
+        "meteor": 0.16129032258064518
+      },
+      {
+        "image": "3719461451_07de35af3a.jpg",
+        "candidate": "a man is a a in in",
+        "references": [
+          "A pelican flies over the water .",
+          "A very large bird flying over water .",
+          "A white Pelican is flying over the ocean .",
+          "The white pelican is flying over the ocean .",
+          "white gull flying over ocean"
+        ],
+        "bleu4": 1.300118652068739e-07,
+        "meteor": 0.12658227848101264
+      },
+      {
+        "image": "3720366614_dfa8fe1088.jpg",
+        "candidate": "a man is a a in in",
+        "references": [
+          "A small black dog is standing on two feet and wearing a pink tutu .",
+          "Small dog in costume stands on hind legs to reach dangling flowers .",
+          "The dog is jumping up beside a red wall .",
+          "The small brown and black down is wearing a pink tutu .",
+          "The small dog wearing a tutu stands on its hind legs ."
+        ],
+        "bleu4": 1.1618668216566524e-07,
+        "meteor": 0.11278195488721804
+      },
+      {
+        "image": "3722572342_6904d11d52.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "a red covered boat racing across the water",
+          "A red high speed racing boat skips across the water .",
+          "A red speed boat crosses the water .",
+          "A watercraft speeds through the water .",
+          "Red boat marked GRAHAM races across water ."
+        ],
+        "bleu4": 9.764540896763123e-08,
+        "meteor": 0.07692307692307693
+      },
+      {
+        "image": "3723690961_729dd5d617.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A man in a pink shirt and white vest plays a guitar .",
+          "A man in a pink shirt playing guitar .",
+          "A man in a white suit and a pink shirt plays guitar .",
+          "A man wearing pants plays a guitar while onstage .",
+          "The man in the white and pink outfit is holding a guitar ."
+        ],
+        "bleu4": 0.24640511033537824,
+        "meteor": 0.5831325301204818
+      },
+      {
+        "image": "3724113279_99b6e5bf41.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "\"a bmx rider , wall rides .\"",
+          "A man does a trick with his bicycle off the side of a wall .",
+          "A man jumps with his bike near a brick wall .",
+          "Man is performing a trick with a bicycle off a brick wall .",
+          "The man rides his bicycle up the brick wall ."
+        ],
+        "bleu4": 1.4601394329159491e-05,
+        "meteor": 0.25302530253025307
+      },
+      {
+        "image": "3718007650_e5930b4509.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A girl with a black dress and big white bow stands with her back to the camera .",
+          "many people gather outside .",
+          "People stand outside watching something .",
+          "People with costumes are gathered in a wooded area looking the same direction .",
+          "The back of a woman in costume ; little girl looks at her"
+        ],
+        "bleu4": 1.1734128121866198e-05,
+        "meteor": 0.08403361344537814
+      },
+      {
+        "image": "3720210639_18bb34e475.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "A person in a red hat and shoes doing stunts on a red bike while a person in yellow watches .",
+          "A person is doing a trick in the air on a bike while his friend takes a picture .",
+          "A red bike jumps toward a person in yellow .",
+          "Boy in midair on bicycle",
+          "Person doing bicycle jump"
+        ],
+        "bleu4": 1.588277335841436e-05,
+        "meteor": 0.22324025596276909
+      },
+      {
+        "image": "3727740053_3baa94ffcb.jpg",
+        "candidate": "a man in a blue shirt is a a in in",
+        "references": [
+          "One man kicks another in the shoulder at a martial arts event .",
+          "Two martial artists compete in a match .",
+          "Two men are participating in a karate match .",
+          "Two men in an oriental fighting contest .",
+          "Two men in karate uniforms kicking each other ."
+        ],
+        "bleu4": 1.1734128121866198e-05,
+        "meteor": 0.06756756756756757
+      }
+    ],
+    "num_layers": 3,
+    "hidden_units": 128
+  }
+}
