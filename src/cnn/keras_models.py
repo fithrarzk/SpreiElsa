@@ -69,11 +69,11 @@ class SimpleLocallyConnected2D(tf.keras.layers.Layer):
         return config
 
 
-def _pooling_layer(pooling: str):
+def _pooling_layer(pooling: str, index: int):
     if pooling == "max":
-        return tf.keras.layers.MaxPooling2D(pool_size=(2, 2), name="pool")
+        return tf.keras.layers.MaxPooling2D(pool_size=(2, 2), name=f"pool_{index}")
     if pooling == "avg":
-        return tf.keras.layers.AveragePooling2D(pool_size=(2, 2), name="pool")
+        return tf.keras.layers.AveragePooling2D(pool_size=(2, 2), name=f"pool_{index}")
     raise ValueError(f"Unsupported pooling: {pooling}")
 
 
@@ -88,7 +88,7 @@ def build_shared_cnn(config: CNNExperimentConfig) -> tf.keras.Model:
             activation="relu",
             name=f"conv_{index + 1}",
         )(x)
-        x = _pooling_layer(config.pooling)(x)
+        x = _pooling_layer(config.pooling, index + 1)(x)
     x = tf.keras.layers.Flatten(name="flatten")(x)
     x = tf.keras.layers.Dense(config.dense_units, activation="relu", name="dense_hidden")(x)
     outputs = tf.keras.layers.Dense(config.num_classes, activation="softmax", name="classifier")(x)
@@ -112,7 +112,7 @@ def build_non_shared_cnn(config: CNNExperimentConfig) -> tf.keras.Model:
             activation="relu",
             name=f"local_{index + 1}",
         )(x)
-        x = _pooling_layer(config.pooling)(x)
+        x = _pooling_layer(config.pooling, index + 1)(x)
     x = tf.keras.layers.Flatten(name="flatten")(x)
     x = tf.keras.layers.Dense(config.dense_units, activation="relu", name="dense_hidden")(x)
     outputs = tf.keras.layers.Dense(config.num_classes, activation="softmax", name="classifier")(x)
