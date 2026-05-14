@@ -1,0 +1,7 @@
+{
+  "samples": 30,
+  "keras_macro_f1": 0.17358490566037738,
+  "scratch_macro_f1": 0.17358490566037738,
+  "max_abs_probability_diff": 5.364418029785156e-07,
+  "prediction_match_rate": 1.0
+}

@@ -1,0 +1,16 @@
+{
+  "experiment_id": "d2_f32_k3_max",
+  "conv_depth": 2,
+  "filters_base": 32,
+  "kernel_size": 3,
+  "pooling": "max",
+  "image_size": 64,
+  "num_classes": 6,
+  "dense_units": 64,
+  "learning_rate": 0.001,
+  "filters": [
+    32,
+    64
+  ],
+  "non_shared": true
+}

@@ -1,0 +1,14 @@
+{
+  "test_loss": 1.1926698684692383,
+  "test_accuracy": 0.7260000109672546,
+  "macro_f1": 0.726627171812579,
+  "param_count": 1846086,
+  "class_names": [
+    "buildings",
+    "forest",
+    "glacier",
+    "mountain",
+    "sea",
+    "street"
+  ]
+}

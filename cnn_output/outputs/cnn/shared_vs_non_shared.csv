@@ -1,0 +1,3 @@
+model_type,experiment,macro_f1,test_accuracy,param_count
+shared,shared_d2_f32_k3_max,0.7891029230446035,0.7883333563804626,822662
+non_shared,non_shared_d2_f32_k3_max,0.6443638286579291,0.656333327293396,19802630
