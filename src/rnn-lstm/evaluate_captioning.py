@@ -35,7 +35,8 @@ def _filter_image_names(names: list[str], captions: dict, features: dict) -> lis
     return [name for name in names if name in captions and name in features]
 
 
-def _greedy_decode_keras(model, image_feature: np.ndarray, word2idx: dict, idx2word: dict, max_len: int) -> str:
+def _greedy_decode_keras(model, image_feature: np.ndarray, word2idx: dict, idx2word: dict,
+                         max_len: int, injection_method: str = "pre") -> str:
     pad_idx = word2idx.get("<pad>", 0)
     start_idx = word2idx.get("<start>", 1)
     end_idx = word2idx.get("<end>", 2)
@@ -66,6 +67,7 @@ def _beam_search_keras(
     max_len: int,
     beam_size: int,
     length_penalty: float,
+    injection_method: str = "pre",
 ) -> str:
     pad_idx = word2idx.get("<pad>", 0)
     start_idx = word2idx.get("<start>", 1)
@@ -140,6 +142,7 @@ def evaluate(
     decoding: str,
     beam_size: int,
     length_penalty: float,
+    injection_method: str = "pre",
 ) -> dict:
     rng = random.Random(seed)
     results = []
@@ -158,9 +161,11 @@ def evaluate(
                     max_len=max_len,
                     beam_size=beam_size,
                     length_penalty=length_penalty,
+                    injection_method=injection_method,
                 )
             else:
-                candidate = _greedy_decode_keras(model, feature, word2idx, idx2word, max_len=max_len)
+                candidate = _greedy_decode_keras(model, feature, word2idx, idx2word,
+                                                 max_len=max_len, injection_method=injection_method)
         else:
             if decoding == "beam":
                 candidate = model.generate_caption_beam(feature, max_len=max_len, beam_size=beam_size, length_penalty=length_penalty)
@@ -235,6 +240,7 @@ def main() -> None:
             decoding=args.decoding,
             beam_size=args.beam_size,
             length_penalty=args.length_penalty,
+            injection_method=args.injection,
         )
         with (args.output_dir / "metrics_keras.json").open("w", encoding="utf-8") as handle:
             json.dump(result["metrics"], handle, indent=2)
@@ -259,6 +265,7 @@ def main() -> None:
             decoding=args.decoding,
             beam_size=args.beam_size,
             length_penalty=args.length_penalty,
+            injection_method=args.injection,
         )
         with (args.output_dir / "metrics_scratch.json").open("w", encoding="utf-8") as handle:
             json.dump(result["metrics"], handle, indent=2)

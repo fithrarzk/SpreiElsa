@@ -115,12 +115,19 @@ class CaptionModel:
             h = [np.zeros(hidden_size, dtype=np.float32) for _ in range(self.n_layers)]
             x_img = self.image_projection.forward(image_feature.astype(np.float32))
 
-            if self.injection_method == "pre":
-                _, h = self.decoder.step(x_img, h)
-
             generated = []
-            token = start_idx
-            for _ in range(max_len):
+            if self.injection_method == "pre":
+                out, h = self.decoder.step(x_img, h)
+                logits = self.output_layer.forward(out)
+                token = int(np.argmax(logits))
+                if token == end_idx:
+                    return " ".join(generated)
+                if token != pad_idx:
+                    generated.append(self.idx2word.get(token, "<unk>"))
+            else:
+                token = start_idx
+
+            for _ in range(max_len - (1 if self.injection_method == "pre" else 0)):
                 x = self.embedding.forward(token)
                 out, h = self.decoder.step(x, h)
                 if self.injection_method == "init":
@@ -137,12 +144,19 @@ class CaptionModel:
             c = [np.zeros(hidden_size, dtype=np.float32) for _ in range(self.n_layers)]
             x_img = self.image_projection.forward(image_feature.astype(np.float32))
 
-            if self.injection_method == "pre":
-                _, h, c = self.decoder.step(x_img, h, c)
-
             generated = []
-            token = start_idx
-            for _ in range(max_len):
+            if self.injection_method == "pre":
+                out, h, c = self.decoder.step(x_img, h, c)
+                logits = self.output_layer.forward(out)
+                token = int(np.argmax(logits))
+                if token == end_idx:
+                    return " ".join(generated)
+                if token != pad_idx:
+                    generated.append(self.idx2word.get(token, "<unk>"))
+            else:
+                token = start_idx
+
+            for _ in range(max_len - (1 if self.injection_method == "pre" else 0)):
                 x = self.embedding.forward(token)
                 out, h, c = self.decoder.step(x, h, c)
                 if self.injection_method == "init":
@@ -182,8 +196,16 @@ class CaptionModel:
             h0 = [np.zeros(hidden_size, dtype=np.float32) for _ in range(self.n_layers)]
             x_img = self.image_projection.forward(image_feature.astype(np.float32))
             if self.injection_method == "pre":
-                _, h0 = self.decoder.step(x_img, h0)
-            beams = [([start_idx], 0.0, h0)]
+                out0, h0 = self.decoder.step(x_img, h0)
+                probs0 = self.output_layer.forward(out0)
+                top_idx0 = np.argsort(probs0)[-beam_size:][::-1]
+                beams = [
+                    ([int(idx)], float(np.log(max(float(probs0[int(idx)]), 1e-9))),
+                     [np.array(h, copy=True) for h in h0])
+                    for idx in top_idx0
+                ]
+            else:
+                beams = [([start_idx], 0.0, h0)]
 
             for _ in range(max_len):
                 candidates = []
@@ -217,8 +239,17 @@ class CaptionModel:
             c0 = [np.zeros(hidden_size, dtype=np.float32) for _ in range(self.n_layers)]
             x_img = self.image_projection.forward(image_feature.astype(np.float32))
             if self.injection_method == "pre":
-                _, h0, c0 = self.decoder.step(x_img, h0, c0)
-            beams = [([start_idx], 0.0, h0, c0)]
+                out0, h0, c0 = self.decoder.step(x_img, h0, c0)
+                probs0 = self.output_layer.forward(out0)
+                top_idx0 = np.argsort(probs0)[-beam_size:][::-1]
+                beams = [
+                    ([int(idx)], float(np.log(max(float(probs0[int(idx)]), 1e-9))),
+                     [np.array(h, copy=True) for h in h0],
+                     [np.array(c, copy=True) for c in c0])
+                    for idx in top_idx0
+                ]
+            else:
+                beams = [([start_idx], 0.0, h0, c0)]
 
             for _ in range(max_len):
                 candidates = []
