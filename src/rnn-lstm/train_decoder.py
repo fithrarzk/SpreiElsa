@@ -69,7 +69,7 @@ def _build_model(config: DecoderExperimentConfig, vocab_size: int) -> tf.keras.M
         injection_method=config.injection_method,
     )
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=config.learning_rate),
+        optimizer=tf.keras.optimizers.Adam(learning_rate=config.learning_rate, clipnorm=1.0),
         loss=masked_loss,
         metrics=[masked_accuracy],
     )
@@ -113,7 +113,15 @@ def train_one(
     )
 
     model = _build_model(config, vocab_size=len(word2idx))
-    history = model.fit(train_ds, validation_data=val_ds, epochs=epochs)
+    callbacks = [
+        tf.keras.callbacks.EarlyStopping(
+            monitor="val_loss", patience=5, restore_best_weights=True, verbose=1
+        ),
+        tf.keras.callbacks.ReduceLROnPlateau(
+            monitor="val_loss", factor=0.5, patience=3, min_lr=1e-5, verbose=1
+        ),
+    ]
+    history = model.fit(train_ds, validation_data=val_ds, epochs=epochs, callbacks=callbacks)
 
     model.save(experiment_dir / "model.keras")
     model.save_weights(experiment_dir / "weights.weights.h5")
