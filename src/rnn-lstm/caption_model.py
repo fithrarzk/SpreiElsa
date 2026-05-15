@@ -113,10 +113,9 @@ class CaptionModel:
             # Position 0: image feature
             out, h, c = self._step(x_img, h, c)
             token = int(np.argmax(self._predict(out, x_img)))
-            if token == end:
+            if token in (end, pad):
                 return ""
-            if token != pad:
-                generated.append(self.idx2word.get(token, "<unk>"))
+            generated.append(self.idx2word.get(token, "<unk>"))
             to_feed      = start   # first loop feeds <start>
             prev_pred    = token   # after <start>, feeds T0
 
@@ -124,11 +123,10 @@ class CaptionModel:
                 x         = self.embedding.forward(to_feed)
                 out, h, c = self._step(x, h, c)
                 token     = int(np.argmax(self._predict(out, x_img)))
-                if token == end:
+                if token in (end, pad):
                     break
-                if token != pad:
-                    generated.append(self.idx2word.get(token, "<unk>"))
-                to_feed   = prev_pred   
+                generated.append(self.idx2word.get(token, "<unk>"))
+                to_feed   = prev_pred
                 prev_pred = token
 
         else:  # init-inject
@@ -137,10 +135,9 @@ class CaptionModel:
                 x         = self.embedding.forward(token)
                 out, h, c = self._step(x, h, c)
                 token     = int(np.argmax(self._predict(out, x_img)))
-                if token == end:
+                if token in (end, pad):
                     break
-                if token != pad:
-                    generated.append(self.idx2word.get(token, "<unk>"))
+                generated.append(self.idx2word.get(token, "<unk>"))
 
         return " ".join(generated)
 
