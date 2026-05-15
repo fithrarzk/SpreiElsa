@@ -117,27 +117,41 @@ class CaptionModel:
 
             generated = []
             if self.injection_method == "pre":
+                # Training input sequence: [img, <start>, w1, w2, ...]
+                # So after image step (pos 0), next input must be <start> (pos 1),
+                # then w1 (pos 2), w2 (pos 3), etc.
+                feed_queue = [start_idx]
                 out, h = self.decoder.step(x_img, h)
                 logits = self.output_layer.forward(out)
                 token = int(np.argmax(logits))
                 if token == end_idx:
-                    return " ".join(generated)
+                    return ""
                 if token != pad_idx:
                     generated.append(self.idx2word.get(token, "<unk>"))
+                feed_queue.append(token)
+
+                for step in range(1, max_len):
+                    x = self.embedding.forward(feed_queue[step - 1])
+                    out, h = self.decoder.step(x, h)
+                    logits = self.output_layer.forward(out)
+                    token = int(np.argmax(logits))
+                    if token == end_idx:
+                        break
+                    if token != pad_idx:
+                        generated.append(self.idx2word.get(token, "<unk>"))
+                    feed_queue.append(token)
             else:
                 token = start_idx
-
-            for _ in range(max_len - (1 if self.injection_method == "pre" else 0)):
-                x = self.embedding.forward(token)
-                out, h = self.decoder.step(x, h)
-                if self.injection_method == "init":
+                for _ in range(max_len):
+                    x = self.embedding.forward(token)
+                    out, h = self.decoder.step(x, h)
                     out = np.concatenate([out, x_img], axis=-1)
-                logits = self.output_layer.forward(out)
-                token = int(np.argmax(logits))
-                if token == end_idx:
-                    break
-                if token != pad_idx:
-                    generated.append(self.idx2word.get(token, "<unk>"))
+                    logits = self.output_layer.forward(out)
+                    token = int(np.argmax(logits))
+                    if token == end_idx:
+                        break
+                    if token != pad_idx:
+                        generated.append(self.idx2word.get(token, "<unk>"))
 
         else:  # lstm
             h = [np.zeros(hidden_size, dtype=np.float32) for _ in range(self.n_layers)]
@@ -146,27 +160,38 @@ class CaptionModel:
 
             generated = []
             if self.injection_method == "pre":
+                feed_queue = [start_idx]
                 out, h, c = self.decoder.step(x_img, h, c)
                 logits = self.output_layer.forward(out)
                 token = int(np.argmax(logits))
                 if token == end_idx:
-                    return " ".join(generated)
+                    return ""
                 if token != pad_idx:
                     generated.append(self.idx2word.get(token, "<unk>"))
+                feed_queue.append(token)
+
+                for step in range(1, max_len):
+                    x = self.embedding.forward(feed_queue[step - 1])
+                    out, h, c = self.decoder.step(x, h, c)
+                    logits = self.output_layer.forward(out)
+                    token = int(np.argmax(logits))
+                    if token == end_idx:
+                        break
+                    if token != pad_idx:
+                        generated.append(self.idx2word.get(token, "<unk>"))
+                    feed_queue.append(token)
             else:
                 token = start_idx
-
-            for _ in range(max_len - (1 if self.injection_method == "pre" else 0)):
-                x = self.embedding.forward(token)
-                out, h, c = self.decoder.step(x, h, c)
-                if self.injection_method == "init":
+                for _ in range(max_len):
+                    x = self.embedding.forward(token)
+                    out, h, c = self.decoder.step(x, h, c)
                     out = np.concatenate([out, x_img], axis=-1)
-                logits = self.output_layer.forward(out)
-                token = int(np.argmax(logits))
-                if token == end_idx:
-                    break
-                if token != pad_idx:
-                    generated.append(self.idx2word.get(token, "<unk>"))
+                    logits = self.output_layer.forward(out)
+                    token = int(np.argmax(logits))
+                    if token == end_idx:
+                        break
+                    if token != pad_idx:
+                        generated.append(self.idx2word.get(token, "<unk>"))
 
         return " ".join(generated)
 
@@ -207,14 +232,20 @@ class CaptionModel:
             else:
                 beams = [([start_idx], 0.0, h0)]
 
-            for _ in range(max_len):
+            for step_k in range(max_len):
                 candidates = []
                 for tokens, score, h_state in beams:
                     last = tokens[-1]
                     if last in (end_idx, pad_idx):
                         candidates.append((tokens, score, h_state))
                         continue
-                    x = self.embedding.forward(last)
+                    # Pre injection: pos 0=img, pos 1=<start>, pos 2=w1, pos 3=w2, ...
+                    # At beam step_k=0: feed <start>; step_k=1: feed tokens[0]=w1; etc.
+                    if self.injection_method == "pre":
+                        feed_tok = start_idx if step_k == 0 else tokens[step_k - 1]
+                    else:
+                        feed_tok = last
+                    x = self.embedding.forward(feed_tok)
                     out, new_h = self.decoder.step(x, h_state)
                     if self.injection_method == "init":
                         out = np.concatenate([out, x_img], axis=-1)
@@ -251,14 +282,18 @@ class CaptionModel:
             else:
                 beams = [([start_idx], 0.0, h0, c0)]
 
-            for _ in range(max_len):
+            for step_k in range(max_len):
                 candidates = []
                 for tokens, score, h_state, c_state in beams:
                     last = tokens[-1]
                     if last in (end_idx, pad_idx):
                         candidates.append((tokens, score, h_state, c_state))
                         continue
-                    x = self.embedding.forward(last)
+                    if self.injection_method == "pre":
+                        feed_tok = start_idx if step_k == 0 else tokens[step_k - 1]
+                    else:
+                        feed_tok = last
+                    x = self.embedding.forward(feed_tok)
                     out, new_h, new_c = self.decoder.step(x, h_state, c_state)
                     if self.injection_method == "init":
                         out = np.concatenate([out, x_img], axis=-1)
