@@ -97,16 +97,6 @@ class LSTMDecoder:
         self.cells = cells
         self.n_layers = len(cells)
 
-    @classmethod
-    def from_keras(cls, keras_model, n_layers: int, name_prefix: str = "lstm"):
-        cells = []
-        for i in range(n_layers):
-            layer = keras_model.get_layer(f"{name_prefix}_{i}")
-            cell = LSTMCell()
-            cell.load_weights(layer)
-            cells.append(cell)
-        return cls(cells)
-
     def forward(
         self,
         sequence: np.ndarray,

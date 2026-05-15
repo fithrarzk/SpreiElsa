@@ -35,26 +35,43 @@ def _filter_image_names(names: list[str], captions: dict, features: dict) -> lis
     return [name for name in names if name in captions and name in features]
 
 
+def _next_token_no_repeat(logits: np.ndarray, recent: list, no_repeat_ngram: int) -> int:
+    if no_repeat_ngram < 2 or len(recent) < no_repeat_ngram - 1:
+        return int(np.argmax(logits))
+    prefix = tuple(recent[-(no_repeat_ngram - 1):])
+    forbidden: set = set()
+    for i in range(len(recent) - (no_repeat_ngram - 1)):
+        if tuple(recent[i : i + no_repeat_ngram - 1]) == prefix:
+            if i + no_repeat_ngram - 1 < len(recent):
+                forbidden.add(recent[i + no_repeat_ngram - 1])
+    for idx in np.argsort(logits)[::-1]:
+        if int(idx) not in forbidden:
+            return int(idx)
+    return int(np.argmax(logits))
+
+
 def _greedy_decode_keras(model, image_feature: np.ndarray, word2idx: dict, idx2word: dict,
-                         max_len: int, injection_method: str = "pre") -> str:
-    pad_idx = word2idx.get("<pad>", 0)
+                         max_len: int, no_repeat_ngram: int = 3) -> str:
+    pad_idx   = word2idx.get("<pad>", 0)
     start_idx = word2idx.get("<start>", 1)
-    end_idx = word2idx.get("<end>", 2)
+    end_idx   = word2idx.get("<end>", 2)
 
     caption_len = int(model.inputs[1].shape[1])
-    output_len = int(model.outputs[0].shape[1])
+    output_len  = int(model.outputs[0].shape[1])
     steps = min(max_len, output_len)
 
     tokens = [start_idx]
+    generated_ids: list = [] 
     for step in range(steps):
         caption_input = np.full((1, caption_len), pad_idx, dtype=np.int32)
         cap_len = min(len(tokens), caption_len)
         caption_input[0, :cap_len] = tokens[:cap_len]
         preds = model.predict([image_feature[np.newaxis], caption_input], verbose=0)
-        next_token = int(np.argmax(preds[0, step]))
+        next_token = _next_token_no_repeat(preds[0, step], generated_ids, no_repeat_ngram)
         if next_token in (end_idx, pad_idx):
             break
         tokens.append(next_token)
+        generated_ids.append(next_token)
 
     return decode_caption(tokens, idx2word)
 
@@ -67,7 +84,6 @@ def _beam_search_keras(
     max_len: int,
     beam_size: int,
     length_penalty: float,
-    injection_method: str = "pre",
 ) -> str:
     pad_idx = word2idx.get("<pad>", 0)
     start_idx = word2idx.get("<start>", 1)
@@ -143,6 +159,7 @@ def evaluate(
     beam_size: int,
     length_penalty: float,
     injection_method: str = "pre",
+    no_repeat_ngram: int = 3,
 ) -> dict:
     rng = random.Random(seed)
     results = []
@@ -154,21 +171,21 @@ def evaluate(
         if mode == "keras":
             if decoding == "beam":
                 candidate = _beam_search_keras(
-                    model,
-                    feature,
-                    word2idx,
-                    idx2word,
-                    max_len=max_len,
-                    beam_size=beam_size,
+                    model, feature, word2idx, idx2word,
+                    max_len=max_len, beam_size=beam_size,
                     length_penalty=length_penalty,
-                    injection_method=injection_method,
                 )
             else:
-                candidate = _greedy_decode_keras(model, feature, word2idx, idx2word,
-                                                 max_len=max_len, injection_method=injection_method)
+                candidate = _greedy_decode_keras(
+                    model, feature, word2idx, idx2word,
+                    max_len=max_len, no_repeat_ngram=no_repeat_ngram,
+                )
         else:
             if decoding == "beam":
-                candidate = model.generate_caption_beam(feature, max_len=max_len, beam_size=beam_size, length_penalty=length_penalty)
+                candidate = model.generate_caption_beam(
+                    feature, max_len=max_len, beam_size=beam_size,
+                    length_penalty=length_penalty,
+                )
             else:
                 candidate = model.generate_caption(feature, max_len=max_len)
         results.append(_evaluate_single(image_name, candidate, references))
@@ -207,6 +224,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--decoding", choices=["greedy", "beam"], default="greedy")
     parser.add_argument("--beam-size", type=int, default=3)
     parser.add_argument("--length-penalty", type=float, default=0.7)
+    parser.add_argument("--no-repeat-ngram", type=int, default=3)
     return parser.parse_args()
 
 
@@ -241,6 +259,7 @@ def main() -> None:
             beam_size=args.beam_size,
             length_penalty=args.length_penalty,
             injection_method=args.injection,
+            no_repeat_ngram=args.no_repeat_ngram,
         )
         with (args.output_dir / "metrics_keras.json").open("w", encoding="utf-8") as handle:
             json.dump(result["metrics"], handle, indent=2)

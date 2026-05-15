@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from collections import Counter
-from typing import Iterable
 import math
 
 import sys
@@ -114,11 +113,3 @@ def meteor_score(candidate: list[str], references: list[list[str]]) -> float:
     return float(best)
 
 
-def corpus_bleu(candidates: Iterable[list[str]], references_list: Iterable[list[list[str]]], max_n: int = 4) -> float:
-    scores = [bleu_score(candidate, references, max_n=max_n) for candidate, references in zip(candidates, references_list)]
-    return float(sum(scores) / max(len(scores), 1))
-
-
-def corpus_meteor(candidates: Iterable[list[str]], references_list: Iterable[list[list[str]]]) -> float:
-    scores = [meteor_score(candidate, references) for candidate, references in zip(candidates, references_list)]
-    return float(sum(scores) / max(len(scores), 1))
