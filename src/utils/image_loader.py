@@ -1,5 +1,3 @@
-"""Backward-compatible aliases for the public image utilities."""
-
 from __future__ import annotations
 
 from pathlib import Path

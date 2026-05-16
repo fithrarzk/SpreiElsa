@@ -1,5 +1,3 @@
-"""Kaggle-oriented runner for the full CNN experiment set."""
-
 from __future__ import annotations
 
 import argparse

@@ -1,5 +1,3 @@
-"""Captioning evaluation metrics (BLEU-4 and simplified METEOR)."""
-
 from __future__ import annotations
 
 from collections import Counter

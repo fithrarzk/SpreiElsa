@@ -1,5 +1,3 @@
-"""NumPy implementations of CNN forward layers."""
-
 from __future__ import annotations
 
 from dataclasses import dataclass

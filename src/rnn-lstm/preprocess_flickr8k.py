@@ -1,5 +1,3 @@
-"""Preprocess Flickr8k captions and splits for training."""
-
 from __future__ import annotations
 
 import json

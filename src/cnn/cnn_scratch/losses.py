@@ -1,5 +1,3 @@
-"""Loss helpers for scratch CNN training."""
-
 from __future__ import annotations
 
 import numpy as np
@@ -11,11 +9,6 @@ def softmax_cross_entropy_loss(
     eps: float = 1e-9,
     reduction: str = "mean",
 ) -> tuple[float, np.ndarray]:
-    """Compute softmax cross-entropy and gradient w.r.t. logits.
-
-    This expects raw logits (no softmax applied). For a single example,
-    pass shape (C,) and label scalar.
-    """
     logits = np.asarray(logits, dtype=np.float32)
     labels = np.asarray(labels, dtype=np.int64)
 
@@ -55,10 +48,7 @@ def cross_entropy_from_probs(
     eps: float = 1e-9,
     reduction: str = "mean",
 ) -> tuple[float, np.ndarray]:
-    """Cross-entropy using probabilities and gradient w.r.t. probs.
 
-    Useful when the model output already applies softmax.
-    """
     probs = np.asarray(probs, dtype=np.float32)
     labels = np.asarray(labels, dtype=np.int64)
 

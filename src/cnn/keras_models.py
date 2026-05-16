@@ -1,5 +1,3 @@
-"""Keras CNN model builders for shared and non-shared CNN experiments."""
-
 from __future__ import annotations
 
 import tensorflow as tf
@@ -9,8 +7,6 @@ from .experiments import CNNExperimentConfig
 
 @tf.keras.utils.register_keras_serializable(package="SpreiElsa")
 class SimpleLocallyConnected2D(tf.keras.layers.Layer):
-    """Minimal valid-padding LocallyConnected2D fallback for small images."""
-
     def __init__(self, filters: int, kernel_size: int | tuple[int, int], strides: int | tuple[int, int] = 1, activation: str | None = None, **kwargs):
         super().__init__(**kwargs)
         self.filters = filters

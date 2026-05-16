@@ -1,5 +1,3 @@
-"""Compare Keras predictions with NumPy scratch forward propagation."""
-
 from __future__ import annotations
 
 import argparse

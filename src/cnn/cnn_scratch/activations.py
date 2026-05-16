@@ -1,5 +1,3 @@
-"""Activation functions for scratch CNN forward propagation."""
-
 from __future__ import annotations
 
 import numpy as np

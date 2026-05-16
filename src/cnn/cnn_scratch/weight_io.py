@@ -1,5 +1,3 @@
-"""Convert supported Keras models to scratch forward models."""
-
 from __future__ import annotations
 
 from .layers import (
@@ -16,11 +14,6 @@ from .model import SequentialScratchModel
 
 
 def keras_to_scratch_model(keras_model) -> SequentialScratchModel:
-    """Convert supported Keras layers to a NumPy forward model.
-
-    Supported layers: Conv2D, MaxPooling2D, AveragePooling2D,
-    GlobalAveragePooling2D, GlobalMaxPooling2D, Flatten, Dense.
-    """
     scratch_layers = []
     for layer in keras_model.layers:
         class_name = layer.__class__.__name__

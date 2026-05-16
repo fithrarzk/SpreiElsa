@@ -1,5 +1,3 @@
-"""Plot CNN training histories and summarize experiments."""
-
 from __future__ import annotations
 
 import argparse

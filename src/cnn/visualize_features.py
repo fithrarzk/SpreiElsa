@@ -1,5 +1,3 @@
-"""Visualize CNN feature maps and Grad-CAM for a single image."""
-
 from __future__ import annotations
 
 import argparse

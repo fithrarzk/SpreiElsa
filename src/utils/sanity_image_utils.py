@@ -1,5 +1,3 @@
-"""Small CLI sanity check for the local image subset."""
-
 from __future__ import annotations
 
 import argparse

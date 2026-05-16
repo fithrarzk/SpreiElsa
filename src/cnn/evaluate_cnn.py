@@ -1,5 +1,3 @@
-"""Evaluate saved Keras CNN artifacts."""
-
 from __future__ import annotations
 
 import argparse

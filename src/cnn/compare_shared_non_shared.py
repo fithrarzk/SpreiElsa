@@ -1,5 +1,3 @@
-"""Build a compact shared vs non-shared comparison from experiment artifacts."""
-
 from __future__ import annotations
 
 import argparse

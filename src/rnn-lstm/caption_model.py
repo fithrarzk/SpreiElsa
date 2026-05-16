@@ -110,8 +110,6 @@ class CaptionModel:
         generated = []
 
         if self.injection_method == "pre":
-            # Teacher forcing alignment:
-            # [image, <start>, S0, S1, ...] predicts [S0, S1, S2, ...].
             out, h, c = self._step(x_img, h, c)
             token = int(np.argmax(self._predict(out, x_img)))
             if token in (end, pad):

@@ -1,9 +1,3 @@
-"""Image utilities for the CNN and image-captioning pipelines.
-
-All preprocessing here uses Pillow and NumPy, not Keras preprocessing layers.
-Images are returned in channel-last RGB format.
-"""
-
 from __future__ import annotations
 
 from pathlib import Path
@@ -21,17 +15,7 @@ def load_image(
     image_size: tuple[int, int] = (64, 64),
     normalize: bool = True,
 ) -> np.ndarray:
-    """Load one RGB image.
-
-    Args:
-        path: Image file path.
-        image_size: Target size as ``(height, width)``.
-        normalize: If true, return float32 values in ``[0, 1]``. Otherwise
-            return uint8-like float32 values in ``[0, 255]``.
-
-    Returns:
-        Array with shape ``(height, width, 3)``.
-    """
+   
     height, width = image_size
     with Image.open(path) as image:
         image = image.convert("RGB").resize((width, height))
@@ -46,7 +30,6 @@ def load_images(
     image_size: tuple[int, int] = (64, 64),
     normalize: bool = True,
 ) -> np.ndarray:
-    """Load a batch of images into ``(N, H, W, C)`` format."""
     images = [load_image(path, image_size=image_size, normalize=normalize) for path in paths]
     if not images:
         height, width = image_size
@@ -58,16 +41,6 @@ def list_image_paths(
     root: str | Path,
     class_names: Sequence[str] | None = None,
 ) -> tuple[list[Path], np.ndarray, list[str]]:
-    """Scan a class-folder split.
-
-    Args:
-        root: Split root with children like ``buildings/*.jpg``.
-        class_names: Optional fixed class order. If omitted, class folders are
-            sorted alphabetically.
-
-    Returns:
-        ``(paths, labels, class_names)`` where labels are integer class ids.
-    """
     split_root = Path(root)
     if not split_root.is_dir():
         raise FileNotFoundError(f"Dataset split not found: {split_root}")
@@ -92,7 +65,6 @@ def list_image_paths(
 
 
 def iter_image_paths(root: str | Path) -> Iterable[tuple[Path, str]]:
-    """Yield ``(image_path, class_name)`` from a class-folder split."""
     paths, labels, classes = list_image_paths(root)
     for path, label in zip(paths, labels):
         yield path, classes[int(label)]
@@ -104,25 +76,18 @@ def load_classification_split(
     class_names: Sequence[str] | None = None,
     normalize: bool = True,
 ) -> tuple[np.ndarray, np.ndarray, list[str]]:
-    """Load a small class-folder split fully into memory.
-
-    Intended for local subset sanity checks. Full training should use Keras
-    streaming datasets.
-    """
     paths, labels, classes = list_image_paths(root, class_names=class_names)
     images = load_images(paths, image_size=image_size, normalize=normalize)
     return images, labels, classes
 
 
 def save_features(features: np.ndarray, path: str | Path) -> None:
-    """Save feature vectors to ``.npy``."""
     output_path = Path(path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     np.save(output_path, features)
 
 
 def load_features(path: str | Path) -> np.ndarray:
-    """Load feature vectors saved by :func:`save_features`."""
     return np.load(Path(path), allow_pickle=False)
 
 
@@ -133,11 +98,6 @@ def extract_features_with_keras_encoder(
     image_size: tuple[int, int] = (224, 224),
     batch_size: int = 32,
 ) -> np.ndarray:
-    """Extract image features with a frozen Keras encoder and save ``.npy``.
-
-    The encoder is expected to accept normalized RGB arrays with shape
-    ``(N, H, W, 3)`` and return feature vectors or feature maps.
-    """
     batches: list[np.ndarray] = []
     paths = list(image_paths)
     for start in range(0, len(paths), batch_size):

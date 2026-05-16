@@ -1,5 +1,3 @@
-"""Evaluate captioning models with BLEU-4 and METEOR."""
-
 from __future__ import annotations
 
 import argparse

@@ -1,5 +1,3 @@
-"""Train RNN/LSTM decoder models for Flickr8k."""
-
 from __future__ import annotations
 
 import json

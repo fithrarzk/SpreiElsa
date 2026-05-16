@@ -1,5 +1,3 @@
-"""Loss helpers for scratch sequence models."""
-
 from __future__ import annotations
 
 import numpy as np
@@ -11,12 +9,6 @@ def sequence_cross_entropy_from_probs(
     pad_idx: int = 0,
     eps: float = 1e-9,
 ) -> tuple[float, np.ndarray]:
-    """Cross-entropy over sequences with padding mask.
-
-    Returns loss scalar and gradient w.r.t. probs.
-    probs: (batch, seq_len, vocab)
-    targets: (batch, seq_len)
-    """
     probs = np.asarray(probs, dtype=np.float32)
     targets = np.asarray(targets, dtype=np.int64)
 

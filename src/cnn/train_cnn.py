@@ -1,9 +1,3 @@
-"""Train CNN experiments with Keras.
-
-Local usage should run one tiny experiment only. Full ``--run-all`` training is
-intended for Kaggle GPU.
-"""
-
 from __future__ import annotations
 
 import json
