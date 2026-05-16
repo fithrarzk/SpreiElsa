@@ -1,72 +1,92 @@
 {
   "best_rnn": {
-    "experiment": "rnn_pre_l1_h128_e256_m35",
+    "experiment": "rnn_pre_l1_h256_e256_m35",
     "decoder_type": "rnn",
     "injection": "pre",
     "layers": 1,
-    "hidden": 128,
-    "loss": 3.138343572616577,
-    "val_loss": 4.162527561187744,
-    "param_count": 3532164
+    "hidden": 256,
+    "loss": 3.0749247074127197,
+    "val_loss": 4.054644584655762,
+    "param_count": 4597764,
+    "epochs_ran": 29,
+    "selection_bleu4": 0.029151971121431027,
+    "selection_meteor": 0.2574929765477092,
+    "selection_avg_time_ms": 3.407096719965921
   },
   "best_lstm": {
-    "experiment": "lstm_pre_l2_h128_e256_m35",
+    "experiment": "lstm_pre_l1_h256_e256_m35",
     "decoder_type": "lstm",
     "injection": "pre",
-    "layers": 2,
-    "hidden": 128,
-    "loss": 3.14715838432312,
-    "val_loss": 3.996837854385376,
-    "param_count": 3811588
+    "layers": 1,
+    "hidden": 256,
+    "loss": 2.8810079097747803,
+    "val_loss": 3.9630815982818604,
+    "param_count": 4991748,
+    "epochs_ran": 21,
+    "selection_bleu4": 0.0526022607159707,
+    "selection_meteor": 0.27187059672066577,
+    "selection_avg_time_ms": 7.6451612800156
   },
   "rnn_variations": [
     {
       "experiment": "rnn_pre_l1_h256_e256_m35",
       "layers": 1,
       "hidden": 256,
-      "bleu4": 0.02529110273369268,
-      "meteor": 0.25134604407376954,
-      "avg_time_ms": 976.8122911000137
-    },
-    {
-      "experiment": "rnn_pre_l2_h128_e256_m35",
-      "layers": 2,
-      "hidden": 128,
-      "bleu4": 0.019373861269926,
-      "meteor": 0.24091384132429522,
-      "avg_time_ms": 1022.5509068800056
-    },
-    {
-      "experiment": "rnn_pre_l2_h256_e256_m35",
-      "layers": 2,
-      "hidden": 256,
-      "bleu4": 0.01802549819691187,
-      "meteor": 0.2500226387185999,
-      "avg_time_ms": 1039.771893899997
+      "bleu4": 0.029151971121431027,
+      "meteor": 0.2574929765477092,
+      "avg_time_ms": 3.407096719965921,
+      "val_loss": 4.054644584655762,
+      "param_count": 4597764
     },
     {
       "experiment": "rnn_pre_l3_h256_e256_m35",
       "layers": 3,
       "hidden": 256,
-      "bleu4": 0.015188255492220096,
-      "meteor": 0.24749339999472736,
-      "avg_time_ms": 1056.3698341800045
+      "bleu4": 0.016443283078328753,
+      "meteor": 0.2185872361241292,
+      "avg_time_ms": 4.370354179991409,
+      "val_loss": 4.108801364898682,
+      "param_count": 4860420
     },
     {
-      "experiment": "rnn_pre_l3_h128_e256_m35",
-      "layers": 3,
+      "experiment": "rnn_pre_l2_h128_e256_m35",
+      "layers": 2,
       "hidden": 128,
-      "bleu4": 0.014798835004889538,
-      "meteor": 0.23396716646332166,
-      "avg_time_ms": 1229.1926496999986
+      "bleu4": 0.013076460779738168,
+      "meteor": 0.22943350404269436,
+      "avg_time_ms": 2.831201160006458,
+      "val_loss": 4.111119747161865,
+      "param_count": 3565060
+    },
+    {
+      "experiment": "rnn_pre_l2_h256_e256_m35",
+      "layers": 2,
+      "hidden": 256,
+      "bleu4": 0.011311192661326543,
+      "meteor": 0.23127778372612365,
+      "avg_time_ms": 3.539005879938486,
+      "val_loss": 4.066447734832764,
+      "param_count": 4729092
     },
     {
       "experiment": "rnn_pre_l1_h128_e256_m35",
       "layers": 1,
       "hidden": 128,
-      "bleu4": 0.004186517128522594,
-      "meteor": 0.21963094451752632,
-      "avg_time_ms": 1109.2080119800085
+      "bleu4": 0.01129934803310004,
+      "meteor": 0.2415432461371504,
+      "avg_time_ms": 2.52913203999924,
+      "val_loss": 4.09910249710083,
+      "param_count": 3532164
+    },
+    {
+      "experiment": "rnn_pre_l3_h128_e256_m35",
+      "layers": 3,
+      "hidden": 128,
+      "bleu4": 0.011157751708074148,
+      "meteor": 0.23258289183510514,
+      "avg_time_ms": 3.0739590599841904,
+      "val_loss": 4.197484016418457,
+      "param_count": 3597956
     }
   ],
   "lstm_variations": [
@@ -74,117 +94,131 @@
       "experiment": "lstm_pre_l1_h256_e256_m35",
       "layers": 1,
       "hidden": 256,
-      "bleu4": 0.03279475834998587,
-      "meteor": 0.2527572114168954,
-      "avg_time_ms": 1030.4024882399972
-    },
-    {
-      "experiment": "lstm_pre_l3_h256_e256_m35",
-      "layers": 3,
-      "hidden": 256,
-      "bleu4": 0.029018127070403917,
-      "meteor": 0.2492419115426664,
-      "avg_time_ms": 1118.506088380018
-    },
-    {
-      "experiment": "lstm_pre_l2_h128_e256_m35",
-      "layers": 2,
-      "hidden": 128,
-      "bleu4": 0.02612777498962389,
-      "meteor": 0.24814164190491358,
-      "avg_time_ms": 1143.6951984600091
-    },
-    {
-      "experiment": "lstm_pre_l2_h256_e256_m35",
-      "layers": 2,
-      "hidden": 256,
-      "bleu4": 0.026026737540128977,
-      "meteor": 0.25708473198868764,
-      "avg_time_ms": 1137.6886897400254
+      "bleu4": 0.0526022607159707,
+      "meteor": 0.27187059672066577,
+      "avg_time_ms": 7.6451612800156,
+      "val_loss": 3.9630815982818604,
+      "param_count": 4991748
     },
     {
       "experiment": "lstm_pre_l1_h128_e256_m35",
       "layers": 1,
       "hidden": 128,
-      "bleu4": 0.019362285325463552,
-      "meteor": 0.24839518360826113,
-      "avg_time_ms": 1114.596251160001
+      "bleu4": 0.030841342212569973,
+      "meteor": 0.2664037141291833,
+      "avg_time_ms": 3.7815568600490224,
+      "val_loss": 4.00108003616333,
+      "param_count": 3680004
+    },
+    {
+      "experiment": "lstm_pre_l2_h128_e256_m35",
+      "layers": 2,
+      "hidden": 128,
+      "bleu4": 0.023030582496078,
+      "meteor": 0.24668227574042084,
+      "avg_time_ms": 5.381693499948597,
+      "val_loss": 3.9930930137634277,
+      "param_count": 3811588
+    },
+    {
+      "experiment": "lstm_pre_l3_h256_e256_m35",
+      "layers": 3,
+      "hidden": 256,
+      "bleu4": 0.021534806608509417,
+      "meteor": 0.24139351055318897,
+      "avg_time_ms": 9.712921019963687,
+      "val_loss": 4.009427070617676,
+      "param_count": 6042372
+    },
+    {
+      "experiment": "lstm_pre_l2_h256_e256_m35",
+      "layers": 2,
+      "hidden": 256,
+      "bleu4": 0.017147911435712364,
+      "meteor": 0.23490537256886918,
+      "avg_time_ms": 7.755485119996592,
+      "val_loss": 3.97074031829834,
+      "param_count": 5517060
     },
     {
       "experiment": "lstm_pre_l3_h128_e256_m35",
       "layers": 3,
       "hidden": 128,
-      "bleu4": 0.010208185360959965,
-      "meteor": 0.22662845566314938,
-      "avg_time_ms": 1408.9908418199775
+      "bleu4": 0.014499195134657573,
+      "meteor": 0.23645188130180725,
+      "avg_time_ms": 6.386906039988389,
+      "val_loss": 4.086756706237793,
+      "param_count": 3943172
     }
   ],
   "keras_vs_scratch": [
     {
       "decoder": "RNN",
-      "keras_bleu4": 0.004186517128522594,
-      "scratch_bleu4": 0.004186517128522594,
-      "keras_meteor": 0.21963094451752632,
-      "scratch_meteor": 0.21963094451752632,
-      "keras_avg_time_ms": 1157.418282360013,
-      "scratch_avg_time_ms": 2.921472099988023
+      "keras_bleu4": 0.029151971121431027,
+      "scratch_bleu4": 0.029151971121431027,
+      "keras_meteor": 0.2574929765477092,
+      "scratch_meteor": 0.2574929765477092,
+      "keras_avg_time_ms": 991.9251337999594,
+      "scratch_avg_time_ms": 3.524823080006172,
+      "caption_match_rate": 1.0
     },
     {
       "decoder": "LSTM",
-      "keras_bleu4": 0.02612777498962389,
-      "scratch_bleu4": 0.02612777498962389,
-      "keras_meteor": 0.24814164190491358,
-      "scratch_meteor": 0.24814164190491358,
-      "keras_avg_time_ms": 1122.3140636800053,
-      "scratch_avg_time_ms": 5.8418716199958
+      "keras_bleu4": 0.0526022607159707,
+      "scratch_bleu4": 0.0526022607159707,
+      "keras_meteor": 0.27187059672066577,
+      "scratch_meteor": 0.27187059672066577,
+      "keras_avg_time_ms": 1384.3253864599683,
+      "scratch_avg_time_ms": 5.85741508002684,
+      "caption_match_rate": 1.0
     }
   ],
   "rnn_vs_lstm": {
     "n_common": 50,
-    "rnn_bleu4": 0.004186517128522595,
-    "lstm_bleu4": 0.026127774989623886,
-    "rnn_meteor": 0.2196309445175263,
-    "lstm_meteor": 0.24814164190491353
+    "rnn_bleu4": 0.029151971121431027,
+    "lstm_bleu4": 0.05260226071597069,
+    "rnn_meteor": 0.2574929765477092,
+    "lstm_meteor": 0.27187059672066577
   },
   "caption_length": {
-    "15": 0.026127865016326527,
-    "25": 0.02612777498962389,
-    "35": 0.02612777498962389
+    "15": 0.054520402485316984,
+    "25": 0.0526022607159707,
+    "35": 0.0526022607159707
   },
   "beam": {
     "rnn": {
       "beam_1": {
-        "bleu4": 0.004186517128522594,
-        "meteor": 0.21963094451752632,
+        "bleu4": 0.029151971121431027,
+        "meteor": 0.2574929765477092,
         "samples": 50,
         "mode": "scratch",
         "decoder_type": "rnn",
-        "total_time_s": 0.13755843299986736,
-        "avg_time_ms": 2.7511686599973473,
+        "total_time_s": 0.16621176400076365,
+        "avg_time_ms": 3.324235280015273,
         "decoding": "greedy",
         "beam_size": null,
         "injection": "pre"
       },
       "beam_3": {
-        "bleu4": 0.0183214320617034,
-        "meteor": 0.22097020731595576,
+        "bleu4": 0.0684980273795893,
+        "meteor": 0.280651071438447,
         "samples": 50,
         "mode": "scratch",
         "decoder_type": "rnn",
-        "total_time_s": 0.6861540900008549,
-        "avg_time_ms": 13.723081800017098,
+        "total_time_s": 0.7222494279994862,
+        "avg_time_ms": 14.444988559989724,
         "decoding": "beam",
         "beam_size": 3,
         "injection": "pre"
       },
       "beam_5": {
-        "bleu4": 0.03595451207295272,
-        "meteor": 0.22188335754851088,
+        "bleu4": 0.06690619499478415,
+        "meteor": 0.27906180601328756,
         "samples": 50,
         "mode": "scratch",
         "decoder_type": "rnn",
-        "total_time_s": 1.1531013700005133,
-        "avg_time_ms": 23.062027400010265,
+        "total_time_s": 1.2195400900018285,
+        "avg_time_ms": 24.39080180003657,
         "decoding": "beam",
         "beam_size": 5,
         "injection": "pre"
@@ -192,37 +226,37 @@
     },
     "lstm": {
       "beam_1": {
-        "bleu4": 0.02612777498962389,
-        "meteor": 0.24814164190491358,
+        "bleu4": 0.0526022607159707,
+        "meteor": 0.27187059672066577,
         "samples": 50,
         "mode": "scratch",
         "decoder_type": "lstm",
-        "total_time_s": 0.2644493779989716,
-        "avg_time_ms": 5.288987559979432,
+        "total_time_s": 0.2965697489999002,
+        "avg_time_ms": 5.931394979998004,
         "decoding": "greedy",
         "beam_size": null,
         "injection": "pre"
       },
       "beam_3": {
-        "bleu4": 0.04392611153586033,
-        "meteor": 0.27297880300749355,
+        "bleu4": 0.03080252620283612,
+        "meteor": 0.2793518238301759,
         "samples": 50,
         "mode": "scratch",
         "decoder_type": "lstm",
-        "total_time_s": 1.0878957739987527,
-        "avg_time_ms": 21.757915479975054,
+        "total_time_s": 1.0404395980003756,
+        "avg_time_ms": 20.80879196000751,
         "decoding": "beam",
         "beam_size": 3,
         "injection": "pre"
       },
       "beam_5": {
-        "bleu4": 0.04017098341305772,
-        "meteor": 0.2694461033093707,
+        "bleu4": 0.03771832259544891,
+        "meteor": 0.27734353896992936,
         "samples": 50,
         "mode": "scratch",
         "decoder_type": "lstm",
-        "total_time_s": 1.9258908449992305,
-        "avg_time_ms": 38.51781689998461,
+        "total_time_s": 1.9125282450004306,
+        "avg_time_ms": 38.25056490000861,
         "decoding": "beam",
         "beam_size": 5,
         "injection": "pre"
@@ -232,43 +266,43 @@
   "batch": {
     "rnn": {
       "n": 50,
-      "single_total_s": 0.15954668599988509,
-      "batch_total_s": 0.08916417500040552,
-      "single_avg_ms": 3.1909337199977017,
-      "batch_avg_ms": 1.7832835000081104,
-      "match_rate": 0.0
+      "single_total_s": 0.1387662779998209,
+      "batch_total_s": 0.07176602000254206,
+      "single_avg_ms": 2.7753255599964177,
+      "batch_avg_ms": 1.4353204000508413,
+      "match_rate": 1.0
     },
     "lstm": {
       "n": 50,
-      "single_total_s": 0.2328449050000927,
-      "batch_total_s": 0.08328157299911254,
-      "single_avg_ms": 4.656898100001854,
-      "batch_avg_ms": 1.6656314599822508,
-      "match_rate": 0.0
+      "single_total_s": 0.2592046350000601,
+      "batch_total_s": 0.09845819600013783,
+      "single_avg_ms": 5.184092700001202,
+      "batch_avg_ms": 1.9691639200027566,
+      "match_rate": 1.0
     }
   },
-  "init_inject": {
+  "init_inject_bonus": {
     "rnn": {
       "pre": {
-        "bleu4": 0.004186517128522594,
-        "meteor": 0.21963094451752632,
+        "bleu4": 0.029151971121431027,
+        "meteor": 0.2574929765477092,
         "samples": 50,
-        "mode": "keras",
+        "mode": "scratch",
         "decoder_type": "rnn",
-        "total_time_s": 54.310465373000625,
-        "avg_time_ms": 1086.2093074600125,
+        "total_time_s": 0.16854870500174002,
+        "avg_time_ms": 3.3709741000348004,
         "decoding": "greedy",
         "beam_size": null,
         "injection": "pre"
       },
       "init": {
-        "bleu4": 0.05304117364052667,
-        "meteor": 0.30333766925638306,
+        "bleu4": 0.03415854199804917,
+        "meteor": 0.2744395432672545,
         "samples": 50,
-        "mode": "keras",
+        "mode": "scratch",
         "decoder_type": "rnn",
-        "total_time_s": 55.41089967100015,
-        "avg_time_ms": 1108.217993420003,
+        "total_time_s": 0.31719392299783067,
+        "avg_time_ms": 6.343878459956613,
         "decoding": "greedy",
         "beam_size": null,
         "injection": "init"
@@ -276,25 +310,25 @@
     },
     "lstm": {
       "pre": {
-        "bleu4": 0.02612777498962389,
-        "meteor": 0.24814164190491358,
+        "bleu4": 0.0526022607159707,
+        "meteor": 0.27187059672066577,
         "samples": 50,
-        "mode": "keras",
+        "mode": "scratch",
         "decoder_type": "lstm",
-        "total_time_s": 57.48681550699985,
-        "avg_time_ms": 1149.736310139997,
+        "total_time_s": 0.29206998600056977,
+        "avg_time_ms": 5.841399720011395,
         "decoding": "greedy",
         "beam_size": null,
         "injection": "pre"
       },
       "init": {
-        "bleu4": 0.05438013226887419,
-        "meteor": 0.3231058998061437,
+        "bleu4": 0.0728401906286606,
+        "meteor": 0.30578010557846563,
         "samples": 50,
-        "mode": "keras",
+        "mode": "scratch",
         "decoder_type": "lstm",
-        "total_time_s": 62.38535607899939,
-        "avg_time_ms": 1247.7071215799879,
+        "total_time_s": 0.41193075200135354,
+        "avg_time_ms": 8.23861504002707,
         "decoding": "greedy",
         "beam_size": null,
         "injection": "init"
@@ -304,113 +338,144 @@
   "qualitative_examples": [
     {
       "image": "3721799573_2f470950e0.jpg",
-      "rnn_bleu4": 8.891397050194633e-08,
-      "lstm_bleu4": 9.036020036098453e-08,
-      "rnn_caption": "a man in a black shirt and a woman is a a on in street city",
-      "lstm_caption": "a man in a black shirt and a woman in a black shirt and a",
+      "rnn_bleu4": 9.55442792204367e-08,
+      "lstm_bleu4": 9.365137582048793e-08,
+      "rnn_caption": "a woman in a black shirt and a is hat a a",
+      "lstm_caption": "a man in a blue shirt and a is is in a of",
       "ground_truth": [
         "There are two ladies embracing and posing shown here .",
         "Two girlfriends smiling ."
       ]
     },
     {
-      "image": "3719461451_07de35af3a.jpg",
-      "rnn_bleu4": 1.1612061509165741e-07,
-      "lstm_bleu4": 1.4953487812212206e-07,
-      "rnn_caption": "a man is a a and and dog in in field",
-      "lstm_caption": "a dog is in in water",
+      "image": "3725177385_62d5e13634.jpg",
+      "rnn_bleu4": 1.4388178057096277e-07,
+      "lstm_bleu4": 1.2091070234069986e-07,
+      "rnn_caption": "a race car driver through a turn",
+      "lstm_caption": "a man is a a on on motorcycle motorcycle",
       "ground_truth": [
-        "A pelican flies over the water .",
-        "A very large bird flying over water ."
+        "A bunch of vintage cars are parked in a lot .",
+        "An antique car that is yellow is shown lined up with other cars ."
       ]
     },
     {
-      "image": "3720366614_dfa8fe1088.jpg",
-      "rnn_bleu4": 1.5650845800732888e-07,
-      "lstm_bleu4": 1.4601394329159486e-07,
-      "rnn_caption": "a dog and a little dog run in the snow",
-      "lstm_caption": "a dog dog a a in of snow on a leash",
+      "image": "3729405438_6e79077ab2.jpg",
+      "rnn_bleu4": 1.6548754598234378e-07,
+      "lstm_bleu4": 1.2014057070673781e-05,
+      "rnn_caption": "a man is a a on on bike",
+      "lstm_caption": "a man in a blue shirt and a pants shirt a a on on skateboard skateboard",
       "ground_truth": [
-        "A small black dog is standing on two feet and wearing a pink tutu .",
-        "Small dog in costume stands on hind legs to reach dangling flowers ."
+        "A bicycler balances his bike on a rail .",
+        "A biker is riding down the stairs on his bike at night ."
       ]
     },
     {
-      "image": "3724150944_fc62e8d5e0.jpg",
-      "rnn_bleu4": 1.428720214849401e-07,
-      "lstm_bleu4": 1.4953487812212213e-05,
-      "rnn_caption": "a boy boy a a on in field field grass grass a",
-      "lstm_caption": "a little boy in a blue shirt is a a ball ball a a in in",
+      "image": "3721881082_afe9fc734e.jpg",
+      "rnn_bleu4": 1.1645788017799575e-07,
+      "lstm_bleu4": 1.7167035531989437e-05,
+      "rnn_caption": "a man of a heritage wearing on black",
+      "lstm_caption": "a man and a woman are on on sidewalk street a a",
       "ground_truth": [
-        "A group of young boys on opposing teams are playing soccer .",
-        "Children playing soccer near the goal net ."
+        "A woman and a girl sitting on a front lawn",
+        "\"A woman and girl wearing traditional clothes , sits on the front lawn , reading from a book .\""
       ]
     },
     {
       "image": "3725814794_30db172f67.jpg",
-      "rnn_bleu4": 1.1986809949741643e-05,
-      "lstm_bleu4": 1.3193849171325932e-05,
-      "rnn_caption": "a man player a a and and uniform uniform basketball basketball a the in",
-      "lstm_caption": "a man player a a and and uniform ball to a ball",
+      "rnn_bleu4": 1.351200154807034e-05,
+      "lstm_bleu4": 1.5352597838656372e-05,
+      "rnn_caption": "a man player a a and ball is a a",
+      "lstm_caption": "a basketball player in a is uniform a the",
       "ground_truth": [
         "A man performing martial arts kicks his opponent .",
         "\"During a martial arts match , a man attempts to kick the other in the face .\""
       ]
     },
     {
-      "image": "3724113279_99b6e5bf41.jpg",
-      "rnn_bleu4": 1.4601394329159491e-05,
-      "lstm_bleu4": 1.606856837889304e-05,
-      "rnn_caption": "a man in a blue shirt is a a on with mountain",
-      "lstm_caption": "a man is a a on on bicycle bicycle a a of and and bike sign",
+      "image": "3728256505_7f8db8270d.jpg",
+      "rnn_bleu4": 1.8092176081223304e-05,
+      "lstm_bleu4": 1.4554368293886241e-05,
+      "rnn_caption": "a man is a a on on bike",
+      "lstm_caption": "a man in a blue shirt is a a on on skateboard skateboard",
       "ground_truth": [
-        "\"a bmx rider , wall rides .\"",
-        "A man does a trick with his bicycle off the side of a wall ."
+        "A man jumping onto a platform .",
+        "A man on the edge of a wall about to fall off ."
       ]
     },
     {
-      "image": "3724738804_f00748a137.jpg",
-      "rnn_bleu4": 2.2724387329350015e-05,
-      "lstm_bleu4": 1.0129058949799612e-05,
-      "rnn_caption": "two children are in a water",
-      "lstm_caption": "a young boy in a pink shirt and a shorts shirt a on bucket swing water a a in in",
+      "image": "3726700898_c50494b8bd.jpg",
+      "rnn_bleu4": 1.8046314683044433e-05,
+      "lstm_bleu4": 1.6548754598234387e-05,
+      "rnn_caption": "a man in a black shirt and a is hat a a",
+      "lstm_caption": "a man in a blue shirt and a is is on a back in a air",
       "ground_truth": [
-        "A woman and three children are jumping into a swimming pool .",
-        "Children jumping in a pool surrounded by pool chairs and huts ."
+        "A man balances a knife on his arm as another man watches .",
+        "A man has a knife on his arm and another man is watching ."
       ]
     },
     {
-      "image": "3726120436_740bda8416.jpg",
-      "rnn_bleu4": 1.865892043799414e-05,
-      "lstm_bleu4": 1.9056141256856847e-05,
-      "rnn_caption": "a man in a blue shirt is a a on and dandelion",
-      "lstm_caption": "a man in a black shirt and a pants is a on on skateboard",
+      "image": "3721812313_6000566803.jpg",
+      "rnn_bleu4": 0.0016653831334339092,
+      "lstm_bleu4": 1.5461103513878924e-07,
+      "rnn_caption": "a man of a woman wearing a white hat and a is hat a a",
+      "lstm_caption": "a man of a and and woman woman a a pose in a of",
       "ground_truth": [
-        "A man and woman sitting in chairs next to a turquoise truck .",
-        "An older couple chats near a bright colored car ."
-      ]
-    },
-    {
-      "image": "3718964174_cb2dc1615e.jpg",
-      "rnn_bleu4": 1.817385841085785e-05,
-      "lstm_bleu4": 0.0020687206010259413,
-      "rnn_caption": "a man and a woman are a on on street street",
-      "lstm_caption": "a man in a black shirt and a woman is a on on of",
-      "ground_truth": [
-        "A woman in a blue sweater with a blue scarf around her head .",
-        "A woman in a head covering is looking away from the camera ."
+        "A closeup shot of three guys and a girl posing for the camera .",
+        "A woman and three men are posing for a photo"
       ]
     },
     {
       "image": "3724718895_bd03f4a4dc.jpg",
-      "rnn_bleu4": 1.4539441923491842e-05,
-      "lstm_bleu4": 0.5109955811291784,
-      "rnn_caption": "a dog and a brown dog are in in snow",
-      "lstm_caption": "a black and white dog is running through a grass field",
+      "rnn_bleu4": 1.9304869754804474e-05,
+      "lstm_bleu4": 0.38999752528799086,
+      "rnn_caption": "a dog and a dog dog in a snow",
+      "lstm_caption": "a black and white dog is running through a grass field a a",
       "ground_truth": [
         "a dog drinks the sprinkler water .",
         "A small brown and white dog is playing with the sprinkler in the grass ."
       ]
+    },
+    {
+      "image": "3726025663_e7d35d23f6.jpg",
+      "rnn_bleu4": 0.30213753973567675,
+      "lstm_bleu4": 0.31239399369202553,
+      "rnn_caption": "a group of people are a a on on motorcycle",
+      "lstm_caption": "a group of people are a bicycles on a dirt",
+      "ground_truth": [
+        "A group of people ride in a race",
+        "A large group of bicycles riding their bikes ."
+      ]
     }
-  ]
+  ],
+  "sanity": {
+    "rnn_selected_experiment": "rnn_pre_l1_h256_e256_m35",
+    "lstm_selected_experiment": "lstm_pre_l1_h256_e256_m35",
+    "rnn_keras_scratch_caption_match": 1.0,
+    "lstm_keras_scratch_caption_match": 1.0,
+    "rnn_bleu4_delta": 0.0,
+    "lstm_bleu4_delta": 0.0,
+    "rnn_meteor_delta": 0.0,
+    "lstm_meteor_delta": 0.0,
+    "rnn_strict_caption_match_passed": true,
+    "lstm_strict_caption_match_passed": true
+  },
+  "scratch_sanity": {
+    "rnn_batch_shape": [
+      2,
+      5,
+      3
+    ],
+    "lstm_batch_shape": [
+      2,
+      6,
+      3
+    ],
+    "rnn_Wx_backward_relative_error": 0.25552618503570557
+  },
+  "spec_notes": {
+    "main_architecture": "pre-inject",
+    "scratch_forward_library": "numpy",
+    "full_required_variations": "6 RNN + 6 LSTM when RUN_MODE=full",
+    "fallback_split": "6000 train / 1000 val / 1000 test"
+  }
 }

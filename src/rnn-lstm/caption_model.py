@@ -110,14 +110,15 @@ class CaptionModel:
         generated = []
 
         if self.injection_method == "pre":
-            # Position 0: image feature
+            # Teacher forcing alignment:
+            # [image, <start>, S0, S1, ...] predicts [S0, S1, S2, ...].
             out, h, c = self._step(x_img, h, c)
             token = int(np.argmax(self._predict(out, x_img)))
             if token in (end, pad):
                 return ""
             generated.append(self.idx2word.get(token, "<unk>"))
-            to_feed      = start   # first loop feeds <start>
-            prev_pred    = token   # after <start>, feeds T0
+            to_feed      = start
+            prev_pred    = token
 
             for _ in range(max_len - 1):
                 x         = self.embedding.forward(to_feed)
@@ -281,8 +282,83 @@ class CaptionModel:
     def generate_captions_batch(
         self, image_features: np.ndarray, max_len: int = 30, batch_size: int = 32
     ) -> list:
+        assert self.decoder is not None, "Call load_from_keras() first."
+
         captions = []
-        for i in range(0, len(image_features), batch_size):
-            for feat in image_features[i : i + batch_size]:
-                captions.append(self.generate_caption(feat, max_len=max_len))
+        for start_row in range(0, len(image_features), batch_size):
+            feature_batch = np.asarray(
+                image_features[start_row : start_row + batch_size], dtype=np.float32
+            )
+            if feature_batch.size == 0:
+                continue
+
+            pad_idx   = self.word2idx["<pad>"]
+            start_idx = self.word2idx["<start>"]
+            end_idx   = self.word2idx["<end>"]
+            batch     = feature_batch.shape[0]
+            hs        = self.decoder.cells[0].hidden_size
+
+            x_img = self.image_projection.forward(feature_batch)
+            generated = [[] for _ in range(batch)]
+            finished  = np.zeros(batch, dtype=bool)
+            h = [np.zeros((batch, hs), dtype=np.float32) for _ in range(self.n_layers)]
+            c = (
+                [np.zeros((batch, hs), dtype=np.float32) for _ in range(self.n_layers)]
+                if self.decoder_type == "lstm"
+                else None
+            )
+
+            def step(x):
+                nonlocal h, c
+                if self.decoder_type == "rnn":
+                    out, h = self.decoder.step(x, h)
+                    return out
+                out, h, c = self.decoder.step(x, h, c)
+                return out
+
+            def predict(out):
+                if self.injection_method == "init":
+                    out = np.concatenate([out, x_img], axis=-1)
+                return self.output_layer.forward(out)
+
+            if self.injection_method == "pre":
+                out = step(x_img)
+                tokens = np.argmax(predict(out), axis=-1).astype(np.int32)
+                for i, tok in enumerate(tokens):
+                    if int(tok) in (end_idx, pad_idx):
+                        finished[i] = True
+                    else:
+                        generated[i].append(self.idx2word.get(int(tok), "<unk>"))
+
+                to_feed = np.full(batch, start_idx, dtype=np.int32)
+                prev_pred = tokens.copy()
+                for _ in range(max_len - 1):
+                    out = step(self.embedding.forward(to_feed))
+                    new_tok = np.argmax(predict(out), axis=-1).astype(np.int32)
+                    for i, tok in enumerate(new_tok):
+                        if not finished[i]:
+                            if int(tok) in (end_idx, pad_idx):
+                                finished[i] = True
+                            else:
+                                generated[i].append(self.idx2word.get(int(tok), "<unk>"))
+                    to_feed = prev_pred
+                    prev_pred = new_tok
+                    if finished.all():
+                        break
+            else:
+                to_feed = np.full(batch, start_idx, dtype=np.int32)
+                for _ in range(max_len):
+                    out = step(self.embedding.forward(to_feed))
+                    to_feed = np.argmax(predict(out), axis=-1).astype(np.int32)
+                    for i, tok in enumerate(to_feed):
+                        if not finished[i]:
+                            if int(tok) in (end_idx, pad_idx):
+                                finished[i] = True
+                            else:
+                                generated[i].append(self.idx2word.get(int(tok), "<unk>"))
+                    if finished.all():
+                        break
+
+            captions.extend(" ".join(words) for words in generated)
+
         return captions
