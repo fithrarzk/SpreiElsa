@@ -36,13 +36,13 @@ def _filter_image_names(names: list[str], captions: dict, features: dict) -> lis
 
 
 def _greedy_decode_keras(model, image_feature: np.ndarray, word2idx: dict, idx2word: dict,
-                         max_len: int, injection_method: str = "pre") -> str:
-    pad_idx = word2idx.get("<pad>", 0)
+                         max_len: int) -> str:
+    pad_idx   = word2idx.get("<pad>", 0)
     start_idx = word2idx.get("<start>", 1)
-    end_idx = word2idx.get("<end>", 2)
+    end_idx   = word2idx.get("<end>", 2)
 
     caption_len = int(model.inputs[1].shape[1])
-    output_len = int(model.outputs[0].shape[1])
+    output_len  = int(model.outputs[0].shape[1])
     steps = min(max_len, output_len)
 
     tokens = [start_idx]
@@ -67,7 +67,6 @@ def _beam_search_keras(
     max_len: int,
     beam_size: int,
     length_penalty: float,
-    injection_method: str = "pre",
 ) -> str:
     pad_idx = word2idx.get("<pad>", 0)
     start_idx = word2idx.get("<start>", 1)
@@ -154,21 +153,21 @@ def evaluate(
         if mode == "keras":
             if decoding == "beam":
                 candidate = _beam_search_keras(
-                    model,
-                    feature,
-                    word2idx,
-                    idx2word,
-                    max_len=max_len,
-                    beam_size=beam_size,
+                    model, feature, word2idx, idx2word,
+                    max_len=max_len, beam_size=beam_size,
                     length_penalty=length_penalty,
-                    injection_method=injection_method,
                 )
             else:
-                candidate = _greedy_decode_keras(model, feature, word2idx, idx2word,
-                                                 max_len=max_len, injection_method=injection_method)
+                candidate = _greedy_decode_keras(
+                    model, feature, word2idx, idx2word,
+                    max_len=max_len,
+                )
         else:
             if decoding == "beam":
-                candidate = model.generate_caption_beam(feature, max_len=max_len, beam_size=beam_size, length_penalty=length_penalty)
+                candidate = model.generate_caption_beam(
+                    feature, max_len=max_len, beam_size=beam_size,
+                    length_penalty=length_penalty,
+                )
             else:
                 candidate = model.generate_caption(feature, max_len=max_len)
         results.append(_evaluate_single(image_name, candidate, references))

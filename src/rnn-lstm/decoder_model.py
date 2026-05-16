@@ -37,9 +37,13 @@ def build_decoder_model(
 
     for i in range(n_layers):
         if decoder_type == "rnn":
-            x = SimpleRNN(hidden_size, return_sequences=True, name=f"simple_rnn_{i}")(x)
+            x = SimpleRNN(hidden_size, return_sequences=True,
+                          dropout=0.3, recurrent_dropout=0.1,
+                          name=f"simple_rnn_{i}")(x)
         else:
-            x = LSTM(hidden_size, return_sequences=True, name=f"lstm_{i}")(x)
+            x = LSTM(hidden_size, return_sequences=True,
+                     dropout=0.3, recurrent_dropout=0.1,
+                     name=f"lstm_{i}")(x)
 
     if injection_method == "init":
         x_img_seq = RepeatVector(max_seq_len - 1, name="image_repeat")(x_img)
